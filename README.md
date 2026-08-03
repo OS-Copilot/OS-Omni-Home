@@ -40,23 +40,45 @@ static/js/
   osomni-charts.js       dependency-free SVG chart library
   main.js                page behaviour + chart wiring
 public/
-  cover.png .webp        key art  (PLACEHOLDER — still OSReward's)
-  favicon*.png .ico      derived from the cover (PLACEHOLDER)
-  social/og-image.png    1200x630 social card (PLACEHOLDER)
+  os-omni-logo-v2.png    the brand logo, 1024x1024 RGBA — source of the icons
+  favicon*.png .ico      built from it, see tools/
+  apple-touch-icon.png   built from it
+  cover.png .webp        hero key art  (PLACEHOLDER — still OSReward's)
+  social/og-image.png    1200x630 social card (PLACEHOLDER — still OSReward's)
   logos/                 model-family marks used in tables and plots
   logos/projects/        marks for the "More research" nav dropdown
+tools/
+  build_brand_assets.py  rebuilds every icon from the logo
 figure/                  local-only working material (gitignored)
 ```
+
+## Brand marks
+
+`python3 tools/build_brand_assets.py` regenerates the whole icon set from
+`public/os-omni-logo-v2.png`. Run it whenever the logo changes.
+
+The logo is a wide composition — the robot centre-left, platform icons orbiting
+it — so nothing uses it whole. At 32 px the full scene is unreadable, and the
+two places the mark appears small (the nav at 30 px, the footer at 34 px) would
+show mush. Every icon is therefore cut from the robot and its plinth
+(`ROBOT_BOX` in the script), which stays legible down to 16 px.
+
+Two treatments, by where the file is used. `favicon-512.png` is the in-page mark
+(nav, footer, 404) and keeps its transparency, so it sits on the page's own
+background in both themes. The browser-chrome icons — `favicon-16/32.png`,
+`favicon.ico`, `apple-touch-icon.png` — get a navy plate, because the robot's
+shell is white and would otherwise disappear against a light tab strip.
 
 ## What to fill in
 
 Search `index.html` for `TODO` — there are about forty, each naming what belongs
 in that spot. The larger jobs, roughly in order:
 
-1. **Brand assets.** `public/cover.png`, `cover.webp`, the favicons and
-   `public/social/og-image.png` are all still the source page's artwork. Replace
-   the cover first, then regenerate the rest from it. `public/logos/Ours.png` is
-   a placeholder mark for our own entry in the plots.
+1. **The two remaining brand assets.** The icons are done. `public/cover.png`,
+   `cover.webp` (the hero art) and `public/social/og-image.png` (the social
+   card) are still the source page's artwork — replace them before the page is
+   shared anywhere. `public/logos/Ours.png` is a placeholder mark for our own
+   entry in the plots.
 2. **The data file.** `static/js/osomni-data.js` is the single source of truth.
    Nothing goes inline in `index.html` or `main.js` — put it there. Each block is
    commented with what it feeds and what needs deciding.
