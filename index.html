@@ -237,14 +237,16 @@
         </div>
       </div>
 
-      <!-- TODO: public/cover.png and .webp are still the source template's key
-           art. The icons are already built from public/OS-Omni-V6.png
-           (see tools/build_brand_assets.py); the hero art is the open item. -->
+      <!-- Both files are built from public/os-omni-cover-v2.png by
+           tools/build_cover.py. The WebP is listed first and is what almost
+           every browser fetches; the PNG is the fallback. -->
       <figure class="hero-art plate">
         <picture>
           <source srcset="public/cover.webp" type="image/webp">
           <img src="public/cover.png" width="900" height="900" fetchpriority="high"
-            alt="OS-Omni key art — placeholder, to be replaced.">
+            alt="OS-Omni key art: a robot at the centre of a ring of platforms — two phones, a
+                 Windows desktop, a browser window, and macOS and Ubuntu laptops — each on its own
+                 plinth, wired back to the robot.">
         </picture>
       </figure>
     </div>

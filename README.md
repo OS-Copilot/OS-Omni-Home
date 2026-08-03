@@ -54,12 +54,14 @@ public/
   OS-Omni-V6.png         the brand logo, 1024x1024 RGBA — source of the icons
   favicon*.png .ico      built from it, see tools/
   apple-touch-icon.png   built from it
-  cover.png .webp        hero key art  (PLACEHOLDER — still OSReward's)
+  os-omni-cover-v2.png   the hero key art, 1254x1254 — source of cover.*
+  cover.png .webp        900x900 hero art, built from it
   social/og-image.png    1200x630 social card (PLACEHOLDER — still OSReward's)
   logos/                 model-family marks used in tables and plots
   logos/projects/        marks for the "More research" nav dropdown
 tools/
   build_brand_assets.py  rebuilds every icon from the logo
+  build_cover.py         rebuilds the hero art from the source cover
   export_logo.py         exports the logo for slides, papers, avatars
 exports/                 output of export_logo.py (gitignored)
 figure/                  local-only working material (gitignored)
@@ -100,11 +102,11 @@ JPEG, which is flattened onto white.
 Search `index.html` for `TODO` — there are about forty, each naming what belongs
 in that spot. The larger jobs, roughly in order:
 
-1. **The two remaining brand assets.** The icons are done. `public/cover.png`,
-   `cover.webp` (the hero art) and `public/social/og-image.png` (the social
-   card) are still the source page's artwork — replace them before the page is
-   shared anywhere. `public/logos/Ours.png` is a placeholder mark for our own
-   entry in the plots.
+1. **The social card.** The icons and the hero art are done;
+   `public/social/og-image.png` is the last piece of the source page's artwork,
+   so a shared link still previews as OSReward. Replace it before the page goes
+   anywhere. `public/logos/Ours.png` is also still a placeholder mark, for our
+   own entry in the plots.
 2. **The data file.** `static/js/osomni-data.js` is the single source of truth.
    Nothing goes inline in `index.html` or `main.js` — put it there. Each block is
    commented with what it feeds and what needs deciding.
