@@ -1,0 +1,13 @@
+# Local working material: paper drafts, raw cover art, scratch assets.
+figure/
+
+# macOS
+.DS_Store
+._*
+
+# Editors
+.vscode/
+.idea/
+
+# Node (only if a build step is ever added)
+node_modules/
