@@ -2,20 +2,20 @@
 
     python3 tools/build_brand_assets.py
 
-Source : public/os-omni-logo-v2.png       1024x1024 RGBA, transparent background
+Source : public/OS-Omni-V6.png            1024x1024 RGBA, transparent background
 
-The source is a wide composition — the robot stands centre-left with platform
-icons orbiting it — so nothing here uses it whole. Scaled to 32 px the full
-scene is unreadable, and the two places the mark actually appears small (the
-nav at 30 px, the footer at 34 px) would show mush. Everything is therefore cut
-from ROBOT_BOX, the robot and its plinth, which stays legible down to 16 px.
+The whole composition is kept — robot, plinth, orbit ring and all six platform
+cards. The source is wider than it is tall, so it is squared by padding, never
+by cropping: the transparent margin is trimmed off, then equal strips are added
+above and below. Nothing is cut at any size.
 
 Two treatments, by where the file is used:
 
   in-page mark   transparent, so it sits on the page's own background in both
                  the light and the dark theme
-  browser chrome navy rounded plate, because the robot's shell is white and
-                 would otherwise disappear against a light tab strip
+  browser chrome navy rounded plate, because the robot's shell and several of
+                 the cards are white and would otherwise disappear against a
+                 light tab strip
 
 Writes : public/favicon-512.png       512  transparent   nav, footer, 404 mark
          public/favicon-32.png         32  navy plate    <link rel=icon>
@@ -29,27 +29,26 @@ from pathlib import Path
 from PIL import Image, ImageDraw
 
 ROOT = Path(__file__).resolve().parent.parent
-SOURCE = ROOT / "public" / "os-omni-logo-v2.png"
+SOURCE = ROOT / "public" / "OS-Omni-V6.png"
 OUT = ROOT / "public"
 
-# The robot and its plinth, in source pixels, measured off the alpha channel.
-# Widen this to let more of the orbiting icons in; the crop is squared around
-# its centre afterwards, so the box does not have to be square itself.
-ROBOT_BOX = (365, 232, 700, 700)
-CROP_PAD = 0.03          # breathing room around the box, as a fraction
+MARGIN = 0.03            # breathing room around the art, as a fraction of the side
 
 # One step lighter than --bg (#050c19) in static/css/main.css, so the robot's
 # dark blue face does not merge into the plate at small sizes.
 PLATE = (8, 17, 36, 255)
 PLATE_RADIUS = 0.18      # corner radius as a fraction of the icon's side
-PLATE_INSET = 0.08       # margin between the plate edge and the art
+PLATE_INSET = 0.03       # margin between the plate edge and the art
 
 
-def squared_crop(img, box, pad=CROP_PAD):
-    x0, y0, x1, y1 = box
-    side = int(max(x1 - x0, y1 - y0) * (1 + 2 * pad))
-    cx, cy = (x0 + x1) // 2, (y0 + y1) // 2
-    return img.crop((cx - side // 2, cy - side // 2, cx + side // 2, cy + side // 2))
+def squared(img):
+    """Trim the transparent margin, then pad to a square. Padding, not cropping,
+    so a composition that is not square keeps every part of itself."""
+    art = img.crop(img.getbbox())
+    side = round(max(art.size) * (1 + 2 * MARGIN))
+    out = Image.new("RGBA", (side, side), (0, 0, 0, 0))
+    out.paste(art, ((side - art.width) // 2, (side - art.height) // 2))
+    return out
 
 
 def plated(art, size, radius=PLATE_RADIUS, opaque=False):
@@ -70,11 +69,15 @@ def plated(art, size, radius=PLATE_RADIUS, opaque=False):
 def build():
     if not SOURCE.exists():
         raise SystemExit(f"source logo not found: {SOURCE}")
-    art = squared_crop(Image.open(SOURCE).convert("RGBA"), ROBOT_BOX)
+    src = Image.open(SOURCE).convert("RGBA")
+    art = squared(src)
+    print(f"  source {src.size[0]}x{src.size[1]} -> art {art.size[0]}x{art.size[1]} "
+          f"(content {src.getbbox()[2] - src.getbbox()[0]}x{src.getbbox()[3] - src.getbbox()[1]}, "
+          f"squared by padding)")
 
     written = []
 
-    # in-page brand mark — transparent. Quantised: full RGBA is 418 KB for
+    # in-page brand mark — transparent. Quantised: full RGBA is ~400 KB for
     # something that renders at 30 px in the nav and 104 px on the 404 page.
     # FASTOCTREE is the one PIL quantiser that keeps the alpha channel.
     p = OUT / "favicon-512.png"

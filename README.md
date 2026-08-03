@@ -51,7 +51,7 @@ static/js/
   osomni-charts.js       dependency-free SVG chart library
   main.js                page behaviour + chart wiring
 public/
-  os-omni-logo-v2.png    the brand logo, 1024x1024 RGBA — source of the icons
+  OS-Omni-V6.png         the brand logo, 1024x1024 RGBA — source of the icons
   favicon*.png .ico      built from it, see tools/
   apple-touch-icon.png   built from it
   cover.png .webp        hero key art  (PLACEHOLDER — still OSReward's)
@@ -66,19 +66,21 @@ figure/                  local-only working material (gitignored)
 ## Brand marks
 
 `python3 tools/build_brand_assets.py` regenerates the whole icon set from
-`public/os-omni-logo-v2.png`. Run it whenever the logo changes.
+`public/OS-Omni-V6.png`. Run it whenever the logo changes.
 
-The logo is a wide composition — the robot centre-left, platform icons orbiting
-it — so nothing uses it whole. At 32 px the full scene is unreadable, and the
-two places the mark appears small (the nav at 30 px, the footer at 34 px) would
-show mush. Every icon is therefore cut from the robot and its plinth
-(`ROBOT_BOX` in the script), which stays legible down to 16 px.
+Every icon keeps the whole composition — robot, plinth, orbit ring and all six
+platform cards. The logo is wider than it is tall, so it is squared by padding,
+never by cropping: the transparent margin is trimmed off, then equal strips are
+added above and below. The cost is legibility at the smallest sizes, where a
+scene this detailed reads as a coloured cluster rather than a mark; it resolves
+from about 48 px up.
 
 Two treatments, by where the file is used. `favicon-512.png` is the in-page mark
 (nav, footer, 404) and keeps its transparency, so it sits on the page's own
 background in both themes. The browser-chrome icons — `favicon-16/32.png`,
 `favicon.ico`, `apple-touch-icon.png` — get a navy plate, because the robot's
-shell is white and would otherwise disappear against a light tab strip.
+shell and several of the cards are white and would otherwise disappear against a
+light tab strip.
 
 ## What to fill in
 
