@@ -3,12 +3,23 @@
 Source for the OS-Omni homepage: *Benchmarking Generalist Computer-Using Agents
 on Long-Horizon Workflows Across Platforms*.
 
-Static HTML, CSS and vanilla JS. No build step, no framework, no CDN scripts —
-open `index.html` or serve the directory and it runs.
+Static HTML, CSS and vanilla JS. No build step, no framework, no CDN scripts,
+nothing to install.
+
+## Running it
 
 ```bash
-python3 -m http.server 8899   # then http://localhost:8899
+git clone https://github.com/OS-Copilot/OS-Omni-Home.git
+cd OS-Omni-Home
+python3 -m http.server 8899        # then open http://localhost:8899
 ```
+
+Any static server works; the port is arbitrary. Edit a file and reload the
+browser — there is no watcher and nothing to rebuild.
+
+Opening `index.html` straight from the file system works for a quick look. Only
+`404.html` needs a server, and specifically one serving the site under
+`/OS-Omni-Home/`, since its paths are root-absolute — see Deploying.
 
 ## Status: this is a template
 
