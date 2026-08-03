@@ -75,12 +75,16 @@ added above and below. The cost is legibility at the smallest sizes, where a
 scene this detailed reads as a coloured cluster rather than a mark; it resolves
 from about 48 px up.
 
-Two treatments, by where the file is used. `favicon-512.png` is the in-page mark
-(nav, footer, 404) and keeps its transparency, so it sits on the page's own
-background in both themes. The browser-chrome icons — `favicon-16/32.png`,
-`favicon.ico`, `apple-touch-icon.png` — get a navy plate, because the robot's
-shell and several of the cards are white and would otherwise disappear against a
-light tab strip.
+Everything stays transparent, so each icon sits on whatever is behind it. An
+earlier pass put the small ones on a navy plate, on the theory that the robot's
+white shell needs contrast against a light tab strip. Rendered against Chrome's
+actual tab colours that was clearly wrong: at 16 px the plate is the icon and
+the art inside it is eleven pixels tall, so the tab shows a black square. The
+composition carries its own contrast — a blue monitor, a green phone, an orange
+laptop, a teal ring.
+
+`apple-touch-icon.png` is the exception, because iOS fills transparent pixels
+with black. It gets an opaque navy square, matching the page background.
 
 ## What to fill in
 
