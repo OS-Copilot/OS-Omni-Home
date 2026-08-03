@@ -1,6 +1,10 @@
 # Local working material: paper drafts, raw cover art, scratch assets.
 figure/
 
+# Logo exports for slides, papers and avatars. Rebuild any time with
+# tools/export_logo.py — no reason to carry them in the repository.
+exports/
+
 # macOS
 .DS_Store
 ._*

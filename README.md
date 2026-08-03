@@ -60,6 +60,8 @@ public/
   logos/projects/        marks for the "More research" nav dropdown
 tools/
   build_brand_assets.py  rebuilds every icon from the logo
+  export_logo.py         exports the logo for slides, papers, avatars
+exports/                 output of export_logo.py (gitignored)
 figure/                  local-only working material (gitignored)
 ```
 
@@ -85,6 +87,13 @@ laptop, a teal ring.
 
 `apple-touch-icon.png` is the exception, because iOS fills transparent pixels
 with black. It gets an opaque navy square, matching the page background.
+
+For the logo outside this site — a slide, a paper, an organisation avatar —
+`python3 tools/export_logo.py` writes a set of trimmed copies to `exports/`,
+which is gitignored. The lossless WebP is the one to reach for: identical in
+every visible pixel to the PNG, at about half the file size. Where WebP is not
+accepted, use the PNG; where an alpha channel would render as black, use the
+JPEG, which is flattened onto white.
 
 ## What to fill in
 
