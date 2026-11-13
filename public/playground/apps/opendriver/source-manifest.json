@@ -1,0 +1,192 @@
+[
+  {
+    "relative": "flutter.js",
+    "source": "/home/user/Applications/opendriver/public/flutter.js",
+    "sha256": "0e71430c5cbe3a12351bb14a248d46a067dcb6ba40d91a9552e17018ef214ab6"
+  },
+  {
+    "relative": "manifest.json",
+    "source": "/home/user/Applications/opendriver/public/manifest.json",
+    "sha256": "f60e93a58501df433518d1ea1d7d15f26f7fa37a01097d9b7c071e4b684eb7a0"
+  },
+  {
+    "relative": "index.html",
+    "source": "/home/user/Applications/opendriver/public/index.html",
+    "sha256": "a5dd71fdacbcd00d06b81be43a91836ff0ab99102284b8920068848a5d791528"
+  },
+  {
+    "relative": "version.json",
+    "source": "/home/user/Applications/opendriver/public/version.json",
+    "sha256": "82b8d430fe826f10561dcad03942add5be40acf30aa91af232929cfa1681091b"
+  },
+  {
+    "relative": "main.dart.js",
+    "source": "/home/user/Applications/opendriver/public/main.dart.js",
+    "sha256": "86b1499cd861835f845bd88850477fad7e127944e613cfe171ff2de50d19168c"
+  },
+  {
+    "relative": ".last_build_id",
+    "source": "/home/user/Applications/opendriver/public/.last_build_id",
+    "sha256": "cbede960378f3362e835e4a53505c86112e9c5dc0e2c4979793818dd010a8614"
+  },
+  {
+    "relative": "favicon.png",
+    "source": "/home/user/Applications/opendriver/public/favicon.png",
+    "sha256": "7ab2525f4b86b65d3e4c70358a17e5a1aaf6f437f99cbcc046dad73d59bb9015"
+  },
+  {
+    "relative": "flutter_service_worker.js",
+    "source": "/home/user/Applications/opendriver/public/flutter_service_worker.js",
+    "sha256": "dbfbe64ae5be5b462abb97338eb9af783ed4ed57a8c73a53c2a44488a26f6416"
+  },
+  {
+    "relative": "flutter_bootstrap.js",
+    "source": "/home/user/Applications/opendriver/public/flutter_bootstrap.js",
+    "sha256": "a22d4d62974fc2f281413bfc799b94e98698f2591cb64de07b44cddd475de947"
+  },
+  {
+    "relative": "canvaskit/canvaskit.js",
+    "source": "/home/user/Applications/opendriver/public/canvaskit/canvaskit.js",
+    "sha256": "cafd0b0d57dc996ad536600f2ba75e377cbe135bbbd2bc0b754d575ea13c7ad4"
+  },
+  {
+    "relative": "canvaskit/skwasm_heavy.js.symbols",
+    "source": "/home/user/Applications/opendriver/public/canvaskit/skwasm_heavy.js.symbols",
+    "sha256": "3b188cca6b8935b2073159eea372062e3cd7548cc3f23a36b51db78dcd1a67d4"
+  },
+  {
+    "relative": "canvaskit/skwasm.js.symbols",
+    "source": "/home/user/Applications/opendriver/public/canvaskit/skwasm.js.symbols",
+    "sha256": "01b3966b4b06cf099bbf8eea8411a13e9c529305761968bcd7c51d073abd7396"
+  },
+  {
+    "relative": "canvaskit/skwasm_heavy.wasm",
+    "source": "/home/user/Applications/opendriver/public/canvaskit/skwasm_heavy.wasm",
+    "sha256": "33f5c52d1612df0af41d12204fd54ec276e436f7e3319c2871a689dee18f82d1"
+  },
+  {
+    "relative": "canvaskit/skwasm_heavy.js",
+    "source": "/home/user/Applications/opendriver/public/canvaskit/skwasm_heavy.js",
+    "sha256": "8869279617cc5e218a950757f35d444ba40e9046d75b25045f44bb2420a23240"
+  },
+  {
+    "relative": "canvaskit/skwasm.js",
+    "source": "/home/user/Applications/opendriver/public/canvaskit/skwasm.js",
+    "sha256": "7b942b7019e19e97ac77960ec224615c0bd5f78e73a0170bd1034d582ce46e9d"
+  },
+  {
+    "relative": "canvaskit/wimp.wasm",
+    "source": "/home/user/Applications/opendriver/public/canvaskit/wimp.wasm",
+    "sha256": "acefbd1d04dc92f01655f1872148f3cc59f9a9c85804e9c0123c6744939cd500"
+  },
+  {
+    "relative": "canvaskit/wimp.js",
+    "source": "/home/user/Applications/opendriver/public/canvaskit/wimp.js",
+    "sha256": "55f92e10a710062c4149ecafb6fb69877e61dda8ff4f2d8121f7b6e9d7224d73"
+  },
+  {
+    "relative": "canvaskit/wimp.js.symbols",
+    "source": "/home/user/Applications/opendriver/public/canvaskit/wimp.js.symbols",
+    "sha256": "376e8f2fff96ab29ab947ba367912247181978add48461bda2cc3890e5173e91"
+  },
+  {
+    "relative": "canvaskit/skwasm.wasm",
+    "source": "/home/user/Applications/opendriver/public/canvaskit/skwasm.wasm",
+    "sha256": "f8bab54ad143745fb699ff1b534b1295b31a67f1a9e98d72db5b0a5c9200d3a8"
+  },
+  {
+    "relative": "canvaskit/canvaskit.js.symbols",
+    "source": "/home/user/Applications/opendriver/public/canvaskit/canvaskit.js.symbols",
+    "sha256": "dfab92cd7bc316bf19931563d48e883838876fa1d31b2ab24d6e223beeffbba9"
+  },
+  {
+    "relative": "canvaskit/canvaskit.wasm",
+    "source": "/home/user/Applications/opendriver/public/canvaskit/canvaskit.wasm",
+    "sha256": "42e392d69fd05a8540cb1b2cd9b88ab2115659c9378c136d1377b3595e703839"
+  },
+  {
+    "relative": "canvaskit/chromium/canvaskit.js",
+    "source": "/home/user/Applications/opendriver/public/canvaskit/chromium/canvaskit.js",
+    "sha256": "04ec43bba31e1c96e9a3dc942e8d618f22578e276013dd9489ec69f92b01c179"
+  },
+  {
+    "relative": "canvaskit/chromium/canvaskit.js.symbols",
+    "source": "/home/user/Applications/opendriver/public/canvaskit/chromium/canvaskit.js.symbols",
+    "sha256": "18cc780b1e115f0f8d0f889612a341dce46c08e878f987850a5ce24bb135bd11"
+  },
+  {
+    "relative": "canvaskit/chromium/canvaskit.wasm",
+    "source": "/home/user/Applications/opendriver/public/canvaskit/chromium/canvaskit.wasm",
+    "sha256": "2bf5ea09d70b8eadb22bb0471c9edfd7b2bee909dbf84456c32480d944660418"
+  },
+  {
+    "relative": "icons/Icon-512.png",
+    "source": "/home/user/Applications/opendriver/public/icons/Icon-512.png",
+    "sha256": "baccb205ae45f0b421be1657259b4943ac40c95094ab877f3bcbe12cd544dcbe"
+  },
+  {
+    "relative": "icons/Icon-192.png",
+    "source": "/home/user/Applications/opendriver/public/icons/Icon-192.png",
+    "sha256": "3dce99077602f70421c1c6b2a240bc9b83d64d86681d45f2154143310c980be3"
+  },
+  {
+    "relative": "icons/Icon-maskable-192.png",
+    "source": "/home/user/Applications/opendriver/public/icons/Icon-maskable-192.png",
+    "sha256": "d2c842e22a9f4ec9d996b23373a905c88d9a203b220c5c151885ad621f974b5c"
+  },
+  {
+    "relative": "icons/Icon-maskable-512.png",
+    "source": "/home/user/Applications/opendriver/public/icons/Icon-maskable-512.png",
+    "sha256": "6aee06cdcab6b2aef74b1734c4778f4421d2da100b0ff9e52b21b55240202929"
+  },
+  {
+    "relative": "assets/AssetManifest.bin",
+    "source": "/home/user/Applications/opendriver/public/assets/AssetManifest.bin",
+    "sha256": "6cf95af53f3104c3bba88893459abd5937a4e2468f4138c91f0c7d1c762a0c89"
+  },
+  {
+    "relative": "assets/FontManifest.json",
+    "source": "/home/user/Applications/opendriver/public/assets/FontManifest.json",
+    "sha256": "28b1eb2b3d2e1ad60b8c8b0f9100b1ccbf492f7fa97f5bebb51ea97e73926e7d"
+  },
+  {
+    "relative": "assets/NOTICES",
+    "source": "/home/user/Applications/opendriver/public/assets/NOTICES",
+    "sha256": "d8d4086e3cb4aa7f031905b2e84a42e39993769cd03e259b8df8327406276098"
+  },
+  {
+    "relative": "assets/AssetManifest.bin.json",
+    "source": "/home/user/Applications/opendriver/public/assets/AssetManifest.bin.json",
+    "sha256": "a314048fe9e47902495074fd9578eaf9799ed8d8afe73cd62188c4096ceb9a7d"
+  },
+  {
+    "relative": "assets/fonts/MaterialIcons-Regular.otf",
+    "source": "/home/user/Applications/opendriver/public/assets/fonts/MaterialIcons-Regular.otf",
+    "sha256": "d9865b671a09d683d13a863089d8825e0f61a37696ce5d7d448bc8023aa62453"
+  },
+  {
+    "relative": "assets/brand/opendriver.ico",
+    "source": "/home/user/Applications/opendriver/public/assets/brand/opendriver.ico",
+    "sha256": "e5aa23029d94800b16f401777917a9abad65c4b18f0fad49c56b0f5aa3e3d26d"
+  },
+  {
+    "relative": "assets/assets/maps/README.md",
+    "source": "/home/user/Applications/opendriver/public/assets/assets/maps/README.md",
+    "sha256": "ff31cf64422b83add74b512d27dd79f56c94947f0735696cdcc4672df76d7abb"
+  },
+  {
+    "relative": "assets/shaders/stretch_effect.frag",
+    "source": "/home/user/Applications/opendriver/public/assets/shaders/stretch_effect.frag",
+    "sha256": "b7c5714b62b715ce2b860e2c3f580a667698739c817752c7cdca27a27b299d02"
+  },
+  {
+    "relative": "assets/shaders/ink_sparkle.frag",
+    "source": "/home/user/Applications/opendriver/public/assets/shaders/ink_sparkle.frag",
+    "sha256": "8d5a98f59d5601eb155093c67ef32cf91bda977b5e81bb06ed41052fba3c68aa"
+  },
+  {
+    "relative": "assets/packages/flutter_map/lib/assets/flutter_map_logo.png",
+    "source": "/home/user/Applications/opendriver/public/assets/packages/flutter_map/lib/assets/flutter_map_logo.png",
+    "sha256": "6051ae42fb505931a833e58f9209a9f96669a4d0e4b3f06f6d82cde12a0e0401"
+  }
+]

@@ -1,0 +1,34 @@
+/* Page typography. Logical device screens keep their native viewport scale. */
+body{font-size:18px;line-height:1.7}
+.section-sub{font-size:19px;line-height:1.8}.eyebrow{font-size:14px;letter-spacing:.12em}
+.hero .lede,.abstract{font-size:18px;line-height:1.8}.bullets li{font-size:17px;line-height:1.7}
+.feature p,.takeaway p,.contribs li{font-size:17px;line-height:1.8}.card h3,.chart-head h3{font-size:25px;line-height:1.35}
+.nav-links a,.nav-more-btn{font-size:16px}.btn{font-size:16px;min-height:46px}.chart-note{font-size:16px;line-height:1.8}
+.cr-source{font-size:14px!important;line-height:1.8}.cr-stat span{font-size:14px;line-height:1.8}
+.cr-bar-row{font-size:16px;grid-template-columns:minmax(170px,1.3fr) minmax(65px,1.7fr) minmax(95px,.75fr);gap:12px;padding:8px 6px}
+.cr-bar-row strong{font-size:15px}.cr-bar-track{height:13px}.cr-bars{gap:18px}.cr-bar-row:after{font-size:14px;padding:10px 14px}
+.cr-platform-tabs{gap:8px}.cr-platform-tabs button{font-size:14px;min-height:42px;padding:9px 13px}.cr-platform-tabs i{width:8px;height:8px}
+.cr-gap>span,.cr-gap strong small{font-size:14px}.cr-gap p{font-size:15px;line-height:1.8}.cr-gap{padding:22px}
+.cr-protocol .card p,.cr-error-list p{font-size:17px;line-height:1.8}.cr-error-list h4{font-size:19px}
+.cr-table{min-width:1120px;font-size:16px}.cr-table caption{font-size:15px;line-height:1.7}.cr-table th[scope=row]{font-size:16px}.cr-table thead th{font-size:14px}.cr-table th,.cr-table td{padding:15px 12px}.cr-table th button{min-height:42px}
+.dc-ring-layout{gap:24px;justify-content:center}.dc-ring{width:240px;flex:0 1 240px;min-width:200px;max-height:260px}.dc-ring-value{font-size:38px}.dc-ring-sub{font-size:11px}
+.dc-legend{flex:1 1 270px;width:100%;min-width:0}.dc-legend li{font-size:16px;grid-template-columns:10px minmax(0,1fr) 44px 60px;gap:12px;padding:12px 0}
+.dc-legend button{font-size:16px;line-height:1.5;grid-template-columns:10px minmax(0,1fr) 44px 60px;gap:12px;padding:13px 8px}
+.dc-legend strong,.dc-legend small{font-size:15px}.dc-legend i{width:9px;height:9px}.dc-legend span{overflow-wrap:break-word}
+.dc-selection{font-size:14px;line-height:1.8;min-height:50px}.dc-stack{height:36px}
+.dc-device-path{font-size:16px;grid-template-columns:1fr 105px 1fr}.dc-device-path b{font-size:14px}.dc-device-path span{padding:20px 12px}
+.dc-roundtrip button{font-size:14px;line-height:1.7;padding:14px;min-height:58px}.dc-stage-detail{font-size:16px;line-height:1.8;min-height:126px}
+.dc-controls label{font-size:14px}.dc-controls input,.dc-controls select{font-size:16px;min-height:46px}
+.dc-matrix{font-size:15px;min-width:1000px}.dc-matrix caption{font-size:14px;line-height:1.7}.dc-matrix thead th{font-size:14px}.dc-matrix th,.dc-matrix td{padding:12px}.dc-matrix th[scope=row]{min-width:230px}.dc-matrix button{font-size:15px;min-width:42px;min-height:42px}
+.te-intro{font-size:14px;line-height:1.6}.te-intro strong{font-size:32px}.te-platform{font-size:16px;min-width:120px}.te-platform b{font-size:14px;opacity:.85}
+.te-controls label{font-size:13px;line-height:1.5}.te-controls input,.te-controls select{font-size:16px;min-height:48px}.te-clear,.te-count{font-size:14px}.te-count{line-height:1.7}
+.te-card-top{font-size:13px;line-height:1.6;letter-spacing:.08em}.te-task-title{font-size:clamp(25px,2.2vw,31px);line-height:1.3;min-height:80px}
+.te-excerpt{font-size:16px;line-height:1.8;min-height:58px}.te-badges{gap:8px}.te-badges span{font-size:13px;line-height:1.6;padding:6px 9px}
+.te-task-body{font-size:17px;line-height:1.85}.te-task-body code,.te-task-body h4,.te-source{font-size:14px;line-height:1.8}
+.te-pagination{font-size:14px}.te-pagination button{min-height:46px}.te-app-icon{width:24px;height:24px}.te-platform-icon{width:28px;height:28px}
+.bp-details>p{font-size:17px;line-height:1.8}.bp-info-title{font-size:18px}.bp-info-description{font-size:15px;line-height:1.8}.bp-search-label{font-size:14px}.bp-search{font-size:16px;min-height:46px}.bp-app-list{max-height:300px;gap:8px}.bp-app-list button{font-size:14px;min-height:40px;padding:8px 10px}.bp-app-list img{width:20px;height:20px}.bp-details small{font-size:13px;line-height:1.8;opacity:1}.bp-feedback{font-size:14px!important}.bp-inventory{font-size:14px;line-height:1.7}.bp-device-tools button{font-size:14px;min-height:40px}
+.footer p,.footer li,.footer a,.footer-bottom{font-size:15px;line-height:1.8}
+@media(min-width:851px) and (max-width:1250px){#findings .grid-2,#benchmark .grid-2,#problem .grid-2{grid-template-columns:1fr}.cr-gap-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:850px){.cr-gap-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.te-controls{grid-template-columns:1fr 1fr}.te-controls .te-search{grid-column:1/-1}.te-task-title{font-size:26px}.dc-legend{flex-basis:270px}}
+@media(max-width:650px){.cr-bar-row{grid-template-columns:minmax(0,1fr) 100px;gap:8px 12px}.cr-bar-label{grid-column:1/-1}.cr-bar-row strong{font-size:15px}.dc-ring-layout{gap:16px}.dc-legend button,.dc-legend li{font-size:16px}.dc-device-path{grid-template-columns:1fr 76px 1fr;gap:8px;font-size:14px}.dc-device-path b{font-size:13px}.dc-device-path span{padding:14px 8px}.te-intro{font-size:13px}.te-intro>span{max-width:none}.te-intro{flex-wrap:wrap;gap:8px}.te-task-title{min-height:0}.te-badges{padding-right:28px}.te-pagination{flex-wrap:wrap}.section-sub{font-size:18px}}
+@media(max-width:400px){.dc-legend li,.dc-legend button{grid-template-columns:8px minmax(0,1fr) 34px 50px;gap:8px;padding-left:0;padding-right:0}.dc-legend strong,.dc-legend small{font-size:14px}.dc-roundtrip{grid-template-columns:1fr}.te-controls{grid-template-columns:1fr}.te-controls .te-search{grid-column:auto}.cr-gap-grid{grid-template-columns:1fr}.te-pagination span{order:3;width:100%;text-align:center}}

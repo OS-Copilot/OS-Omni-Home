@@ -1,0 +1,785 @@
+{
+  "platform": "ios",
+  "applications": [
+    {
+      "id": "calendar",
+      "name": "Calendar",
+      "bundle": "com.apple.mobilecal",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed",
+      "viewport_check": {
+        "logical_width": 440,
+        "document_width": 440,
+        "horizontal_overflow": false
+      },
+      "browser_document_title": "Calendar",
+      "verified_workflows": [
+        "date navigation",
+        "event creation",
+        "week view",
+        "reload persistence"
+      ],
+      "core_function_check": "passed"
+    },
+    {
+      "id": "photos",
+      "name": "Photos",
+      "bundle": "com.apple.mobileslideshow",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed",
+      "viewport_check": {
+        "logical_width": 440,
+        "document_width": 440,
+        "horizontal_overflow": false
+      },
+      "browser_document_title": "Photos",
+      "verified_workflows": [
+        "image import",
+        "preview",
+        "album creation/filter",
+        "reload persistence"
+      ],
+      "core_function_check": "passed"
+    },
+    {
+      "id": "reminders",
+      "name": "Reminders",
+      "bundle": "com.apple.reminders",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed",
+      "viewport_check": {
+        "logical_width": 440,
+        "document_width": 440,
+        "horizontal_overflow": false
+      },
+      "browser_document_title": "Reminders",
+      "verified_workflows": [
+        "reminder creation",
+        "completion",
+        "reload persistence"
+      ],
+      "core_function_check": "passed"
+    },
+    {
+      "id": "ios-news",
+      "name": "News",
+      "bundle": "com.apple.news",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "icon_provenance": "Image artwork",
+      "verified_workflows": [
+        "create",
+        "edit",
+        "delete",
+        "reload persistence",
+        "mobile width"
+      ],
+      "core_function_check": "passed"
+    },
+    {
+      "id": "maps",
+      "name": "Maps",
+      "bundle": "com.apple.Maps",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed",
+      "viewport_check": {
+        "logical_width": 440,
+        "document_width": 440,
+        "horizontal_overflow": false
+      },
+      "browser_document_title": "Maps",
+      "verified_workflows": [
+        "place search",
+        "save place",
+        "reload persistence"
+      ],
+      "core_function_check": "passed"
+    },
+    {
+      "id": "ios-health",
+      "name": "Health",
+      "bundle": "com.apple.Health",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "icon_provenance": "Image artwork",
+      "verified_workflows": [
+        "create",
+        "edit",
+        "delete",
+        "reload persistence",
+        "mobile width"
+      ],
+      "core_function_check": "passed"
+    },
+    {
+      "id": "ios-wallet",
+      "name": "Wallet",
+      "bundle": "com.apple.Passbook",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "icon_provenance": "Image artwork",
+      "verified_workflows": [
+        "create",
+        "edit",
+        "delete",
+        "reload persistence",
+        "mobile width"
+      ],
+      "core_function_check": "passed"
+    },
+    {
+      "id": "settings",
+      "name": "Settings",
+      "bundle": "com.apple.Preferences",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed",
+      "viewport_check": {
+        "logical_width": 440,
+        "document_width": 440,
+        "horizontal_overflow": false
+      },
+      "browser_document_title": "Settings",
+      "verified_workflows": [
+        "wallpaper change",
+        "reload persistence"
+      ],
+      "core_function_check": "passed"
+    },
+    {
+      "id": "ios-fitness",
+      "name": "Fitness",
+      "bundle": "com.apple.Fitness",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "icon_provenance": "Image artwork",
+      "verified_workflows": [
+        "create",
+        "edit",
+        "delete",
+        "reload persistence",
+        "mobile width"
+      ],
+      "core_function_check": "passed"
+    },
+    {
+      "id": "ios-watch",
+      "name": "Watch",
+      "bundle": "com.apple.Bridge",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "icon_provenance": "Image artwork",
+      "verified_workflows": [
+        "create",
+        "edit",
+        "delete",
+        "reload persistence",
+        "mobile width"
+      ],
+      "core_function_check": "passed"
+    },
+    {
+      "id": "contacts",
+      "name": "Contacts",
+      "bundle": "com.apple.MobileAddressBook",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed",
+      "viewport_check": {
+        "logical_width": 440,
+        "document_width": 440,
+        "horizontal_overflow": false
+      },
+      "browser_document_title": "Contacts",
+      "verified_workflows": [
+        "contact creation/search",
+        "reload persistence"
+      ],
+      "core_function_check": "passed"
+    },
+    {
+      "id": "files",
+      "name": "Files",
+      "bundle": "com.apple.DocumentsApp",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed",
+      "viewport_check": {
+        "logical_width": 440,
+        "document_width": 440,
+        "horizontal_overflow": false
+      },
+      "browser_document_title": "Files",
+      "verified_workflows": [
+        "file import",
+        "folder creation",
+        "move",
+        "rename"
+      ],
+      "core_function_check": "passed"
+    },
+    {
+      "id": "ios-preview",
+      "name": "Preview",
+      "bundle": "com.apple.Preview",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "icon_provenance": "Browser fallback artwork; original full icon unavailable",
+      "verified_workflows": [
+        "text import and preview"
+      ],
+      "core_function_check": "passed"
+    },
+    {
+      "id": "ios-shortcuts",
+      "name": "Shortcuts",
+      "bundle": "com.apple.shortcuts",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "icon_provenance": "Image artwork",
+      "verified_workflows": [
+        "create",
+        "edit",
+        "delete",
+        "reload persistence",
+        "mobile width"
+      ],
+      "core_function_check": "passed"
+    },
+    {
+      "id": "ios-passwords",
+      "name": "Passwords",
+      "bundle": "com.apple.Passwords",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "icon_provenance": "Browser fallback artwork; original full icon unavailable",
+      "verified_workflows": [
+        "create",
+        "edit",
+        "delete",
+        "reload persistence",
+        "mobile width",
+        "encrypted secret and decryption"
+      ],
+      "core_function_check": "passed"
+    },
+    {
+      "id": "maily",
+      "name": "Maily",
+      "bundle": "de.enough.maily",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed",
+      "viewport_check": {
+        "logical_width": 440,
+        "document_width": 440,
+        "horizontal_overflow": false
+      },
+      "browser_document_title": "Maily",
+      "verified_workflows": [
+        "mobile inbox/reader/back",
+        "reply composer",
+        "compose/send to local Sent",
+        "folder navigation/search",
+        "reload persistence"
+      ],
+      "core_function_check": "passed"
+    },
+    {
+      "id": "deltachat",
+      "name": "Delta Chat",
+      "bundle": "chat.delta",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed",
+      "viewport_check": {
+        "logical_width": 440,
+        "document_width": 440,
+        "horizontal_overflow": false
+      },
+      "browser_document_title": "Delta Chat",
+      "verified_workflows": [
+        "contact creation",
+        "local message send",
+        "reload persistence"
+      ],
+      "core_function_check": "passed"
+    },
+    {
+      "id": "fsnotes",
+      "name": "FSNotes",
+      "bundle": "co.fluder.mobile.FSNotes-iOS",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed",
+      "viewport_check": {
+        "logical_width": 440,
+        "document_width": 440,
+        "horizontal_overflow": false
+      },
+      "browser_document_title": "FSNotes",
+      "verified_workflows": [
+        "folder creation/rename",
+        "note editing/search",
+        "archive",
+        "Markdown import/export",
+        "reload persistence"
+      ],
+      "core_function_check": "passed"
+    },
+    {
+      "id": "habit",
+      "name": "Habit",
+      "bundle": "co.nazariizomko.Habit",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed",
+      "viewport_check": {
+        "logical_width": 440,
+        "document_width": 440,
+        "horizontal_overflow": false
+      },
+      "browser_document_title": "Habit",
+      "verified_workflows": [
+        "creation",
+        "rename",
+        "today check-in",
+        "historical check-in",
+        "reload persistence"
+      ],
+      "core_function_check": "passed"
+    },
+    {
+      "id": "flow",
+      "name": "Flow",
+      "bundle": "mn.flow.flow",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed",
+      "viewport_check": {
+        "logical_width": 440,
+        "document_width": 440,
+        "horizontal_overflow": false
+      },
+      "browser_document_title": "Flow",
+      "verified_workflows": [
+        "mobile section navigation",
+        "expense creation",
+        "transaction search/edit",
+        "reload persistence"
+      ],
+      "core_function_check": "passed"
+    },
+    {
+      "id": "openbank",
+      "name": "OpenBank",
+      "bundle": "com.killt.openbank",
+      "mode": "Original ios application frontend, browser adapted",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed",
+      "viewport_check": {
+        "logical_width": 440,
+        "document_width": 440,
+        "horizontal_overflow": false
+      },
+      "browser_document_title": "OpenBank",
+      "verified_workflows": [
+        "transfer form submission",
+        "transfer history",
+        "reload persistence"
+      ],
+      "core_function_check": "passed"
+    },
+    {
+      "id": "openshop",
+      "name": "OpenShop",
+      "bundle": "com.killt.openshop",
+      "mode": "Original ios application frontend, browser adapted",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed",
+      "viewport_check": {
+        "logical_width": 440,
+        "document_width": 440,
+        "horizontal_overflow": false
+      },
+      "browser_document_title": "OpenShop",
+      "verified_workflows": [
+        "cart editing",
+        "checkout/order submission"
+      ],
+      "core_function_check": "passed"
+    },
+    {
+      "id": "opentrip",
+      "name": "OpenTrip",
+      "bundle": "com.killt.opentrip",
+      "mode": "Original ios application frontend, browser adapted",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed",
+      "viewport_check": {
+        "logical_width": 440,
+        "document_width": 440,
+        "horizontal_overflow": false
+      },
+      "browser_document_title": "OpenTrip",
+      "verified_workflows": [
+        "flight search",
+        "result display",
+        "itinerary inspection"
+      ],
+      "core_function_check": "passed"
+    },
+    {
+      "id": "opentwitter",
+      "name": "OpenTwitter",
+      "bundle": "com.killt.opentwitter",
+      "mode": "Original ios application frontend, browser adapted",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed",
+      "viewport_check": {
+        "logical_width": 440,
+        "document_width": 440,
+        "horizontal_overflow": false
+      },
+      "browser_document_title": "OpenTwitter",
+      "verified_workflows": [
+        "post publication",
+        "reload persistence"
+      ],
+      "core_function_check": "passed"
+    },
+    {
+      "id": "openrednote",
+      "name": "OpenNote",
+      "bundle": "com.killt.opennote",
+      "mode": "Original ios application frontend, browser adapted",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed",
+      "viewport_check": {
+        "logical_width": 440,
+        "document_width": 440,
+        "horizontal_overflow": false
+      },
+      "browser_document_title": "OpenNote",
+      "verified_workflows": [
+        "text post publication",
+        "profile display",
+        "reload persistence"
+      ],
+      "core_function_check": "passed"
+    },
+    {
+      "id": "opendriver",
+      "name": "OpenDriver",
+      "bundle": "com.killt.opendriver",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed",
+      "viewport_check": {
+        "logical_width": 440,
+        "document_width": 440,
+        "horizontal_overflow": false
+      },
+      "browser_document_title": "opendriver",
+      "verified_workflows": [
+        "Flutter login using browser adapter"
+      ],
+      "core_function_check": "passed"
+    },
+    {
+      "id": "openphotoedit",
+      "name": "OpenPhotoEdit",
+      "bundle": "com.killt.openphotoedit",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed",
+      "viewport_check": {
+        "logical_width": 440,
+        "document_width": 440,
+        "horizontal_overflow": false
+      },
+      "browser_document_title": "OpenPhotoEdit",
+      "verified_workflows": [
+        "image import",
+        "PNG export"
+      ],
+      "core_function_check": "passed"
+    },
+    {
+      "id": "opennavigation",
+      "name": "OpenNavigation",
+      "bundle": "com.killt.opennavigation",
+      "mode": "Original ios application frontend, browser adapted",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed",
+      "viewport_check": {
+        "logical_width": 440,
+        "document_width": 440,
+        "horizontal_overflow": false
+      },
+      "browser_document_title": "OpenNavigation",
+      "verified_workflows": [
+        "place search",
+        "save place",
+        "reload persistence"
+      ],
+      "core_function_check": "passed"
+    },
+    {
+      "id": "safari",
+      "name": "Safari",
+      "bundle": "com.apple.mobilesafari",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed",
+      "viewport_check": {
+        "logical_width": 440,
+        "document_width": 440,
+        "horizontal_overflow": false
+      },
+      "browser_document_title": "Safari",
+      "verified_workflows": [
+        "navigation URL",
+        "bookmark creation",
+        "reload persistence"
+      ],
+      "core_function_check": "passed"
+    },
+    {
+      "id": "messages",
+      "name": "Messages",
+      "bundle": "com.apple.MobileSMS",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed",
+      "viewport_check": {
+        "logical_width": 440,
+        "document_width": 440,
+        "horizontal_overflow": false
+      },
+      "browser_document_title": "Messages",
+      "verified_workflows": [
+        "contact creation",
+        "local message send",
+        "reload persistence"
+      ],
+      "core_function_check": "passed"
+    }
+  ],
+  "image_launcher_entries": 30,
+  "browser_implementations": 30,
+  "not_implemented": 0,
+  "note": "Original image resources do not imply native feature parity.",
+  "functional_checks": [
+    "Lock screen entry",
+    "Platform-specific native icon catalog",
+    "OpenShop cart and checkout",
+    "OpenNote post publication and persistence",
+    "Calendar event creation, week view and persistence",
+    "OpenDriver login",
+    "Control panel brightness and media volume",
+    "Original SpringBoard page assignment and horizontal paging",
+    "Lock-screen Control Center pull-down"
+  ],
+  "inventory_verification": {
+    "count_scope": "Active third-party app bundles and unique SpringBoard home/dock launchers. The simulator archive does not include its separate runtime SDK or full built-in app binaries.",
+    "active_third_party_bundles": 13,
+    "home_and_dock_launchers": 30,
+    "browser_implementations": 30,
+    "pending_launchers": 0,
+    "third_party": [
+      {
+        "bundle": "com.killt.opentrip",
+        "name": "OpenTrip"
+      },
+      {
+        "bundle": "com.killt.openphotoedit",
+        "name": "OpenPhotoEdit"
+      },
+      {
+        "bundle": "chat.delta",
+        "name": "Delta Chat"
+      },
+      {
+        "bundle": "com.killt.openshop",
+        "name": "OpenShop"
+      },
+      {
+        "bundle": "co.nazariizomko.Habit",
+        "name": "Habit"
+      },
+      {
+        "bundle": "com.killt.opennote",
+        "name": "OpenNote"
+      },
+      {
+        "bundle": "co.fluder.mobile.FSNotes-iOS",
+        "name": "FSNotes"
+      },
+      {
+        "bundle": "de.enough.maily",
+        "name": "Maily"
+      },
+      {
+        "bundle": "com.killt.opennavigation",
+        "name": "OpenNavigation"
+      },
+      {
+        "bundle": "mn.flow.flow",
+        "name": "Flow"
+      },
+      {
+        "bundle": "com.killt.opendriver",
+        "name": "OpenDriver"
+      },
+      {
+        "bundle": "com.killt.opentwitter",
+        "name": "OpenTwitter"
+      },
+      {
+        "bundle": "com.killt.openbank",
+        "name": "OpenBank"
+      }
+    ],
+    "home_bundles": [
+      "com.apple.mobilecal",
+      "com.apple.mobileslideshow",
+      "com.apple.reminders",
+      "com.apple.news",
+      "com.apple.Maps",
+      "com.apple.Health",
+      "com.apple.Passbook",
+      "com.apple.Preferences",
+      "com.apple.Fitness",
+      "com.apple.Bridge",
+      "com.apple.MobileAddressBook",
+      "com.apple.DocumentsApp",
+      "com.apple.Preview",
+      "com.apple.shortcuts",
+      "com.apple.Passwords",
+      "de.enough.maily",
+      "chat.delta",
+      "co.fluder.mobile.FSNotes-iOS",
+      "co.nazariizomko.Habit",
+      "mn.flow.flow",
+      "com.killt.openbank",
+      "com.killt.openshop",
+      "com.killt.opentrip",
+      "com.killt.opentwitter",
+      "com.killt.opennote",
+      "com.killt.opendriver",
+      "com.killt.openphotoedit",
+      "com.killt.opennavigation",
+      "com.apple.mobilesafari",
+      "com.apple.MobileSMS"
+    ],
+    "historical_uninstalled_bundles": [
+      "local.opennavigation.ios.launcher"
+    ],
+    "pending": [],
+    "verified": true,
+    "paper_task_app_presence": {
+      "QuickShop": "No active bundle or launcher under this name; image contains OpenShop",
+      "Daybreak": "No active bundle or launcher in this image"
+    }
+  },
+  "quality_verification": {
+    "browser_apps_with_tested_workflows": 30,
+    "native_full_feature_parity": false,
+    "note": "Only the listed workflows were tested. This is not a claim of complete native app parity."
+  }
+}

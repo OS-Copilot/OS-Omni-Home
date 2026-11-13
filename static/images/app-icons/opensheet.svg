@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="OpenSheet">
+  <defs>
+    <linearGradient id="sheet-bg" x1="20" x2="108" y1="12" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#31a36a"/>
+      <stop offset="1" stop-color="#185c37"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="26" fill="url(#sheet-bg)"/>
+  <path d="M34 22h44l20 20v64H34z" fill="#fff"/>
+  <path d="M78 22v20h20z" fill="#cfe9dc"/>
+  <rect x="44" y="52" width="44" height="40" rx="3" fill="#e9f6ef" stroke="#217346" stroke-width="4"/>
+  <path d="M44 65h44M44 78h44M58 52v40M73 52v40" stroke="#217346" stroke-width="4"/>
+  <path d="M25 78l13-18h-9l8-16h20L43 64h10L39 84z" fill="#217346"/>
+</svg>

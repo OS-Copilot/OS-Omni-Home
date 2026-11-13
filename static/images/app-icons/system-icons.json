@@ -1,0 +1,380 @@
+{
+  "calendar": {
+    "icon_name": "org.gnome.Calendar",
+    "source": "/usr/share/icons/Yaru/256x256/apps/org.gnome.Calendar.png",
+    "asset": "static/images/app-icons/calendar.png",
+    "sha256": "6051ce38e1ec8cccf7a44731d2b243997b32bb416ed1f852ba3f22c0d2d83da6",
+    "mapping": "system icon"
+  },
+  "contacts": {
+    "icon_name": "org.gnome.Contacts",
+    "source": "/usr/share/icons/Yaru/256x256/apps/org.gnome.Contacts.png",
+    "asset": "static/images/app-icons/contacts.png",
+    "sha256": "f580cee69aa0441bd44229ac3e636497330744ddbd3ca7c93abc04f1b657a000",
+    "mapping": "system icon"
+  },
+  "reminders": {
+    "icon_name": "org.gnome.Todo",
+    "source": "/usr/share/icons/Yaru/256x256/apps/org.gnome.Todo.png",
+    "asset": "static/images/app-icons/reminders.png",
+    "sha256": "31672a69371c496919582514af828eddffff0fbd6c24ba3323f4a55fed7a2678",
+    "mapping": "system icon"
+  },
+  "notes": {
+    "icon_name": "org.gnome.gedit",
+    "source": "/usr/share/icons/Yaru/256x256/apps/org.gnome.gedit.png",
+    "asset": "static/images/app-icons/notes.png",
+    "sha256": "f42001b84524011258cd8be10203c4b3d54c52cd3cf3bc47244755579ec21344",
+    "mapping": "related tool"
+  },
+  "files": {
+    "icon_name": "org.gnome.Nautilus",
+    "source": "/usr/share/icons/Yaru/256x256/apps/org.gnome.Nautilus.png",
+    "asset": "static/images/app-icons/files.png",
+    "sha256": "99aec34aa768650c92ce0943da4ce3d534de5703d80ea6cf25cdf9014c1528af",
+    "mapping": "system icon"
+  },
+  "calculator": {
+    "icon_name": "org.gnome.Calculator",
+    "source": "/usr/share/icons/Yaru/256x256/apps/org.gnome.Calculator.png",
+    "asset": "static/images/app-icons/calculator.png",
+    "sha256": "d3d0d288df196dc87f340a30079c729481547d5ea57f8ef86d31e6378a7eb2d4",
+    "mapping": "system icon"
+  },
+  "clock": {
+    "icon_name": "org.gnome.clocks",
+    "source": "/usr/share/icons/Yaru/256x256/apps/org.gnome.clocks.png",
+    "asset": "static/images/app-icons/clock.png",
+    "sha256": "37b8ef783a4b151cd94f9d7944d411c02cd8d33d77342c77776a57b9cb5d093a",
+    "mapping": "system icon"
+  },
+  "settings": {
+    "icon_name": "org.gnome.Settings",
+    "source": "/usr/share/icons/Yaru/256x256/apps/org.gnome.Settings.png",
+    "asset": "static/images/app-icons/settings.png",
+    "sha256": "1d76b627ebcae3f1f3c01e5b7bec2fb4b0442dd327b8ccd3531e50cd3afe8fe5",
+    "mapping": "system icon"
+  },
+  "gallery": {
+    "icon_name": "org.gnome.eog",
+    "source": "/usr/share/icons/Yaru/256x256/apps/org.gnome.eog.png",
+    "asset": "static/images/app-icons/gallery.png",
+    "sha256": "d5a89685834283d30e49354f70f2662eac7f4c13ed256e1ef88e68d03424f6ce",
+    "mapping": "system icon"
+  },
+  "habits": {
+    "icon_name": "org.gnome.Todo",
+    "source": "/usr/share/icons/Yaru/256x256/apps/org.gnome.Todo.png",
+    "asset": "static/images/app-icons/habits.png",
+    "sha256": "31672a69371c496919582514af828eddffff0fbd6c24ba3323f4a55fed7a2678",
+    "mapping": "related tool"
+  },
+  "drawing": {
+    "icon_name": "libreoffice-draw",
+    "source": "/usr/share/icons/Yaru/256x256/apps/libreoffice-draw.png",
+    "asset": "static/images/app-icons/drawing.png",
+    "sha256": "111f1963a0a80b68067188dd8195936af310f80ded52c35618b394a3ba72fd2c",
+    "mapping": "related tool"
+  },
+  "openphoto": {
+    "icon_name": "gimp",
+    "source": "/usr/share/icons/hicolor/256x256/apps/gimp.png",
+    "asset": "static/images/app-icons/openphoto.png",
+    "sha256": "01c0036415bf39fc3682a56aa401fa2a25ecc22e3a2caf89136ca5faa90561f0",
+    "mapping": "related tool"
+  },
+  "deltachat": {
+    "icon_name": "deltachat-desktop",
+    "source": "/usr/share/icons/hicolor/128x128/apps/deltachat-desktop.png",
+    "asset": "static/images/app-icons/deltachat.png",
+    "sha256": "8e6ee3c22e14102021d143375e230a42acbbf318a34841e3a3275f31ffaa6902",
+    "mapping": "system icon"
+  },
+  "drawio": {
+    "icon_name": "drawio",
+    "source": "/usr/share/icons/hicolor/128x128/apps/drawio.png",
+    "asset": "static/images/app-icons/drawio.png",
+    "sha256": "39356154162b97d0679c461d415acfcfbaccd55765e11c8f52c727af4a4be8da",
+    "mapping": "system icon"
+  },
+  "libreoffice-draw": {
+    "icon_name": "libreoffice-draw",
+    "source": "/usr/share/icons/Yaru/256x256/apps/libreoffice-draw.png",
+    "asset": "static/images/app-icons/libreoffice-draw.png",
+    "sha256": "111f1963a0a80b68067188dd8195936af310f80ded52c35618b394a3ba72fd2c",
+    "mapping": "system icon"
+  },
+  "spotube": {
+    "icon_name": "org.gnome.Rhythmbox",
+    "source": "/usr/share/icons/Yaru/256x256/apps/org.gnome.Rhythmbox.png",
+    "asset": "static/images/app-icons/spotube.png",
+    "sha256": "af46b76c7da4c816ee6d76437d64e4ea8d9f7673fed6312fe218ac1a749bac1d",
+    "mapping": "system icon"
+  },
+  "vlc": {
+    "icon_name": "vlc",
+    "source": "/usr/share/icons/hicolor/128x128/apps/vlc.png",
+    "asset": "static/images/app-icons/vlc.png",
+    "sha256": "731d5a34a98fee76f9e1aacaa524b3e0ed0cf0ecac3e2f9e2703b38c4a4bc518",
+    "mapping": "system icon"
+  },
+  "mpv": {
+    "icon_name": "mpv",
+    "source": "/usr/share/icons/hicolor/128x128/apps/mpv.png",
+    "asset": "static/images/app-icons/mpv.png",
+    "sha256": "c21fa20771ce7c25caa91cad89799088e0802d6a0f2261f6fa252fde75696f66",
+    "mapping": "system icon"
+  },
+  "rhythmbox": {
+    "icon_name": "org.gnome.Rhythmbox",
+    "source": "/usr/share/icons/Yaru/256x256/apps/org.gnome.Rhythmbox.png",
+    "asset": "static/images/app-icons/rhythmbox.png",
+    "sha256": "af46b76c7da4c816ee6d76437d64e4ea8d9f7673fed6312fe218ac1a749bac1d",
+    "mapping": "system icon"
+  },
+  "chrome": {
+    "icon_name": "google-chrome",
+    "source": "/usr/share/icons/hicolor/128x128/apps/google-chrome.png",
+    "asset": "static/images/app-icons/chrome.png",
+    "sha256": "5cd4e910a9c098f73ca24e662e66eda3222142e9981e63b14f4c5ffb98614de2",
+    "mapping": "system icon"
+  },
+  "safari": {
+    "icon_name": "google-chrome",
+    "source": "/usr/share/icons/hicolor/128x128/apps/google-chrome.png",
+    "asset": "static/images/app-icons/safari.png",
+    "sha256": "5cd4e910a9c098f73ca24e662e66eda3222142e9981e63b14f4c5ffb98614de2",
+    "mapping": "system icon"
+  },
+  "document-viewer": {
+    "icon_name": "org.gnome.Evince",
+    "source": "/usr/share/icons/Yaru/256x256/apps/org.gnome.Evince.png",
+    "asset": "static/images/app-icons/document-viewer.png",
+    "sha256": "478076cacf456791c32e13077be66dbae2878e5c2d9ccacf84181289710121cb",
+    "mapping": "system icon"
+  },
+  "terminal": {
+    "icon_name": "org.gnome.Terminal",
+    "source": "/usr/share/icons/Yaru/256x256/apps/org.gnome.Terminal.png",
+    "asset": "static/images/app-icons/terminal.png",
+    "sha256": "d48a24bacf3379fc683d3eb0bf2fb4b478451526fea2dc39e1ef9aaa7bc4c3cc",
+    "mapping": "system icon"
+  },
+  "thunderbird": {
+    "icon_name": "thunderbird",
+    "source": "/usr/share/icons/hicolor/128x128/apps/thunderbird.png",
+    "asset": "static/images/app-icons/thunderbird.png",
+    "sha256": "64214367f8f8633e3a5be46b18d2bb608d7a76a45cdc5373a5da875013c6d600",
+    "mapping": "system icon"
+  },
+  "k9": {
+    "icon_name": "thunderbird",
+    "source": "/usr/share/icons/hicolor/128x128/apps/thunderbird.png",
+    "asset": "static/images/app-icons/k9.png",
+    "sha256": "64214367f8f8633e3a5be46b18d2bb608d7a76a45cdc5373a5da875013c6d600",
+    "mapping": "system icon"
+  },
+  "maily": {
+    "icon_name": "thunderbird",
+    "source": "/usr/share/icons/hicolor/128x128/apps/thunderbird.png",
+    "asset": "static/images/app-icons/maily.png",
+    "sha256": "64214367f8f8633e3a5be46b18d2bb608d7a76a45cdc5373a5da875013c6d600",
+    "mapping": "system icon"
+  },
+  "fsnotes": {
+    "icon_name": "org.gnome.gedit",
+    "source": "/usr/share/icons/Yaru/256x256/apps/org.gnome.gedit.png",
+    "asset": "static/images/app-icons/fsnotes.png",
+    "sha256": "f42001b84524011258cd8be10203c4b3d54c52cd3cf3bc47244755579ec21344",
+    "mapping": "system icon"
+  },
+  "markor": {
+    "icon_name": "org.gnome.gedit",
+    "source": "/usr/share/icons/Yaru/256x256/apps/org.gnome.gedit.png",
+    "asset": "static/images/app-icons/markor.png",
+    "sha256": "f42001b84524011258cd8be10203c4b3d54c52cd3cf3bc47244755579ec21344",
+    "mapping": "system icon"
+  },
+  "notepad": {
+    "icon_name": "org.gnome.gedit",
+    "source": "/usr/share/icons/Yaru/256x256/apps/org.gnome.gedit.png",
+    "asset": "static/images/app-icons/notepad.png",
+    "sha256": "f42001b84524011258cd8be10203c4b3d54c52cd3cf3bc47244755579ec21344",
+    "mapping": "system icon"
+  },
+  "notepadqq": {
+    "icon_name": "org.gnome.gedit",
+    "source": "/usr/share/icons/Yaru/256x256/apps/org.gnome.gedit.png",
+    "asset": "static/images/app-icons/notepadqq.png",
+    "sha256": "f42001b84524011258cd8be10203c4b3d54c52cd3cf3bc47244755579ec21344",
+    "mapping": "system icon"
+  },
+  "textedit": {
+    "icon_name": "org.gnome.gedit",
+    "source": "/usr/share/icons/Yaru/256x256/apps/org.gnome.gedit.png",
+    "asset": "static/images/app-icons/textedit.png",
+    "sha256": "f42001b84524011258cd8be10203c4b3d54c52cd3cf3bc47244755579ec21344",
+    "mapping": "system icon"
+  },
+  "vim": {
+    "icon_name": "gvim",
+    "source": "/usr/share/icons/hicolor/scalable/apps/gvim.svg",
+    "asset": "static/images/app-icons/vim.svg",
+    "sha256": "4e51accaa8b0161313d257dd87d6d8b192789ca215e1b9357a3863bccaaa6650",
+    "mapping": "system icon"
+  },
+  "actual-budget": {
+    "icon_name": "/home/user/.local/share/icons/osomni-desktop/actual-budget.png",
+    "source": "/home/user/.local/share/icons/osomni-desktop/actual-budget.png",
+    "asset": "static/images/app-icons/actual-budget.png",
+    "sha256": "32be13baf63691f8e1c641c6faf2720d5818d76b86b39459fac07f8718309f63",
+    "mapping": "system icon"
+  },
+  "flow": {
+    "icon_name": "applications-office",
+    "source": "/usr/share/icons/Yaru/256x256/apps/applications-office.png",
+    "asset": "static/images/app-icons/flow.png",
+    "sha256": "6d9e26237c5c9c01b222518c07081465d3d717db87393eae5760bb765200d201",
+    "mapping": "system icon"
+  },
+  "oinkoin": {
+    "icon_name": "applications-office",
+    "source": "/usr/share/icons/Yaru/256x256/apps/applications-office.png",
+    "asset": "static/images/app-icons/oinkoin.png",
+    "sha256": "6d9e26237c5c9c01b222518c07081465d3d717db87393eae5760bb765200d201",
+    "mapping": "system icon"
+  },
+  "quickshop": {
+    "icon_name": "/home/user/.local/share/icons/osomni-desktop/openshop.png",
+    "source": "/home/user/.local/share/icons/osomni-desktop/openshop.png",
+    "asset": "static/images/app-icons/quickshop.png",
+    "sha256": "9f62645d59e25f4c2225987d0428b8cc8f10b035c6cab07f6fcea3a773c0a8ae",
+    "mapping": "system icon"
+  },
+  "tasks-org": {
+    "icon_name": "org.gnome.Todo",
+    "source": "/usr/share/icons/Yaru/256x256/apps/org.gnome.Todo.png",
+    "asset": "static/images/app-icons/tasks-org.png",
+    "sha256": "31672a69371c496919582514af828eddffff0fbd6c24ba3323f4a55fed7a2678",
+    "mapping": "system icon"
+  },
+  "fossify-calendar": {
+    "icon_name": "org.gnome.Calendar",
+    "source": "/usr/share/icons/Yaru/256x256/apps/org.gnome.Calendar.png",
+    "asset": "static/images/app-icons/fossify-calendar.png",
+    "sha256": "6051ce38e1ec8cccf7a44731d2b243997b32bb416ed1f852ba3f22c0d2d83da6",
+    "mapping": "system icon"
+  },
+  "fossify-gallery": {
+    "icon_name": "org.gnome.eog",
+    "source": "/usr/share/icons/Yaru/256x256/apps/org.gnome.eog.png",
+    "asset": "static/images/app-icons/fossify-gallery.png",
+    "sha256": "d5a89685834283d30e49354f70f2662eac7f4c13ed256e1ef88e68d03424f6ce",
+    "mapping": "system icon"
+  },
+  "material-files": {
+    "icon_name": "org.gnome.Nautilus",
+    "source": "/usr/share/icons/Yaru/256x256/apps/org.gnome.Nautilus.png",
+    "asset": "static/images/app-icons/material-files.png",
+    "sha256": "99aec34aa768650c92ce0943da4ce3d534de5703d80ea6cf25cdf9014c1528af",
+    "mapping": "system icon"
+  },
+  "habit": {
+    "icon_name": "org.gnome.Todo",
+    "source": "/usr/share/icons/Yaru/256x256/apps/org.gnome.Todo.png",
+    "asset": "static/images/app-icons/habit.png",
+    "sha256": "31672a69371c496919582514af828eddffff0fbd6c24ba3323f4a55fed7a2678",
+    "mapping": "system icon"
+  },
+  "photos": {
+    "icon_name": "shotwell",
+    "source": "/usr/share/icons/Yaru/256x256/apps/shotwell.png",
+    "asset": "static/images/app-icons/photos.png",
+    "sha256": "e670cc2b888af0a3a93bbba65db253e605b441f0a5acf0e88118bad89066318d",
+    "mapping": "system icon"
+  },
+  "maps": {
+    "icon_name": "marble",
+    "source": "/usr/share/icons/hicolor/128x128/apps/marble.png",
+    "asset": "static/images/app-icons/maps.png",
+    "sha256": "4474f498b5926e2d752b75b802f7fb7cd5a414f85f37aa4db9f123c0548ef66c",
+    "mapping": "system icon"
+  },
+  "marble": {
+    "icon_name": "marble",
+    "source": "/usr/share/icons/hicolor/128x128/apps/marble.png",
+    "asset": "static/images/app-icons/marble.png",
+    "sha256": "4474f498b5926e2d752b75b802f7fb7cd5a414f85f37aa4db9f123c0548ef66c",
+    "mapping": "system icon"
+  },
+  "libreoffice-writer": {
+    "icon_name": "libreoffice-writer",
+    "source": "/usr/share/icons/Yaru/256x256/apps/libreoffice-writer.png",
+    "asset": "static/images/app-icons/libreoffice-writer.png",
+    "sha256": "6204a4b5b1a371795a252736da115a5fd702ff644eb8375cbfc39825a78db972",
+    "mapping": "system icon"
+  },
+  "libreoffice-calc": {
+    "icon_name": "libreoffice-calc",
+    "source": "/usr/share/icons/Yaru/256x256/apps/libreoffice-calc.png",
+    "asset": "static/images/app-icons/libreoffice-calc.png",
+    "sha256": "9d97cb85a4c0f66aab19ea15dbff2c1b1d7d4e153214f2515bf7437e0236cd21",
+    "mapping": "system icon"
+  },
+  "libreoffice-impress": {
+    "icon_name": "libreoffice-impress",
+    "source": "/usr/share/icons/Yaru/256x256/apps/libreoffice-impress.png",
+    "asset": "static/images/app-icons/libreoffice-impress.png",
+    "sha256": "60ade2540aa4872aea3d7f3d111cf84c87f195f0c2cf85d424a5a36516f7b01b",
+    "mapping": "system icon"
+  },
+  "libreoffice": {
+    "icon_name": "libreoffice-startcenter",
+    "source": "/usr/share/icons/Yaru/256x256/apps/libreoffice-startcenter.png",
+    "asset": "static/images/app-icons/libreoffice.png",
+    "sha256": "ed6bbf51c2bc18a653e716e3bf4bc52d9f237f4374b0ae0cfe6962097851746e",
+    "mapping": "system icon"
+  },
+  "gimp": {
+    "icon_name": "gimp",
+    "source": "/usr/share/icons/hicolor/256x256/apps/gimp.png",
+    "asset": "static/images/app-icons/gimp.png",
+    "sha256": "01c0036415bf39fc3682a56aa401fa2a25ecc22e3a2caf89136ca5faa90561f0",
+    "mapping": "system icon"
+  },
+  "blender": {
+    "icon_name": "blender",
+    "source": "/usr/share/icons/hicolor/scalable/apps/blender.svg",
+    "asset": "static/images/app-icons/blender.svg",
+    "sha256": "3d2c63ab279380802b1258f54908ebc565f3609a41abd4ec9198e5c20dc526d2",
+    "mapping": "system icon"
+  },
+  "wireshark": {
+    "icon_name": "org.wireshark.Wireshark",
+    "source": "/usr/share/icons/hicolor/128x128/apps/org.wireshark.Wireshark.png",
+    "asset": "static/images/app-icons/wireshark.png",
+    "sha256": "f05dffa941bd9d132cc8581c69abd1660797c4c86ef34bb45e9b061cadd3eb29",
+    "mapping": "system icon"
+  },
+  "vscode": {
+    "icon_name": "vscode",
+    "source": "/usr/share/pixmaps/vscode.png",
+    "asset": "static/images/app-icons/vscode.png",
+    "sha256": "7537330cec94b308feaa9bb66db45b5554b8379ec7dce83990521d2860bca4b2",
+    "mapping": "system icon"
+  },
+  "vscodium": {
+    "icon_name": "vscode",
+    "source": "/usr/share/pixmaps/vscode.png",
+    "asset": "static/images/app-icons/vscodium.png",
+    "sha256": "7537330cec94b308feaa9bb66db45b5554b8379ec7dce83990521d2860bca4b2",
+    "mapping": "system icon"
+  },
+  "zotero": {
+    "icon_name": "/home/user/Applications/Zotero_linux-x86_64/icons/icon128.png",
+    "source": "/home/user/Applications/Zotero_linux-x86_64/icons/icon128.png",
+    "asset": "static/images/app-icons/zotero.png",
+    "sha256": "88dcca982b4b87fac978377727a5f521b26727fdec01b6f3977eb02755d5b3bc",
+    "mapping": "system icon"
+  }
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="OpenMail">
+  <rect width="512" height="512" rx="112" fill="#0f766e"/>
+  <path d="M112 154h288c24 0 44 20 44 44v156c0 24-20 44-44 44H112c-24 0-44-20-44-44V198c0-24 20-44 44-44Z" fill="#f8fafc"/>
+  <path d="M91 193l144 111c12 9 30 9 42 0l144-111" fill="none" stroke="#0f766e" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M108 368l104-88m192 88-104-88" fill="none" stroke="#14b8a6" stroke-width="28" stroke-linecap="round"/>
+  <circle cx="392" cy="144" r="54" fill="#f97316"/>
+  <path d="M371 144h42M392 123v42" stroke="#fff7ed" stroke-width="18" stroke-linecap="round"/>
+</svg>

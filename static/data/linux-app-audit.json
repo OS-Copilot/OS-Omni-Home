@@ -1,0 +1,911 @@
+{
+  "platform": "linux",
+  "source": "OS-Omni Ubuntu x86 v3 image",
+  "display": {
+    "width": 1920,
+    "height": 1080,
+    "timezone": "Asia/Hong_Kong"
+  },
+  "desktop_entries_inspected": 83,
+  "catalog_entries": 69,
+  "browser_implementations_checked": 37,
+  "not_implemented_or_broken": 32,
+  "note": "加载检查不代表原生功能一致。每项保留已确认的功能缺口；未接入项不计为通过。",
+  "applications": [
+    {
+      "id": "marble",
+      "name": "Marble",
+      "desktop_entry": "/home/user/Desktop/Marble.desktop",
+      "native_executable_exists": true,
+      "status": "浏览器重建，功能不完整",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "当前使用 OpenNavigation 替代界面",
+        "Marble 球体、地图主题、KML/GPX 和完整地理搜索未还原"
+      ]
+    },
+    {
+      "id": "openfood",
+      "name": "OpenFood",
+      "desktop_entry": "/home/user/Desktop/OpenFood.desktop",
+      "native_executable_exists": true,
+      "status": "镜像网页客户端，浏览器适配",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "演示业务记录保存在访客浏览器中，未验证与原生程序的全部功能一致"
+      ]
+    },
+    {
+      "id": "vlc",
+      "name": "VLC",
+      "desktop_entry": "/home/user/Desktop/VLC.desktop",
+      "native_executable_exists": true,
+      "status": "浏览器重建，功能不完整",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "使用本地媒体导入/播放队列替代",
+        "原生媒体库、流媒体、均衡器及完整格式支持未还原"
+      ]
+    },
+    {
+      "id": "blender",
+      "name": "Blender",
+      "desktop_entry": "/home/user/Desktop/Blender.desktop",
+      "native_executable_exists": true,
+      "status": "镜像网页对应版本，非原生客户端",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "使用镜像 OpenBlender 网页对应版本",
+        "原生 Blender、完整 blend 格式、编辑器和渲染器未还原"
+      ]
+    },
+    {
+      "id": "actual-budget",
+      "name": "Actual Budget",
+      "desktop_entry": "/home/user/Desktop/Actual Budget.desktop",
+      "native_executable_exists": true,
+      "status": "镜像网页对应版本，非原生客户端",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "使用镜像 OpenFinance 网页对应版本",
+        "原生预算数据库、完整预算表和 Actual 客户端界面未还原"
+      ]
+    },
+    {
+      "id": "wireshark",
+      "name": "Wireshark",
+      "desktop_entry": "/home/user/Desktop/Wireshark.desktop",
+      "native_executable_exists": true,
+      "status": "镜像网页对应版本，非原生客户端",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "使用镜像 OpenWireshark 网页对应版本",
+        "原生抓包、网络接口及完整协议解析未接入"
+      ]
+    },
+    {
+      "id": "thunderbird",
+      "name": "Thunderbird Mail",
+      "desktop_entry": "/home/user/Desktop/Thunderbird Mail.desktop",
+      "native_executable_exists": true,
+      "status": "镜像网页对应版本，非原生客户端",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "使用镜像 OpenMail 网页对应版本",
+        "原生 Thunderbird 界面、账户、邮件同步和日历扩展未还原"
+      ]
+    },
+    {
+      "id": "openbank",
+      "name": "OpenBank",
+      "desktop_entry": "/home/user/Desktop/OpenBank.desktop",
+      "native_executable_exists": true,
+      "status": "镜像网页客户端，浏览器适配",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "演示业务记录保存在访客浏览器中，未验证与原生程序的全部功能一致"
+      ]
+    },
+    {
+      "id": "libreoffice-calc",
+      "name": "LibreOffice Calc",
+      "desktop_entry": "/home/user/Desktop/LibreOffice Calc.desktop",
+      "native_executable_exists": true,
+      "status": "镜像网页对应版本，非原生客户端",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "使用镜像 OpenSheet 网页对应版本",
+        "不是原生 Calc，完整函数、数据透视表、宏及复杂工作簿兼容性未验证"
+      ]
+    },
+    {
+      "id": "libreoffice-draw",
+      "name": "LibreOffice Draw",
+      "desktop_entry": "/home/user/Desktop/LibreOffice Draw.desktop",
+      "native_executable_exists": true,
+      "status": "浏览器重建，功能不完整",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "目前仍为简化流程图工作流",
+        "原生 Draw 页面、形状库及文件格式未还原"
+      ]
+    },
+    {
+      "id": "drawio",
+      "name": "drawio",
+      "desktop_entry": "/home/user/Desktop/drawio.desktop",
+      "native_executable_exists": true,
+      "status": "镜像原版网页编辑器",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Electron 本地文件系统及桌面专用导出接口已改为浏览器存储/下载"
+      ]
+    },
+    {
+      "id": "vscode",
+      "name": "Visual Studio Code",
+      "desktop_entry": "/home/user/Desktop/Visual Studio Code.desktop",
+      "native_executable_exists": true,
+      "status": "镜像网页对应版本，非原生客户端",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "使用镜像 OpenCode 网页对应版本",
+        "原生扩展宿主、调试器、终端和文件系统未接入"
+      ]
+    },
+    {
+      "id": "opennavigation",
+      "name": "OpenNavigation",
+      "desktop_entry": "/home/user/Desktop/OpenNavigation.desktop",
+      "native_executable_exists": true,
+      "status": "镜像网页客户端，浏览器适配",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "地图仅覆盖镜像中的缓存区域",
+        "路线是明确标注的演示估算，未接原版道路/公交路由数据"
+      ]
+    },
+    {
+      "id": "libreoffice-writer",
+      "name": "LibreOffice Writer",
+      "desktop_entry": "/home/user/Desktop/LibreOffice Writer.desktop",
+      "native_executable_exists": true,
+      "status": "镜像网页对应版本，非原生客户端",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "使用镜像 OpenDoc 网页对应版本",
+        "不是原生 Writer，复杂文档、宏、打印及高级格式功能未完整还原"
+      ]
+    },
+    {
+      "id": "openrednote",
+      "name": "OpenNote",
+      "desktop_entry": "/home/user/Desktop/OpenNote.desktop",
+      "native_executable_exists": true,
+      "status": "镜像网页客户端，浏览器适配",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "演示业务记录保存在访客浏览器中，未验证与原生程序的全部功能一致"
+      ]
+    },
+    {
+      "id": "opentwitter",
+      "name": "OpenTwitter",
+      "desktop_entry": "/home/user/Desktop/OpenTwitter.desktop",
+      "native_executable_exists": true,
+      "status": "镜像网页客户端，浏览器适配",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "演示业务记录保存在访客浏览器中，未验证与原生程序的全部功能一致"
+      ]
+    },
+    {
+      "id": "libreoffice-impress",
+      "name": "LibreOffice Impress",
+      "desktop_entry": "/home/user/Desktop/LibreOffice Impress.desktop",
+      "native_executable_exists": true,
+      "status": "镜像网页对应版本，非原生客户端",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "使用镜像 OpenSlide 网页对应版本",
+        "不是原生 Impress，动画、母版及复杂演示兼容性未完整还原"
+      ]
+    },
+    {
+      "id": "deltachat",
+      "name": "DeltaChat",
+      "desktop_entry": "/home/user/Desktop/DeltaChat.desktop",
+      "native_executable_exists": true,
+      "status": "浏览器重建，功能不完整",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "目前为本地聊天工作流，未复用原生客户端",
+        "真实邮件账户、同步、附件及完整群组能力未接入"
+      ]
+    },
+    {
+      "id": "zotero",
+      "name": "Zotero",
+      "desktop_entry": "/home/user/Desktop/Zotero.desktop",
+      "native_executable_exists": true,
+      "status": "镜像网页对应版本，非原生客户端",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "使用镜像 OpenZotero 网页对应版本",
+        "原生数据库、完整插件/同步及文档编辑器集成未还原"
+      ]
+    },
+    {
+      "id": "chrome",
+      "name": "Google Chrome",
+      "desktop_entry": "/home/user/Desktop/Google Chrome.desktop",
+      "native_executable_exists": true,
+      "status": "浏览器重建，功能不完整",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "目前为网页嵌入和书签工作流",
+        "Chrome 标签、扩展、下载历史及被禁止嵌入的网站未还原"
+      ]
+    },
+    {
+      "id": "opentrip",
+      "name": "OpenTrip",
+      "desktop_entry": "/home/user/Desktop/OpenTrip.desktop",
+      "native_executable_exists": true,
+      "status": "镜像网页客户端，浏览器适配",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "演示业务记录保存在访客浏览器中，未验证与原生程序的全部功能一致"
+      ]
+    },
+    {
+      "id": "opendriver",
+      "name": "OpenDriver",
+      "desktop_entry": "/home/user/Desktop/OpenDriver.desktop",
+      "native_executable_exists": true,
+      "status": "原版 Flutter 界面，演示后端",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "原版 Flutter 页面使用浏览器演示后端",
+        "真实调度/支付未接入，原版地图和完整原生环境兼容性未验证"
+      ]
+    },
+    {
+      "id": "openshop",
+      "name": "OpenShop",
+      "desktop_entry": "/home/user/Desktop/OpenShop.desktop",
+      "native_executable_exists": true,
+      "status": "镜像网页客户端，浏览器适配",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "演示业务记录保存在访客浏览器中，未验证与原生程序的全部功能一致"
+      ]
+    },
+    {
+      "id": "gimp",
+      "name": "GIMP",
+      "desktop_entry": "/home/user/Desktop/GIMP.desktop",
+      "native_executable_exists": true,
+      "status": "镜像网页对应版本，非原生客户端",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "使用镜像 OpenPhotoEdit 网页对应版本",
+        "原生 GIMP 界面、XCF、插件及完整图像操作未还原"
+      ]
+    },
+    {
+      "id": "document-viewer",
+      "name": "Document Viewer",
+      "desktop_entry": "/usr/share/applications/org.gnome.Evince.desktop",
+      "native_executable_exists": true,
+      "status": "浏览器重建，功能不完整",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "使用浏览器 PDF 插件",
+        "原生最近文件、批注、签名及其他 Evince 支持格式未还原"
+      ]
+    },
+    {
+      "id": "files",
+      "name": "Files",
+      "desktop_entry": "/usr/share/applications/org.gnome.Nautilus.desktop",
+      "native_executable_exists": true,
+      "status": "浏览器重建，功能不完整",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "镜像文件系统尚未挂载到浏览器工作区",
+        "文件权限、挂载、回收站等原生功能未实现"
+      ]
+    },
+    {
+      "id": "notes",
+      "name": "Text Editor",
+      "desktop_entry": "/usr/share/applications/org.gnome.gedit.desktop",
+      "native_executable_exists": true,
+      "status": "浏览器重建，功能不完整",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "原生最近文件和文件系统未导入",
+        "语法高亮、插件和完整 gedit 设置未实现"
+      ]
+    },
+    {
+      "id": "vim",
+      "name": "Vim",
+      "desktop_entry": "/usr/share/applications/vim.desktop",
+      "native_executable_exists": true,
+      "status": "浏览器重建，功能不完整",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "当前仍为通用编辑器替代",
+        "Vim 模式、命令、键位及插件未还原"
+      ]
+    },
+    {
+      "id": "reminders",
+      "name": "To Do",
+      "desktop_entry": "/usr/share/applications/org.gnome.Todo.desktop",
+      "native_executable_exists": true,
+      "status": "浏览器重建，功能不完整",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "本地待办列表，非原生 GNOME To Do",
+        "原生账户同步、列表分组和完整子任务能力未还原"
+      ]
+    },
+    {
+      "id": "rhythmbox",
+      "name": "Rhythmbox",
+      "desktop_entry": "/usr/share/applications/rhythmbox.desktop",
+      "native_executable_exists": true,
+      "status": "浏览器重建，功能不完整",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "使用本地媒体导入/播放队列替代",
+        "原生媒体库、流媒体、均衡器及完整格式支持未还原"
+      ]
+    },
+    {
+      "id": "mpv",
+      "name": "mpv Media Player",
+      "desktop_entry": "/usr/share/applications/mpv.desktop",
+      "native_executable_exists": true,
+      "status": "浏览器重建，功能不完整",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "使用本地媒体导入/播放队列替代",
+        "原生媒体库、流媒体、均衡器及完整格式支持未还原"
+      ]
+    },
+    {
+      "id": "shotwell",
+      "name": "Shotwell",
+      "desktop_entry": "/usr/share/applications/shotwell.desktop",
+      "native_executable_exists": true,
+      "status": "浏览器重建，功能不完整",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "浏览器相册，非原生 Shotwell",
+        "原始照片库、标签、EXIF 和完整照片管理功能未导入/还原"
+      ]
+    },
+    {
+      "id": "calendar",
+      "name": "Calendar",
+      "desktop_entry": "/usr/share/applications/org.gnome.Calendar.desktop",
+      "native_executable_exists": true,
+      "status": "浏览器重建，功能不完整",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "原生日历数据库尚未导入",
+        "重复事件、在线同步及联系人生日联动未实现"
+      ]
+    },
+    {
+      "id": "calculator",
+      "name": "Calculator",
+      "desktop_entry": "/usr/share/applications/org.gnome.Calculator.desktop",
+      "native_executable_exists": true,
+      "status": "浏览器重建，功能不完整",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "仅基本表达式和历史记录可用",
+        "高级、金融和编程模式及单位换算未还原"
+      ]
+    },
+    {
+      "id": "settings",
+      "name": "Settings",
+      "desktop_entry": "/usr/share/applications/gnome-control-center.desktop",
+      "native_executable_exists": true,
+      "status": "浏览器重建，功能不完整",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "目前只支持浏览器外观设置",
+        "GNOME 网络、声音、用户、显示器、隐私等系统面板未还原"
+      ]
+    },
+    {
+      "id": "terminal",
+      "name": "Terminal",
+      "desktop_entry": "/usr/share/applications/org.gnome.Terminal.desktop",
+      "native_executable_exists": true,
+      "status": "浏览器重建，功能不完整",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "当前只有浏览器演示命令",
+        "原生 shell、程序执行及 Linux 文件系统未接入"
+      ]
+    },
+    {
+      "id": "image-viewer",
+      "name": "Image Viewer",
+      "desktop_entry": "/usr/share/applications/org.gnome.eog.desktop",
+      "native_executable_exists": true,
+      "status": "浏览器重建，功能不完整",
+      "browser_load_checked": true,
+      "browser_load_errors": [],
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "浏览器图像查看器，非原生 EOG",
+        "原生图片列表、元数据和完整保存格式未还原"
+      ]
+    },
+    {
+      "name": "Mines",
+      "desktop_entry": "/usr/share/applications/org.gnome.Mines.desktop",
+      "native_executable_exists": false,
+      "status": "镜像启动项对应程序缺失",
+      "browser_load_checked": false,
+      "browser_load_errors": null,
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "未提供该应用的网页实现"
+      ]
+    },
+    {
+      "name": "Power Statistics",
+      "desktop_entry": "/usr/share/applications/org.gnome.PowerStats.desktop",
+      "native_executable_exists": true,
+      "status": "尚未接入网页",
+      "browser_load_checked": false,
+      "browser_load_errors": null,
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "未提供该应用的网页实现"
+      ]
+    },
+    {
+      "name": "IBus Preferences",
+      "desktop_entry": "/usr/share/applications/org.freedesktop.IBus.Setup.desktop",
+      "native_executable_exists": true,
+      "status": "尚未接入网页",
+      "browser_load_checked": false,
+      "browser_load_errors": null,
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "未提供该应用的网页实现"
+      ]
+    },
+    {
+      "name": "TeXInfo",
+      "desktop_entry": "/usr/share/applications/info.desktop",
+      "native_executable_exists": true,
+      "status": "尚未接入网页",
+      "browser_load_checked": false,
+      "browser_load_errors": null,
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "未提供该应用的网页实现"
+      ]
+    },
+    {
+      "name": "GNOME System Monitor",
+      "desktop_entry": "/usr/share/applications/gnome-system-monitor-kde.desktop",
+      "native_executable_exists": true,
+      "status": "尚未接入网页",
+      "browser_load_checked": false,
+      "browser_load_errors": null,
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "未提供该应用的网页实现"
+      ]
+    },
+    {
+      "name": "Passwords and Keys",
+      "desktop_entry": "/usr/share/applications/org.gnome.seahorse.Application.desktop",
+      "native_executable_exists": true,
+      "status": "尚未接入网页",
+      "browser_load_checked": false,
+      "browser_load_errors": null,
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "未提供该应用的网页实现"
+      ]
+    },
+    {
+      "name": "Input Method",
+      "desktop_entry": "/usr/share/applications/im-config.desktop",
+      "native_executable_exists": true,
+      "status": "尚未接入网页",
+      "browser_load_checked": false,
+      "browser_load_errors": null,
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "未提供该应用的网页实现"
+      ]
+    },
+    {
+      "name": "Logs",
+      "desktop_entry": "/usr/share/applications/org.gnome.Logs.desktop",
+      "native_executable_exists": true,
+      "status": "尚未接入网页",
+      "browser_load_checked": false,
+      "browser_load_errors": null,
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "未提供该应用的网页实现"
+      ]
+    },
+    {
+      "name": "Backups",
+      "desktop_entry": "/usr/share/applications/org.gnome.DejaDup.desktop",
+      "native_executable_exists": true,
+      "status": "尚未接入网页",
+      "browser_load_checked": false,
+      "browser_load_errors": null,
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "未提供该应用的网页实现"
+      ]
+    },
+    {
+      "name": "LibreOffice Math",
+      "desktop_entry": "/usr/share/applications/libreoffice-math.desktop",
+      "native_executable_exists": true,
+      "status": "尚未接入网页",
+      "browser_load_checked": false,
+      "browser_load_errors": null,
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "未提供该应用的网页实现"
+      ]
+    },
+    {
+      "name": "Startup Disk Creator",
+      "desktop_entry": "/usr/share/applications/usb-creator-gtk.desktop",
+      "native_executable_exists": true,
+      "status": "尚未接入网页",
+      "browser_load_checked": false,
+      "browser_load_errors": null,
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "未提供该应用的网页实现"
+      ]
+    },
+    {
+      "name": "Qingheji",
+      "desktop_entry": "/usr/share/applications/taoshiji.desktop",
+      "native_executable_exists": true,
+      "status": "尚未接入网页",
+      "browser_load_checked": false,
+      "browser_load_errors": null,
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "未提供该应用的网页实现"
+      ]
+    },
+    {
+      "name": "Language Support",
+      "desktop_entry": "/usr/share/applications/gnome-language-selector.desktop",
+      "native_executable_exists": true,
+      "status": "尚未接入网页",
+      "browser_load_checked": false,
+      "browser_load_errors": null,
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "未提供该应用的网页实现"
+      ]
+    },
+    {
+      "name": "Mahjongg",
+      "desktop_entry": "/usr/share/applications/org.gnome.Mahjongg.desktop",
+      "native_executable_exists": false,
+      "status": "镜像启动项对应程序缺失",
+      "browser_load_checked": false,
+      "browser_load_errors": null,
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "未提供该应用的网页实现"
+      ]
+    },
+    {
+      "name": "Help",
+      "desktop_entry": "/usr/share/applications/yelp.desktop",
+      "native_executable_exists": true,
+      "status": "尚未接入网页",
+      "browser_load_checked": false,
+      "browser_load_errors": null,
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "未提供该应用的网页实现"
+      ]
+    },
+    {
+      "name": "Archive Manager",
+      "desktop_entry": "/usr/share/applications/org.gnome.FileRoller.desktop",
+      "native_executable_exists": true,
+      "status": "尚未接入网页",
+      "browser_load_checked": false,
+      "browser_load_errors": null,
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "未提供该应用的网页实现"
+      ]
+    },
+    {
+      "name": "Disks",
+      "desktop_entry": "/usr/share/applications/org.gnome.DiskUtility.desktop",
+      "native_executable_exists": true,
+      "status": "尚未接入网页",
+      "browser_load_checked": false,
+      "browser_load_errors": null,
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "未提供该应用的网页实现"
+      ]
+    },
+    {
+      "name": "System Monitor",
+      "desktop_entry": "/usr/share/applications/gnome-system-monitor.desktop",
+      "native_executable_exists": true,
+      "status": "尚未接入网页",
+      "browser_load_checked": false,
+      "browser_load_errors": null,
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "未提供该应用的网页实现"
+      ]
+    },
+    {
+      "name": "Printers",
+      "desktop_entry": "/usr/share/applications/system-config-printer.desktop",
+      "native_executable_exists": true,
+      "status": "尚未接入网页",
+      "browser_load_checked": false,
+      "browser_load_errors": null,
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "未提供该应用的网页实现"
+      ]
+    },
+    {
+      "name": "Advanced Network Configuration",
+      "desktop_entry": "/usr/share/applications/nm-connection-editor.desktop",
+      "native_executable_exists": true,
+      "status": "尚未接入网页",
+      "browser_load_checked": false,
+      "browser_load_errors": null,
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "未提供该应用的网页实现"
+      ]
+    },
+    {
+      "name": "Startup Applications",
+      "desktop_entry": "/usr/share/applications/gnome-session-properties.desktop",
+      "native_executable_exists": true,
+      "status": "尚未接入网页",
+      "browser_load_checked": false,
+      "browser_load_errors": null,
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "未提供该应用的网页实现"
+      ]
+    },
+    {
+      "name": "Transmission",
+      "desktop_entry": "/usr/share/applications/transmission-gtk.desktop",
+      "native_executable_exists": true,
+      "status": "尚未接入网页",
+      "browser_load_checked": false,
+      "browser_load_errors": null,
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "未提供该应用的网页实现"
+      ]
+    },
+    {
+      "name": "Software & Updates",
+      "desktop_entry": "/usr/share/applications/software-properties-gtk.desktop",
+      "native_executable_exists": true,
+      "status": "尚未接入网页",
+      "browser_load_checked": false,
+      "browser_load_errors": null,
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "未提供该应用的网页实现"
+      ]
+    },
+    {
+      "name": "Characters",
+      "desktop_entry": "/usr/share/applications/org.gnome.Characters.desktop",
+      "native_executable_exists": true,
+      "status": "尚未接入网页",
+      "browser_load_checked": false,
+      "browser_load_errors": null,
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "未提供该应用的网页实现"
+      ]
+    },
+    {
+      "name": "Sudoku",
+      "desktop_entry": "/usr/share/applications/org.gnome.Sudoku.desktop",
+      "native_executable_exists": false,
+      "status": "镜像启动项对应程序缺失",
+      "browser_load_checked": false,
+      "browser_load_errors": null,
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "未提供该应用的网页实现"
+      ]
+    },
+    {
+      "name": "Fonts",
+      "desktop_entry": "/usr/share/applications/org.gnome.font-viewer.desktop",
+      "native_executable_exists": true,
+      "status": "尚未接入网页",
+      "browser_load_checked": false,
+      "browser_load_errors": null,
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "未提供该应用的网页实现"
+      ]
+    },
+    {
+      "name": "Remmina",
+      "desktop_entry": "/usr/share/applications/org.remmina.Remmina.desktop",
+      "native_executable_exists": true,
+      "status": "尚未接入网页",
+      "browser_load_checked": false,
+      "browser_load_errors": null,
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "未提供该应用的网页实现"
+      ]
+    },
+    {
+      "name": "Screenshot",
+      "desktop_entry": "/usr/share/applications/org.gnome.Screenshot.desktop",
+      "native_executable_exists": true,
+      "status": "尚未接入网页",
+      "browser_load_checked": false,
+      "browser_load_errors": null,
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "未提供该应用的网页实现"
+      ]
+    },
+    {
+      "name": "LibreOffice",
+      "desktop_entry": "/usr/share/applications/libreoffice-startcenter.desktop",
+      "native_executable_exists": true,
+      "status": "尚未接入网页",
+      "browser_load_checked": false,
+      "browser_load_errors": null,
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "未提供该应用的网页实现"
+      ]
+    },
+    {
+      "name": "Document Scanner",
+      "desktop_entry": "/usr/share/applications/simple-scan.desktop",
+      "native_executable_exists": true,
+      "status": "尚未接入网页",
+      "browser_load_checked": false,
+      "browser_load_errors": null,
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "未提供该应用的网页实现"
+      ]
+    },
+    {
+      "name": "Videos",
+      "desktop_entry": "/usr/share/applications/org.gnome.Totem.desktop",
+      "native_executable_exists": true,
+      "status": "尚未接入网页",
+      "browser_load_checked": false,
+      "browser_load_errors": null,
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "未提供该应用的网页实现"
+      ]
+    },
+    {
+      "name": "Additional Drivers",
+      "desktop_entry": "/usr/share/applications/software-properties-drivers.desktop",
+      "native_executable_exists": true,
+      "status": "尚未接入网页",
+      "browser_load_checked": false,
+      "browser_load_errors": null,
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "未提供该应用的网页实现"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+body[data-osomni-platform=ios],html[data-osomni-platform=ios] body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+body[data-ios-app=maily],body[data-ios-app=flow]{height:100dvh;display:flex;flex-direction:column;overflow:hidden;background:#f2f2f7}
+.ios-app-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex:0 0 56px;padding:0 16px;background:#ffffffed;border-bottom:1px solid #dadce4;z-index:30}
+.ios-app-bar strong{font-size:21px;font-weight:650;margin-right:auto}.ios-app-bar button{color:#007aff;background:none;border:0;font-size:15px;min-height:40px;padding:5px}.ios-app-bar [hidden]{display:none}
+body:is([data-ios-app=maily],[data-ios-app=flow]) .app-shell{display:block!important;flex:1;min-height:0;min-width:0;height:auto!important;overflow:hidden}
+body:is([data-ios-app=maily],[data-ios-app=flow]) .sidebar{display:none!important;position:fixed!important;inset:56px auto 0 0!important;width:85%;max-width:360px;height:auto!important;overflow:auto;z-index:40;background:#f4f5fa!important;box-shadow:35px 0 80px #0006;padding:20px}
+body.ios-sidebar-open:is([data-ios-app=maily],[data-ios-app=flow]) .sidebar{display:block!important}
+body[data-ios-app=maily] .mail-workspace,body[data-ios-app=flow] .workspace{height:100%;min-width:0;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin}
+body[data-ios-app=maily] .topbar{padding:15px;gap:12px}.mail-workspace .topbar h1{font-size:28px}
+body[data-ios-app=maily] .account-chip,body[data-ios-app=maily] .commandbar{display:none}
+body[data-ios-app=maily] .mail-grid{display:block;height:auto;min-height:0}
+body[data-ios-app=maily] .message-list{max-height:none;overflow:visible;border:0}
+body[data-ios-app=maily] .message-row{padding:14px 16px;border-bottom:1px solid #e4e5eb;background:white;min-height:86px}
+body[data-ios-app=maily] .message-open{min-width:0;max-width:100%}
+body[data-ios-app=maily][data-ios-mail-pane=list] .message-pane{display:none}
+body[data-ios-app=maily][data-ios-mail-pane=reader] .message-list,body[data-ios-app=maily][data-ios-mail-pane=reader] .list-toolbar{display:none}
+body[data-ios-app=maily][data-ios-mail-pane=reader] .message-pane{display:block;padding:18px;background:white;min-height:70vh}
+body[data-ios-app=maily] .compose-modal{padding:0;z-index:60}.compose-modal .compose-card{border-radius:0;max-height:100dvh;overflow:auto;margin:0;width:100%}
+body[data-ios-app=flow] .workspace{padding:16px}.workspace .topbar h1{font-size:28px}
+body[data-ios-app=flow] .drawer{inset:0;z-index:60}.drawer .drawer-card{width:100%;max-width:none;max-height:100dvh;overflow:auto}
+html[data-osomni-platform=ios] #system-app>header{background:#ffffffef;border-bottom:1px solid #dddfe8;padding:20px 18px 14px;position:sticky;top:0;z-index:10}
+html[data-osomni-platform=ios] #system-app>header h1{font-size:28px;letter-spacing:-.7px}
+html[data-osomni-platform=ios] #system-app>header p{display:none}
+html[data-osomni-platform=ios] #system-app>main{padding:16px;max-width:100%}
+html[data-osomni-platform=ios] button,html[data-osomni-platform=ios] input:not([type=checkbox]):not([type=radio]),html[data-osomni-platform=ios] select{min-height:40px}
+html[data-osomni-platform=ios] #edit-dialog{width:calc(100% - 24px);max-width:420px;max-height:calc(100dvh - 24px);padding:20px;border-radius:20px}
+html[data-osomni-platform=ios] #edit-dialog form{max-height:calc(100dvh - 64px);overflow:auto}
+html[data-osomni-platform=ios] .calendar-sidebar{font-size:14px}
+html[data-osomni-platform=ios] .calendar-month .calendar-cell{padding:4px;min-height:82px}
+html[data-osomni-platform=ios] #system-app .toolbar{gap:8px}
+html[data-osomni-platform=ios] #system-app .card{border-radius:16px}
+html[data-osomni-platform=ios] [data-habit-history]{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:12px}
+html[data-osomni-platform=ios] [data-habit-history] button{min-height:32px;font-size:11px;padding:4px;background:#edf0f5;border:0;border-radius:8px}
+html[data-osomni-platform=ios] [data-habit-history] button[aria-pressed=true]{background:#007aff;color:white}
+
+body[data-ios-app=maily]:not(.ios-selecting) .mail-workspace>.toolbar{display:none}
+body[data-ios-app=maily]:not(.ios-selecting) .message-checkbox{display:none}
+body[data-ios-app=maily] .message-row{position:relative;grid-template-columns:22px minmax(0,1fr);align-items:start;gap:8px}
+body[data-ios-app=maily].ios-selecting .message-row{grid-template-columns:20px 22px minmax(0,1fr)}
+body[data-ios-app=maily] .message-main{display:block;max-width:100%}
+body[data-ios-app=maily] .message-sender,body[data-ios-app=maily] .message-subject,body[data-ios-app=maily] .message-preview{display:block}
+body[data-ios-app=maily] .message-sender{padding-right:80px;font-size:15px;font-weight:600}
+body[data-ios-app=maily] .message-date{position:absolute;right:16px;top:14px;font-size:10px}
+body[data-ios-app=maily] .message-flags,body[data-ios-app=maily] .message-thread{display:none}
+body[data-ios-app=maily] .message-star{grid-column:1;grid-row:1}
+body[data-ios-app=maily].ios-selecting .message-star{grid-column:2}
+body[data-ios-app=maily] .message-open{grid-column:2;grid-row:1;width:100%;min-height:66px}
+body[data-ios-app=maily].ios-selecting .message-open{grid-column:3}
+body[data-ios-app=maily][data-ios-mail-pane=reader] .ios-select-button{display:none}
+
+body[data-ios-app=flow] .workspace .table-wrap{overflow:visible}
+body[data-ios-app=flow] .workspace table{display:block;min-width:0!important;width:100%}
+body[data-ios-app=flow] .workspace thead{display:none}
+body[data-ios-app=flow] .workspace tbody{display:block}
+body[data-ios-app=flow] .workspace tbody tr{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px;padding:12px;border:1px solid #e1e3eb;border-radius:16px;background:white;margin:10px 0}
+body[data-ios-app=flow] .workspace td{display:flex;flex-direction:column;gap:4px;min-width:0;border:0;padding:4px;text-align:left;white-space:normal;overflow-wrap:anywhere}
+body[data-ios-app=flow] .workspace td:before{content:attr(data-mobile-label);font-size:10px;color:#65718a}
+body[data-ios-app=flow] .workspace td[colspan]{grid-column:1/-1}
+
+body[data-ios-app=flow] .workspace{display:block}
+body[data-ios-app=flow] .content-grid{display:block;height:auto;min-height:0;padding:12px 0}
+body[data-ios-app=flow] .content-grid>.panel:not([hidden]){height:auto;min-height:0;margin-bottom:16px;padding-bottom:12px}
+body[data-ios-app=flow] .transaction-table-wrap{height:auto;max-height:none;overflow:visible;margin:0 10px}
+
+body[data-ios-app=flow]:not([data-ios-finance-view=overview]) .kpi-grid{display:none}
+
+body[data-ios-app=flow] .transaction-table td:last-child{grid-column:1/-1;grid-row:1;align-items:flex-end}
+body[data-ios-app=flow] .transaction-table td:last-child:before{display:none}
+body[data-ios-app=flow] .topbar-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+body[data-ios-app=flow] .topbar-actions .search-box{grid-column:1/-1}

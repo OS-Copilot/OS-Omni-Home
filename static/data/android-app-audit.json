@@ -1,0 +1,575 @@
+{
+  "platform": "android",
+  "applications": [
+    {
+      "id": "maps",
+      "name": "Organic Maps",
+      "package": "app.organicmaps.web",
+      "version": "2026.04.07-8-Web",
+      "apk_sha256": "d54a70b5764154b0663dc6dcd1a0768d24b7801a7d5e24f5503ef9a5e278689b",
+      "mode": "Partial browser reconstruction",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native Android UI and operating-system integrations are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "deltachat",
+      "name": "Delta Chat",
+      "package": "chat.delta",
+      "version": "2.47.0",
+      "apk_sha256": "288a487fca92abc82797b300e6b25cd0dd4f2b31dbcf36398a7dd1b751ca3169",
+      "mode": "Partial browser reconstruction",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native Android UI and operating-system integrations are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": null,
+      "name": "Camera",
+      "package": "com.android.camera2",
+      "version": "2.0.002",
+      "apk_sha256": "a363356bb55c328c10e22d44305eb9cba93eae6b86a0b1e8bebaaaf5c77ee7f9",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": "chrome",
+      "name": "Chrome",
+      "package": "com.android.chrome",
+      "version": "109.0.5414.123",
+      "apk_sha256": "85b266dedefc86cd8bf92a6d5d70816474db10579055681ea4f83f34e1e949cb",
+      "mode": "Partial browser reconstruction",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native Android UI and operating-system integrations are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "settings",
+      "name": "Settings",
+      "package": "com.android.settings",
+      "version": "13",
+      "apk_sha256": "7cff00648809ac3b3c7f20fa1a710c8b4a33455ca0f7ae2f45e19e721f9251f4",
+      "mode": "Partial browser reconstruction",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native Android UI and operating-system integrations are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": null,
+      "name": "SIM Toolkit",
+      "package": "com.android.stk",
+      "version": "13",
+      "apk_sha256": "815faba07e6732ea5ed9027e87e8d769d11c5e1727073bfc3e54a681320c051e",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": "k9",
+      "name": "K-9 Mail",
+      "package": "com.fsck.k9",
+      "version": "17.0",
+      "apk_sha256": "647842f627a6a4bffc0f829851ff105689a5b6eb15d4e1f67d9032d6b458b359",
+      "mode": "Partial browser reconstruction",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native Android UI and operating-system integrations are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "oinkoin",
+      "name": "Oinkoin Pro",
+      "package": "com.github.emavgl.piggybankpro",
+      "version": "1.6.1",
+      "apk_sha256": "d29a8c7f0b063edc24e0e9a49b1fb8f3eb5f02d5aee0336343fc904f4d18e9a8",
+      "mode": "Partial browser reconstruction",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native Android UI and operating-system integrations are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": null,
+      "name": "Drive",
+      "package": "com.google.android.apps.docs",
+      "version": "2.22.297.0.x86_64.alldpi",
+      "apk_sha256": "1fe171f6d0764a8589b36e80cfc95dad1207acccd6e327289d3a1f532f579081",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": "google-maps",
+      "name": "Maps",
+      "package": "com.google.android.apps.maps",
+      "version": "11.129.0103",
+      "apk_sha256": "74ede260a22cb7e4eea1f31eabf933fb041b03cd9812d6105bfda08d10bfd87a",
+      "mode": "Partial browser reconstruction",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native Android UI and operating-system integrations are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "messages",
+      "name": "Messages",
+      "package": "com.google.android.apps.messaging",
+      "version": "messages.android_20221208_01_RC02_alldpi.x86_64.phone",
+      "apk_sha256": "9363aad7f1cf68d640b872eca208add11e636b6c6747c0b947e7e84ab2bddd6f",
+      "mode": "Partial browser reconstruction",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native Android UI and operating-system integrations are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "photos",
+      "name": "Photos",
+      "package": "com.google.android.apps.photos",
+      "version": "6.29.0.519265844",
+      "apk_sha256": "a847bf875fe1d24acf299258428c52bbe25352ba08fde2b0e8e051710b8a7e7d",
+      "mode": "Partial browser reconstruction",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native Android UI and operating-system integrations are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": null,
+      "name": "YouTube Music",
+      "package": "com.google.android.apps.youtube.music",
+      "version": "5.04.51",
+      "apk_sha256": "3391208f2e16797bdc2c382a5605881cf25c093ce7820cab05b760e9e1259a00",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": "calendar",
+      "name": "Calendar",
+      "package": "com.google.android.calendar",
+      "version": "2022.30.2-463576837-release",
+      "apk_sha256": "f24dcd90b570aea3be5881a17403b55bd02bee1f920716050fe39bff65738402",
+      "mode": "Partial browser reconstruction",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native Android UI and operating-system integrations are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "contacts",
+      "name": "Contacts",
+      "package": "com.google.android.contacts",
+      "version": "4.1.17.505591926",
+      "apk_sha256": "9d6099c900065c45aba54974096611656529746a2f7aea7a5ef13aaccf93a011",
+      "mode": "Partial browser reconstruction",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native Android UI and operating-system integrations are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "clock",
+      "name": "Clock",
+      "package": "com.google.android.deskclock",
+      "version": "7.4 (504317960)",
+      "apk_sha256": "a8fcf105669b3d7043d224aadb446cf8dea58ae7e1512173e2c2ca35f2b3eb1b",
+      "mode": "Partial browser reconstruction",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native Android UI and operating-system integrations are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": null,
+      "name": "Phone",
+      "package": "com.google.android.dialer",
+      "version": "100.0.512999549",
+      "apk_sha256": "73475e19ff9e43421f4e8ca7680f496e0e3753e852a6e8880d3d877adba99252",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": "files",
+      "name": "Files",
+      "package": "com.google.android.documentsui",
+      "version": "t_frc_doc_330543000",
+      "apk_sha256": "18db47dd055f11ad53be4d4bed10f5af6b64a99bccfcfe3f875732d28d6612fe",
+      "mode": "Partial browser reconstruction",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native Android UI and operating-system integrations are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "gmail",
+      "name": "Gmail",
+      "package": "com.google.android.gm",
+      "version": "2023.01.08.501398065.Release",
+      "apk_sha256": "53c827886a94a5a41aaa8c72b1c2f0e8c06b08142c5cf50374ea018e79f3063b",
+      "mode": "Partial browser reconstruction",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native Android UI and operating-system integrations are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": null,
+      "name": "Google",
+      "package": "com.google.android.googlequicksearchbox",
+      "version": "13.17.16.23.x86_64",
+      "apk_sha256": "03694961b35e9e4f10ed70b0a80848f2685e41b361d268a352acba4c6bb72b40",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "YouTube",
+      "package": "com.google.android.youtube",
+      "version": "19.17.42",
+      "apk_sha256": "6f424fe803e62235da8dd1adefeec3524d1de4b359c7fa4ffc595743597b9d5d",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": "openbank",
+      "name": "OpenBank",
+      "package": "com.killt.openbank",
+      "version": "1.0",
+      "apk_sha256": "330032e7d5b22d29d2649bb339130b9559dc9601613d4b424cac01e6d1fc604a",
+      "mode": "Original Android APK WebView frontend, browser adapted",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Capacitor native services and external backend integrations require browser adapters."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "opendriver",
+      "name": "opendriver",
+      "package": "com.killt.opendriver",
+      "version": "0.3.0",
+      "apk_sha256": "708be91d464a266737d2bdc2ff1006db90ed89a7816a9667685ac8257b0c35b8",
+      "mode": "Partial browser reconstruction",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native Android UI and operating-system integrations are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "openfood",
+      "name": "OpenFood",
+      "package": "com.killt.openfood",
+      "version": "1.0",
+      "apk_sha256": "b4d003e0fe1e85a48ceaff99c30da1912bedc4297748b7b5c5e40f8ed54f93af",
+      "mode": "Original Android APK WebView frontend, browser adapted",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Capacitor native services and external backend integrations require browser adapters."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "opennavigation",
+      "name": "OpenNavigation",
+      "package": "com.killt.opennavigation",
+      "version": "1.0",
+      "apk_sha256": "d3da4642125e3e78fcf9eb61504ab4fa1ac804da123c376595084db95a77f1f5",
+      "mode": "Original Android APK WebView frontend, browser adapted",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Capacitor native services and external backend integrations require browser adapters."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "openrednote",
+      "name": "OpenNote",
+      "package": "com.killt.opennote",
+      "version": "1.0",
+      "apk_sha256": "059b1948f1038366041726ec27eb17789a901963b06a3fa343f12fb75ab750f9",
+      "mode": "Original Android APK WebView frontend, browser adapted",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Capacitor native services and external backend integrations require browser adapters."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "openphotoedit",
+      "name": "OpenPhotoEdit",
+      "package": "com.killt.openphotoedit",
+      "version": "1.0",
+      "apk_sha256": "75c087132b46a393834e15080160cde857ddace39d78bfb37be36c007dfa8696",
+      "mode": "Partial browser reconstruction",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native Android UI and operating-system integrations are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "openshop",
+      "name": "OpenShop",
+      "package": "com.killt.openshop",
+      "version": "1.0",
+      "apk_sha256": "f19f3cb4db455c17905227a5401e7f2c97e596bd02a72ba89831ebf4e5e1438b",
+      "mode": "Original Android APK WebView frontend, browser adapted",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Capacitor native services and external backend integrations require browser adapters."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "opentrip",
+      "name": "OpenTrip",
+      "package": "com.killt.opentrip",
+      "version": "1.0",
+      "apk_sha256": "68ac3f579745af2506cc45630bea099208d98f8109684e2980a904b7f6557d49",
+      "mode": "Original Android APK WebView frontend, browser adapted",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Capacitor native services and external backend integrations require browser adapters."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "opentwitter",
+      "name": "OpenTwitter",
+      "package": "com.killt.opentwitter",
+      "version": "1.0",
+      "apk_sha256": "bb7ca466ba864e3d3abe9026d4df9266c51786bfca57256b9609011a29868e8a",
+      "mode": "Original Android APK WebView frontend, browser adapted",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Capacitor native services and external backend integrations require browser adapters."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "material-files",
+      "name": "Material Files",
+      "package": "me.zhanghai.android.files",
+      "version": "1.7.4",
+      "apk_sha256": "ebc5138b6f713f0f73b5467a1a8a4ac3ccfcb2e82135372665b6811a8947641f",
+      "mode": "Partial browser reconstruction",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native Android UI and operating-system integrations are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "markor",
+      "name": "Markor",
+      "package": "net.gsantner.markor",
+      "version": "2.16.1",
+      "apk_sha256": "3f9f260dc3e32a1281cb8803eea6f926eef897579f68a5d35f922523974b84b9",
+      "mode": "Partial browser reconstruction",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native Android UI and operating-system integrations are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "document-viewer",
+      "name": "LibreOffice Viewer",
+      "package": "org.documentfoundation.libreoffice",
+      "version": "25.8.6.2",
+      "apk_sha256": "83d7322e924709a2f7dfa7ae0aac029d5043e10d350fba62e40988468588a8d0",
+      "mode": "Partial browser reconstruction",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native Android UI and operating-system integrations are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": null,
+      "name": "F-Droid",
+      "package": "org.fdroid.fdroid",
+      "version": "1.23.2",
+      "apk_sha256": "985f5181d48bb6bafd54083a048b391271e0ab28385881cc41294fb01a222762",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": "fossify-calendar",
+      "name": "Calendar",
+      "package": "org.fossify.calendar",
+      "version": "1.10.3",
+      "apk_sha256": "2acbd47fa2abc6dd4846e406ed2fd60c5c01b8613158d10e012135923ee24894",
+      "mode": "Partial browser reconstruction",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native Android UI and operating-system integrations are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "fossify-gallery",
+      "name": "Gallery",
+      "package": "org.fossify.gallery",
+      "version": "1.13.1",
+      "apk_sha256": "ae7e699599e81f70e2b82626bb1dfa883fe096cd938387133e123c116e5641d9",
+      "mode": "Partial browser reconstruction",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native Android UI and operating-system integrations are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "calculator",
+      "name": "Calculator",
+      "package": "org.fossify.math",
+      "version": "1.4.0",
+      "apk_sha256": "7c5443c22d6d62c67dfe80df33ea9161ff0fa440f92590bcb45d7008b57613ed",
+      "mode": "Partial browser reconstruction",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native Android UI and operating-system integrations are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "tasks-org",
+      "name": "Tasks",
+      "package": "org.tasks",
+      "version": "15.2.1",
+      "apk_sha256": "0bb8da6870e17744fca5f121383950ee57d15da052bda9c845762d8d2d85e7dc",
+      "mode": "Partial browser reconstruction",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native Android UI and operating-system integrations are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "spotube",
+      "name": "Spotube",
+      "package": "oss.krtirtho.spotube",
+      "version": "5.1.1",
+      "apk_sha256": "2fd31b9100d8bd1b4a0103ec1be171c3cfaa23723a3c23e32e2d4a49276e884c",
+      "mode": "Partial browser reconstruction",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native Android UI and operating-system integrations are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    }
+  ],
+  "installed_launchable_packages": 39,
+  "browser_implementations": 31,
+  "not_implemented": 8,
+  "note": "Original APK assets do not imply full native feature parity.",
+  "browser_load_checks_passed": 31,
+  "functional_checks": {
+    "openfood": [
+      "Restaurant selection",
+      "Cart update persisted to browser-local state"
+    ],
+    "opennavigation": [
+      "Place search",
+      "Platform-specific original frontend"
+    ],
+    "opendriver": [
+      "Flutter rider login"
+    ],
+    "clock": [
+      "Image timezone"
+    ],
+    "visitor_isolation": [
+      "Independent browser contexts do not share state"
+    ]
+  }
+}
