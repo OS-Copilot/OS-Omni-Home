@@ -1,0 +1,10 @@
+/* Stable desktop hardware, independent of native viewport and App coordinates. */
+.bp .bp-stand{position:relative;flex:none;width:clamp(150px,24%,230px);height:auto;aspect-ratio:260/100;margin-top:-1px;background:none;clip-path:none;view-transition-name:none;overflow:visible;filter:drop-shadow(0 10px 10px #0002)}
+.bp .bp-stand>svg{display:block;width:100%;height:auto;overflow:visible}
+.bp:not([data-platform=ios]):not([data-platform=android]) .bp-device{position:relative;z-index:1;padding:11px 11px 16px;border-radius:22px;background:linear-gradient(145deg,#6a7581 0%,#39434f 28%,#252e39 70%,#4d5967 100%);border:1px solid #b8c5d34a;box-shadow:0 28px 65px #0005,inset 0 1px 1px #e9f1fa4d,inset 0 -1px 1px #070b12;isolation:isolate}
+.bp:not([data-platform=ios]):not([data-platform=android]) .bp-device:after{content:'';position:absolute;bottom:5px;left:calc(50% - 16px);width:32px;height:2px;border-radius:3px;background:linear-gradient(90deg,transparent,#a9b8c75c,transparent);pointer-events:none}
+.bp:not([data-platform=ios]):not([data-platform=android]) .bp-display{border-radius:10px;box-shadow:0 0 0 1px #060b13a6;overflow:hidden}
+.bp:not([data-platform=ios]):not([data-platform=android]) .bp-camera{width:4px;height:4px;margin:0 auto 8px;background:#0c1520;box-shadow:0 0 0 1px #78879966}
+.bp .bp-device-tools{margin-top:20px}
+.bp:is([data-platform=ios],[data-platform=android]) .bp-stand,.bp.bp-expanded .bp-stand{display:none}
+@media(max-width:600px){.bp:not([data-platform=ios]):not([data-platform=android]) .bp-device{padding:7px 7px 12px;border-radius:15px}.bp:not([data-platform=ios]):not([data-platform=android]) .bp-display{border-radius:7px}.bp .bp-stand{width:36%;min-width:120px;max-width:180px}.bp .bp-device-tools{margin-top:16px}}

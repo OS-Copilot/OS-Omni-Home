@@ -1,0 +1,43 @@
+/* Startup is a browser workspace animation, above the live App surfaces. */
+.bp{--bp-boot-accent:#e5bd79;--bp-boot-tint:#422341}
+.bp[data-platform=windows]{--bp-boot-accent:#8ccfff;--bp-boot-tint:#103d6b}
+.bp[data-platform=macos]{--bp-boot-accent:#d6d5ff;--bp-boot-tint:#393754}
+.bp[data-platform=android]{--bp-boot-accent:#b5e1c1;--bp-boot-tint:#173f37}
+.bp[data-platform=ios]{--bp-boot-accent:#c6d7ff;--bp-boot-tint:#293e64}
+.bp .bp-boot{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:#080e1b;opacity:0;visibility:hidden;transition:opacity .38s ease,visibility .38s;text-shadow:none;overflow:hidden;pointer-events:none}
+.bp .bp-boot-glow{position:absolute;width:75%;aspect-ratio:1;border-radius:50%;background:radial-gradient(ellipse,var(--bp-boot-tint),transparent 65%);opacity:.8}
+.bp .bp-boot-content{position:relative;display:flex;flex-direction:column;align-items:center;gap:24px;color:#f4f7ff}
+.bp .bp-boot-mark{display:grid;place-items:center;width:112px;height:112px;color:var(--bp-boot-accent);filter:drop-shadow(0 0 28px var(--bp-boot-tint))}
+.bp .bp-boot-mark .bp-platform-icon{width:80px;height:80px;stroke-width:1.15}
+.bp .bp-boot-title{font-family:inherit;font-size:38px;font-weight:500;line-height:1.2;letter-spacing:.08em}
+.bp .bp-boot-caption{font-size:22px;color:#b0bdcf;letter-spacing:.05em}
+.bp .bp-boot-track{width:240px;height:3px;margin-top:22px;background:#ffffff1c;border-radius:4px;overflow:hidden}
+.bp .bp-boot-track>span{display:block;width:100%;height:100%;background:var(--bp-boot-accent);transform:scaleX(0);transform-origin:left;box-shadow:0 0 14px var(--bp-boot-accent)}
+.bp[data-booting=true] .bp-standby{cursor:wait}
+.bp[data-booting=true] .bp-standby>:not(.bp-boot){opacity:0;transition:opacity .24s ease}
+.bp[data-booting=true] .bp-boot{opacity:1;visibility:visible}
+.bp[data-booting=true] .bp-boot-content{animation:bp-boot-arrive .7s .15s cubic-bezier(.16,1,.3,1) both}
+.bp[data-booting=true] .bp-boot-track>span{animation:bp-boot-progress 1.35s .25s cubic-bezier(.24,.6,.3,1) both}
+.bp:is([data-platform=ios],[data-platform=android]) .bp-boot-content{gap:18px}
+.bp:is([data-platform=ios],[data-platform=android]) .bp-boot-mark{width:80px;height:80px}
+.bp:is([data-platform=ios],[data-platform=android]) .bp-boot-mark .bp-platform-icon{width:58px;height:58px}
+.bp:is([data-platform=ios],[data-platform=android]) .bp-boot-title{font-size:28px}
+.bp:is([data-platform=ios],[data-platform=android]) .bp-boot-caption{font-size:15px}
+.bp:is([data-platform=ios],[data-platform=android]) .bp-boot-track{width:150px;height:2px;margin-top:16px}
+@keyframes bp-boot-arrive{from{opacity:0;transform:translateY(14px) scale(.96);filter:blur(4px)}to{opacity:1;transform:none;filter:blur(0)}}
+@keyframes bp-boot-progress{0%{transform:scaleX(0)}35%{transform:scaleX(.42)}75%{transform:scaleX(.83)}100%{transform:scaleX(1)}}
+/* Apple-inspired startup: quiet monochrome, rather than the shared colored identity. */
+.bp:is([data-platform=macos],[data-platform=ios]) .bp-boot{background:#000}
+.bp:is([data-platform=macos],[data-platform=ios]) .bp-boot-glow,
+.bp:is([data-platform=macos],[data-platform=ios]) .bp-boot-title,
+.bp:is([data-platform=macos],[data-platform=ios]) .bp-boot-caption{display:none}
+.bp:is([data-platform=macos],[data-platform=ios]) .bp-boot-content{width:100%;height:100%;gap:0}
+.bp:is([data-platform=macos],[data-platform=ios]) .bp-boot-mark{position:absolute;left:50%;top:46%;transform:translate(-50%,-50%);width:120px;height:120px;color:#f5f5f7;filter:none}
+.bp .bp-apple-mark{display:block;width:100%;height:100%}
+.bp[data-platform=macos] .bp-boot-track{position:absolute;left:50%;top:calc(46% + 116px);transform:translateX(-50%);width:260px;height:5px;margin:0;background:#ffffff30;border-radius:8px}
+.bp[data-platform=macos] .bp-boot-track>span{background:#f5f5f7;box-shadow:none}
+.bp[data-platform=ios] .bp-boot-mark{top:47%;width:74px;height:74px}
+.bp[data-platform=ios] .bp-boot-track{display:none}
+.bp[data-booting=true]:is([data-platform=macos],[data-platform=ios]) .bp-boot-content{animation:bp-apple-arrive .65s .12s ease-out both}
+@keyframes bp-apple-arrive{from{opacity:0}to{opacity:1}}
+@media(prefers-reduced-motion:reduce){.bp .bp-boot,.bp .bp-standby>*{transition:none}.bp[data-booting=true] .bp-boot-content,.bp[data-booting=true] .bp-boot-track>span{animation:none!important}}

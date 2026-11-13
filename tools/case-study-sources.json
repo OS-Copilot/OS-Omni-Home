@@ -1,0 +1,7 @@
+{
+  "windows": {"directory": "windows", "model": "gpt6_astra", "revision": "c8c004959aed92a8a32202560370fb9ae87aeafa", "minimum_steps": 30},
+  "macos": {"directory": "macos", "model": "gpt6_astra", "revision": "c8c004959aed92a8a32202560370fb9ae87aeafa", "minimum_steps": 30},
+  "ios": {"directory": "ios", "model": "gpt6_astra", "revision": "c8c004959aed92a8a32202560370fb9ae87aeafa", "minimum_steps": 30},
+  "linux": {"directory": "ubuntu", "model": "gpt6_astra", "revision": "158ee7f9b9ceba8ac0dfc8d03b0be936d87ac28a", "minimum_steps": 26},
+  "web": {"directory": "web", "model": "gpt6_astra", "revision": "2192b2324ca816144265f9f270fee53dc10d157b", "minimum_steps": 30}
+}

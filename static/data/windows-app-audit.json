@@ -1,0 +1,1816 @@
+{
+  "platform": "windows",
+  "launcher_entries_inspected": 137,
+  "browser_implementations": 43,
+  "not_implemented_or_broken": 92,
+  "applications": [
+    {
+      "id": "actual-budget",
+      "name": "Actual Budget",
+      "launcher_id": "shortcut-0",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "blender",
+      "name": "Blender 2.79b",
+      "launcher_id": "shortcut-1",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "deltachat",
+      "name": "DeltaChat",
+      "launcher_id": "shortcut-2",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "drawio",
+      "name": "draw.io",
+      "launcher_id": "shortcut-3",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "gimp",
+      "name": "GIMP 2.10.38",
+      "launcher_id": "shortcut-4",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "chrome",
+      "name": "Google Chrome",
+      "launcher_id": "shortcut-5",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "libreoffice",
+      "name": "LibreOffice 26.2",
+      "launcher_id": "shortcut-6",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "marble",
+      "name": "Marble",
+      "launcher_id": "shortcut-7",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "edge",
+      "name": "Microsoft Edge",
+      "launcher_id": "shortcut-8",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "openbank",
+      "name": "OpenBank",
+      "launcher_id": "shortcut-9",
+      "native_target_exists": true,
+      "mode": "Original Windows Electron frontend, browser adapted",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "opendriver",
+      "name": "OpenDriver",
+      "launcher_id": "shortcut-10",
+      "native_target_exists": true,
+      "mode": "Original Windows Electron frontend, browser adapted",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "openfood",
+      "name": "OpenFood",
+      "launcher_id": "shortcut-11",
+      "native_target_exists": true,
+      "mode": "Original Windows Electron frontend, browser adapted",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "opennavigation",
+      "name": "OpenNavigation",
+      "launcher_id": "shortcut-12",
+      "native_target_exists": true,
+      "mode": "Original Windows Electron frontend, browser adapted",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "openrednote",
+      "name": "OpenNote",
+      "launcher_id": "shortcut-13",
+      "native_target_exists": true,
+      "mode": "Original Windows Electron frontend, browser adapted",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "openphotoedit",
+      "name": "OpenPhotoEdit",
+      "launcher_id": "shortcut-14",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "openshop",
+      "name": "OpenShop",
+      "launcher_id": "shortcut-15",
+      "native_target_exists": true,
+      "mode": "Original Windows Electron frontend, browser adapted",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "opentrip",
+      "name": "OpenTrip",
+      "launcher_id": "shortcut-16",
+      "native_target_exists": true,
+      "mode": "Original Windows Electron frontend, browser adapted",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "opentwitter",
+      "name": "OpenTwitter",
+      "launcher_id": "shortcut-17",
+      "native_target_exists": true,
+      "mode": "Original Windows Electron frontend, browser adapted",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "spotube",
+      "name": "Spotube",
+      "launcher_id": "shortcut-18",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "thunderbird",
+      "name": "Thunderbird",
+      "launcher_id": "shortcut-19",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "vscode",
+      "name": "Visual Studio Code",
+      "launcher_id": "shortcut-20",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "vlc",
+      "name": "VLC media player",
+      "launcher_id": "shortcut-21",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "wireshark",
+      "name": "Wireshark",
+      "launcher_id": "shortcut-22",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "zotero",
+      "name": "Zotero",
+      "launcher_id": "shortcut-23",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "actual-budget",
+      "name": "Actual",
+      "launcher_id": "shortcut-24",
+      "native_target_exists": true,
+      "mode": "Duplicate launcher for actual-budget",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": null,
+      "name": "Administrative Tools",
+      "launcher_id": "shortcut-25",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "OneDrive",
+      "launcher_id": "shortcut-26",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "QuickShop",
+      "launcher_id": "shortcut-27",
+      "native_target_exists": false,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "LiveCaptions",
+      "launcher_id": "shortcut-28",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Magnify",
+      "launcher_id": "shortcut-29",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Narrator",
+      "launcher_id": "shortcut-30",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "On-Screen Keyboard",
+      "launcher_id": "shortcut-31",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "VoiceAccess",
+      "launcher_id": "shortcut-32",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "IDLE (Python 3.10 64-bit)",
+      "launcher_id": "shortcut-33",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Python 3.10 (64-bit)",
+      "launcher_id": "shortcut-34",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Python 3.10 Manuals (64-bit)",
+      "launcher_id": "shortcut-35",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Python 3.10 Module Docs (64-bit)",
+      "launcher_id": "shortcut-36",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "IDLE (Python 3.11 64-bit)",
+      "launcher_id": "shortcut-37",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Python 3.11 (64-bit)",
+      "launcher_id": "shortcut-38",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Python 3.11 Manuals (64-bit)",
+      "launcher_id": "shortcut-39",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Python 3.11 Module Docs (64-bit)",
+      "launcher_id": "shortcut-40",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "HelloWorld Runtime",
+      "launcher_id": "shortcut-41",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": "command-prompt",
+      "name": "Command Prompt",
+      "launcher_id": "shortcut-42",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": null,
+      "name": "Windows PowerShell (x86)",
+      "launcher_id": "shortcut-43",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": "powershell",
+      "name": "Windows PowerShell",
+      "launcher_id": "shortcut-44",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": null,
+      "name": "7-Zip File Manager",
+      "launcher_id": "shortcut-45",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "7-Zip Help",
+      "launcher_id": "shortcut-46",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Remote Desktop Connection",
+      "launcher_id": "shortcut-47",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Steps Recorder",
+      "launcher_id": "shortcut-48",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": "windows-media-player",
+      "name": "Windows Media Player Legacy",
+      "launcher_id": "shortcut-49",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": null,
+      "name": "Character Map",
+      "launcher_id": "shortcut-50",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Component Services",
+      "launcher_id": "shortcut-51",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Computer Management",
+      "launcher_id": "shortcut-52",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "dfrgui",
+      "launcher_id": "shortcut-53",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Disk Cleanup",
+      "launcher_id": "shortcut-54",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Event Viewer",
+      "launcher_id": "shortcut-55",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "iSCSI Initiator",
+      "launcher_id": "shortcut-56",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Memory Diagnostics Tool",
+      "launcher_id": "shortcut-57",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "ODBC Data Sources (32-bit)",
+      "launcher_id": "shortcut-58",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "ODBC Data Sources (64-bit)",
+      "launcher_id": "shortcut-59",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Performance Monitor",
+      "launcher_id": "shortcut-60",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Print Management",
+      "launcher_id": "shortcut-61",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "RecoveryDrive",
+      "launcher_id": "shortcut-62",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Registry Editor",
+      "launcher_id": "shortcut-63",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Resource Monitor",
+      "launcher_id": "shortcut-64",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Security Configuration Management",
+      "launcher_id": "shortcut-65",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "services",
+      "launcher_id": "shortcut-66",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "System Configuration",
+      "launcher_id": "shortcut-67",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "System Information",
+      "launcher_id": "shortcut-68",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Task Scheduler",
+      "launcher_id": "shortcut-69",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Windows Defender Firewall with Advanced Security",
+      "launcher_id": "shortcut-70",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Git Bash",
+      "launcher_id": "shortcut-71",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Git CMD",
+      "launcher_id": "shortcut-72",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Git GUI",
+      "launcher_id": "shortcut-73",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Git Release Notes",
+      "launcher_id": "shortcut-74",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "LibreOffice (Safe Mode)",
+      "launcher_id": "shortcut-75",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "LibreOffice Base",
+      "launcher_id": "shortcut-76",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": "libreoffice-calc",
+      "name": "LibreOffice Calc",
+      "launcher_id": "shortcut-77",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "libreoffice-draw",
+      "name": "LibreOffice Draw",
+      "launcher_id": "shortcut-78",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "libreoffice-impress",
+      "name": "LibreOffice Impress",
+      "launcher_id": "shortcut-79",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": null,
+      "name": "LibreOffice Math",
+      "launcher_id": "shortcut-80",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": "libreoffice-writer",
+      "name": "LibreOffice Writer",
+      "launcher_id": "shortcut-81",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "libreoffice",
+      "name": "LibreOffice",
+      "launcher_id": "shortcut-82",
+      "native_target_exists": true,
+      "mode": "Duplicate launcher for libreoffice",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": null,
+      "name": "Marble Website",
+      "launcher_id": "shortcut-83",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Task Manager",
+      "launcher_id": "shortcut-84",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Documentation",
+      "launcher_id": "shortcut-85",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Release Notes",
+      "launcher_id": "shortcut-86",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "VideoLAN Website",
+      "launcher_id": "shortcut-87",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "VLC media player - reset preferences and cache files",
+      "launcher_id": "shortcut-88",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "VLC media player skinned",
+      "launcher_id": "shortcut-89",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Windows PowerShell ISE (x86)",
+      "launcher_id": "shortcut-90",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Windows PowerShell ISE",
+      "launcher_id": "shortcut-91",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": "calculator",
+      "name": "Calculator",
+      "launcher_id": "start-92",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": null,
+      "name": "Camera",
+      "launcher_id": "start-93",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Click to Do",
+      "launcher_id": "start-94",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": "clock",
+      "name": "Clock",
+      "launcher_id": "start-95",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": null,
+      "name": "Control Panel",
+      "launcher_id": "start-96",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Defragment and Optimize Drives",
+      "launcher_id": "start-97",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Dev Home",
+      "launcher_id": "start-98",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Feedback Hub",
+      "launcher_id": "start-99",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": "files",
+      "name": "File Explorer",
+      "launcher_id": "start-100",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": null,
+      "name": "Game Bar",
+      "launcher_id": "start-101",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Get Help",
+      "launcher_id": "start-102",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Get Started",
+      "launcher_id": "start-103",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Git FAQs (Frequently Asked Questions)",
+      "launcher_id": "start-104",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Live captions",
+      "launcher_id": "start-105",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Local Security Policy",
+      "launcher_id": "start-106",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Magnifier",
+      "launcher_id": "start-107",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": "media-player",
+      "name": "Media Player",
+      "launcher_id": "start-108",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": null,
+      "name": "Microsoft 365 Copilot",
+      "launcher_id": "start-109",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Microsoft Clipchamp",
+      "launcher_id": "start-110",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Microsoft Store",
+      "launcher_id": "start-111",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Microsoft Teams",
+      "launcher_id": "start-112",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": "to-do",
+      "name": "Microsoft To Do",
+      "launcher_id": "start-113",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": null,
+      "name": "News",
+      "launcher_id": "start-114",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": "notepad",
+      "name": "Notepad",
+      "launcher_id": "start-115",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "outlook",
+      "name": "Outlook",
+      "launcher_id": "start-116",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "paint",
+      "name": "Paint",
+      "launcher_id": "start-117",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": null,
+      "name": "Phone Link",
+      "launcher_id": "start-118",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": "photos",
+      "name": "Photos",
+      "launcher_id": "start-119",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": null,
+      "name": "Power Automate",
+      "launcher_id": "start-120",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Quick Assist",
+      "launcher_id": "start-121",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Recovery Drive",
+      "launcher_id": "start-122",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Run",
+      "launcher_id": "start-123",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": "settings",
+      "name": "Settings",
+      "launcher_id": "start-124",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": null,
+      "name": "Snipping Tool",
+      "launcher_id": "start-125",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Solitaire & Casual Games",
+      "launcher_id": "start-126",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Sound Recorder",
+      "launcher_id": "start-127",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": "sticky-notes",
+      "name": "Sticky Notes",
+      "launcher_id": "start-128",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": "terminal",
+      "name": "Terminal",
+      "launcher_id": "start-129",
+      "native_target_exists": true,
+      "mode": "Partial browser counterpart; native implementation not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native filesystem, OS services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_checked": true,
+      "browser_load_errors": []
+    },
+    {
+      "id": null,
+      "name": "Voice access",
+      "launcher_id": "start-130",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Weather",
+      "launcher_id": "start-131",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Windows Backup",
+      "launcher_id": "start-132",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Windows Memory Diagnostic",
+      "launcher_id": "start-133",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Windows Security",
+      "launcher_id": "start-134",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Windows Tools",
+      "launcher_id": "start-135",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    },
+    {
+      "id": null,
+      "name": "Xbox",
+      "launcher_id": "start-136",
+      "native_target_exists": true,
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "No browser implementation is provided."
+      ],
+      "browser_load_checked": false,
+      "browser_load_errors": null
+    }
+  ],
+  "note": "Original Electron frontend reuse does not imply native feature parity.",
+  "browser_load_checks_passed": 43,
+  "functional_checks": {
+    "openfood": [
+      "Restaurant selection",
+      "Cart update persisted to browser-local state"
+    ],
+    "opennavigation": [
+      "Place search",
+      "Platform-specific original frontend"
+    ],
+    "opendriver": [
+      "Flutter rider login"
+    ],
+    "clock": [
+      "Image timezone",
+      "Winter and summer offsets",
+      "Spring daylight-saving gap"
+    ],
+    "visitor_isolation": [
+      "Independent browser contexts do not share state"
+    ],
+    "notepad": [
+      "Text editing",
+      "Downloaded text bytes verified"
+    ]
+  }
+}

@@ -4,9 +4,6 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- TODO: settle the final title and subtitle, then update them in five
-       places: <title>, og:title, twitter:title, the <h1>/.tagline in the hero,
-       and the BibTeX entry at the bottom. -->
   <title>OS-Omni: Benchmarking Generalist Computer-Using Agents on Long-Horizon Workflows Across Platforms</title>
   <meta name="description"
     content="OS-Omni benchmarks generalist computer-using agents on long-horizon workflows across web, Windows, macOS, Ubuntu and mobile.">
@@ -21,31 +18,39 @@
   <!-- Open Graph / Twitter.
        NOTE: absolute URLs are required by social scrapers. The site is served
        from the OS-Copilot organisation as a project page, so it lives at a
-       subpath. Update both URLs together if the host ever changes.
-       TODO: public/social/og-image.png is still the source template's card.
-       Replace it before the page is shared anywhere. -->
+       subpath. Update both URLs together if the host ever changes. -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://os-copilot.github.io/OS-Omni-Home/">
   <meta property="og:site_name" content="OS-Omni">
   <meta property="og:title" content="OS-Omni: Benchmarking Generalist Computer-Using Agents on Long-Horizon Workflows Across Platforms">
   <meta property="og:description"
-    content="How far do generalist computer-using agents get on workflows that run for a hundred steps, across five platforms and many applications?">
-  <meta property="og:image" content="https://os-copilot.github.io/OS-Omni-Home/public/social/og-image.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
+    content="300 long-horizon tasks across six platforms and cross-device workflows, with seven evaluated models and executable final-state checks.">
+  <meta property="og:image" content="https://os-copilot.github.io/OS-Omni-Home/public/cover.png">
+  <meta property="og:image:width" content="900">
+  <meta property="og:image:height" content="900">
   <meta name="twitter:card" content="summary_large_image">
-  <!-- TODO: confirm the account this should credit. -->
-  <meta name="twitter:site" content="@qiushi_sun">
   <meta name="twitter:title" content="OS-Omni: Benchmarking Generalist Computer-Using Agents on Long-Horizon Workflows Across Platforms">
   <meta name="twitter:description"
-    content="How far do generalist computer-using agents get on workflows that run for a hundred steps, across five platforms and many applications?">
-  <meta name="twitter:image" content="https://os-copilot.github.io/OS-Omni-Home/public/social/og-image.png">
+    content="300 long-horizon tasks across six platforms and cross-device workflows, with seven evaluated models and executable final-state checks.">
+  <meta name="twitter:image" content="https://os-copilot.github.io/OS-Omni-Home/public/cover.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=JetBrains+Mono:wght@400;500&display=swap">
   <link rel="stylesheet" href="static/css/main.css">
+  <link rel="stylesheet" href="static/css/paper-results.css?v=2">
+  <link rel="stylesheet" href="static/css/dataset-composition.css?v=2">
+  <link rel="stylesheet" href="static/css/task-explorer.css?v=4">
+  <link rel="stylesheet" href="static/css/browser-playground.css?v=20261110-startup-6">
+  <link rel="stylesheet" href="static/css/readability.css?v=1">
+  <link rel="stylesheet" href="static/css/research-stories.css?v=1">
+  <link rel="stylesheet" href="static/css/annotation-pipeline.css?v=6">
+  <link rel="stylesheet" href="static/css/device-hardware.css?v=1">
+  <link rel="stylesheet" href="static/css/device-startup.css?v=2">
+  <link rel="stylesheet" href="static/css/device-showcase.css?v=3">
+  <link rel="stylesheet" href="static/css/leaderboard.css?v=2">
+  <link rel="stylesheet" href="static/css/case-studies.css?v=8-platform-library">
   <!-- Reveal-on-scroll hides content until JS un-hides it, so only opt in when
        JS is running; and the theme must be set before first paint. Both happen
        here, before the body renders. -->
@@ -83,6 +88,7 @@
         </svg>
       </button>
       <ul class="nav-links" id="navLinks">
+        <li><a href="#playground-section">Playground</a></li>
         <li class="nav-more" id="navMore" data-open="false">
           <button type="button" aria-expanded="false" aria-haspopup="true">
             More research
@@ -116,10 +122,10 @@
         </li>
         <li><a href="#abstract">Overview</a></li>
         <li><a href="#benchmark">Benchmark</a></li>
-        <li><a href="#findings">Findings</a></li>
         <li><a href="#leaderboard">Leaderboard</a></li>
-        <li><a href="#method">Method</a></li>
-        <li><a href="#viewer">DataViewer</a></li>
+        <li><a href="#findings">Findings</a></li>
+        <li><a href="#method">Protocol</a></li>
+        <li><a href="#tasks">Tasks</a></li>
         <li><a href="#resources">Resources</a></li>
       </ul>
       <div class="nav-tools">
@@ -177,8 +183,8 @@
                 <path d="M3 12.5 12 17l9-4.5M3 16.5 12 21l9-4.5" stroke-linejoin="round" />
               </svg>
             </span>
-            <span><b>Five platforms under one protocol</b> — web, Windows, macOS, Ubuntu and mobile —
-              so a single number is comparable across the whole desktop and handheld surface</span>
+            <span><b>Six platforms under one protocol</b> — Windows, Linux, macOS, iOS, Android, and Web —
+              plus 12 cross-device workflows in the 300-task v1 release</span>
           </li>
           <li>
             <span class="b-ico" aria-hidden="true">
@@ -187,7 +193,7 @@
               </svg>
             </span>
             <span><b>A broad evaluation of generalist agents</b>, scored the same way on every
-              platform, with the analysis that follows from it <em>(TODO: state the scope)</em></span>
+              platform: seven models, evaluated by final-state task success</span>
           </li>
           <li>
             <span class="b-ico" aria-hidden="true">
@@ -197,7 +203,7 @@
               </svg>
             </span>
             <span><b>Open environments, tasks and trajectories</b>, so a result can be reproduced
-              rather than taken on trust <em>(TODO: confirm what ships)</em></span>
+              with reproducible initialization, platform adapters, and executable final-state checks</span>
           </li>
         </ul>
 
@@ -219,8 +225,7 @@
             </svg>
             arXiv
           </a>
-          <a class="btn" href="https://github.com/OS-Copilot/OS-Omni" target="_blank" rel="noopener"
-            data-link="code">
+          <a class="btn pending" role="link" aria-disabled="true" title="Public link forthcoming" data-link="code">
             <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
               <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z" />
             </svg>
@@ -230,7 +235,7 @@
             <span class="ic" aria-hidden="true">🤗</span>
             Benchmark
           </a>
-          <a class="btn pending" role="link" aria-disabled="true" title="Coming soon" data-link="corpus">
+          <a class="btn" href="#case-studies" data-link="corpus">
             <span class="ic" aria-hidden="true">🤗</span>
             Trajectories
           </a>
@@ -244,13 +249,19 @@
         <picture>
           <source srcset="public/cover.webp" type="image/webp">
           <img src="public/cover.png" width="900" height="900" fetchpriority="high"
-            alt="OS-Omni key art: a robot at the centre of a ring of platforms — two phones, a
-                 Windows desktop, a browser window, and macOS and Ubuntu laptops — each on its own
-                 plinth, wired back to the robot.">
+            alt="OS-Omni key art: a robot surrounded by the desktop and mobile platforms.">
         </picture>
       </figure>
     </div>
   </header>
+
+  <section class="band device-showcase" id="playground-section" aria-labelledby="device-showcase-title">
+   <div class="wrap">
+    <div class="section-head"><span class="eyebrow">The applications, in your hands</span><h2 class="section-title" id="device-showcase-title">Five platforms.<br><span class="gilt">Open something.</span></h2><p class="section-sub">Choose a platform, then an App. Explore five browser-local device workspaces; the benchmark also evaluates Web as a sixth platform. Native benchmark execution runs in the separate OS-Omni environments.</p></div>
+    <div id="playground" data-platform="linux"></div>
+    <noscript>This interactive playground requires JavaScript.</noscript>
+   </div>
+  </section>
 
   <!-- ==================================================================== -->
   <!-- Byline                                                                -->
@@ -270,15 +281,7 @@
 
   <main id="main">
 
-    <!-- ================================================================== -->
-    <!-- Template notice — filled in by main.js while the data file's        -->
-    <!-- PLACEHOLDER flag is true, and gone the moment it is set to false.   -->
-    <!-- ================================================================== -->
-    <section class="band-tight" style="padding-bottom:0">
-      <div class="wrap">
-        <div class="placeholder-bar" id="placeholder-bar" hidden></div>
-      </div>
-    </section>
+
 
     <!-- ================================================================== -->
     <!-- News                                                                -->
@@ -287,12 +290,10 @@
       <div class="wrap">
         <div class="card rise" style="padding:22px 26px">
           <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px">
-            <span class="eyebrow" style="margin:0">News</span>
+            <span class="eyebrow" style="margin:0">Release status</span>
           </div>
           <ul style="list-style:none;padding:0;margin:0;font-size:15.5px;line-height:1.9">
-            <!-- TODO: keep the newest item first; use YYYY-MM. -->
-            <li><b style="color:var(--gold-300);font-family:var(--font-mono);font-size:13px">2026-08</b>
-              &nbsp; The OS-Omni project page is up. Paper, benchmark and trajectories are on their way.</li>
+            <li>The v1 task collection and Camera Ready results are presented below. Public artifact links will be enabled as each resource becomes available.</li>
           </ul>
         </div>
       </div>
@@ -326,19 +327,19 @@
           <ol class="contribs">
             <li>
               <a href="#benchmark"><b>A cross-platform benchmark of long-horizon workflows.</b></a>
-              TODO: how many tasks, on what environments, built how, verified how.
+              300 v1 tasks across six platforms and cross-device workflows, with 181 tasks using controlled Open-series applications.
             </li>
             <li>
               <a href="#findings"><b>An evaluation of generalist agents under one protocol.</b></a>
-              TODO: how many agents, what the protocol fixes, and what the headline result is.
+              Seven models under screenshot-only observation; the best model reaches 68.5% average success.
             </li>
             <li>
               <a href="#leaderboard"><b>A leaderboard, per platform and overall.</b></a>
-              TODO: which metrics are reported and how a submission is scored.
+              Success rate on each of seven evaluation groups, plus their unweighted average and a human reference.
             </li>
             <li>
-              <a href="#method"><b>TODO: the fourth contribution</b></a>, if there is one — a method,
-              a training corpus, a released agent. Delete this item and the Method section if not.
+              <a href="#method"><b>Reproducible execution and final-state verification.</b></a>
+              Native adapters, controlled services, durable state checks, and recorded trajectories.
             </li>
           </ol>
         </div>
@@ -352,7 +353,7 @@
               </svg>
             </div>
             <h3>The benchmark</h3>
-            <p>Long-horizon workflows on five platforms, on machines set up to look lived-in.</p>
+            <p>300 long-horizon tasks across six platforms and cross-device workflows, with reproducible initial states.</p>
           </a>
           <a class="card feature" href="#findings">
             <div class="ico">
@@ -361,7 +362,7 @@
               </svg>
             </div>
             <h3>What we found</h3>
-            <p>TODO: the one-line version of the findings section.</p>
+            <p>The strongest model reaches 68.5% average success, 8.8 points below the human reference.</p>
           </a>
           <a class="card feature" href="#leaderboard">
             <div class="ico">
@@ -371,17 +372,17 @@
               </svg>
             </div>
             <h3>Leaderboard</h3>
-            <p>Every agent scored under one protocol, on the full set and the hard split.</p>
+            <p>Seven models scored under one protocol, by platform and across cross-device workflows.</p>
           </a>
-          <a class="card feature" href="#viewer">
+          <a class="card feature" href="#tasks">
             <div class="ico">
               <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
                 <rect x="3" y="5" width="18" height="13" rx="2" />
                 <path d="M3 9h18M7 13h6" stroke-linecap="round" />
               </svg>
             </div>
-            <h3>DataViewer</h3>
-            <p>Step through a trajectory the way an evaluator sees it, then reveal the verdict.</p>
+            <h3>Task Explorer</h3>
+            <p>Explore real benchmark tasks by platform and application, down to the original instruction.</p>
           </a>
         </div>
       </div>
@@ -391,311 +392,79 @@
     <!-- The problem                                                         -->
     <!-- ================================================================== -->
     <section class="band" id="problem">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="eyebrow">The problem</span>
-          <h2 class="section-title">Short tasks hide
-            <span class="gilt">the failures that matter</span></h2>
-          <p class="section-sub">TODO: one or two sentences setting up the chart below — what it
-            plots, and what a reader should notice first.</p>
-        </div>
-
-        <div class="card chart-card rise">
-          <div class="chart-head">
-            <h3>TODO: name this figure</h3>
-          </div>
-          <p class="chart-note">TODO: say what the axes are and what the reference line means.
-            Hover any point; click a family to mute it. This chart is
-            <code>OSOmniCharts.biasPlane</code> — see the README for what it expects.</p>
-          <div id="chart-bias"></div>
-        </div>
-
-        <div class="grid grid-3 rise" style="margin-top:26px">
-          <div class="card feature">
-            <h3 style="color:var(--gold-200)">Length changes the task</h3>
-            <p>An agent that holds up for five steps need not hold up for fifty. Errors compound,
-              context fills, and the goal drifts — none of which a short task can surface.</p>
-          </div>
-          <div class="card feature">
-            <h3 style="color:var(--gold-200)">One platform is not the platform</h3>
-            <p>Results reported on a single operating system say little about the next one. Comparable
-              numbers need the same tasks, the same action space and the same scoring across all of them.</p>
-          </div>
-          <div class="card feature">
-            <h3 style="color:var(--gold-200)">Verification gets harder</h3>
-            <p>The longer the workflow, the more ways there are to end in a state that looks finished
-              and is not. TODO: say how OS-Omni checks the end state.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+ <div class="wrap">
+  <div class="section-head"><span class="eyebrow">The human workload</span><h2 class="section-title">Longer workflows.<br><span class="gilt">More state to preserve.</span></h2><p class="section-sub">Human users take an average of 67.54 interaction steps and 200.97 seconds on OS-Omni, compared with OSWorld references of 15.0 steps and 111.94 seconds.</p></div>
+  <div class="grid grid-2 rise">
+   <div class="card chart-card"><h3>Interaction steps</h3><div id="cr-workload-steps"></div><p class="cr-source">Camera Ready, Introduction, p. 2. Mean human interaction steps; these are aggregate references, not paired measurements of identical tasks.</p></div>
+   <div class="card chart-card"><h3>Completion time</h3><div id="cr-workload-time"></div><p class="cr-source">Camera Ready, Introduction, p. 2. Mean wall-clock completion time in seconds.</p></div>
+  </div>
+ </div>
+</section>
 
     <!-- ================================================================== -->
     <!-- Benchmark                                                           -->
     <!-- ================================================================== -->
     <section class="band" id="benchmark">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="eyebrow">OS-Omni</span>
-          <h2 class="section-title">Realistic machines,
-            <span class="gilt">workflows that run long</span></h2>
-          <p class="section-sub">TODO: the one-paragraph version of how the benchmark was built —
-            environments, task authoring, verification, and how much human time went into it.</p>
-        </div>
-
-        <!-- Environment pipeline. Each .flow-node is one stage; add or remove
-             stages by copying a node and the arrow before it. `human` on a node
-             tints it as a human-in-the-loop step, `out` marks the output. -->
-        <div class="card chart-card rise">
-          <div class="chart-head">
-            <h3>From environment to trajectory</h3>
-          </div>
-          <p class="chart-note">TODO: describe the pipeline in one or two sentences.</p>
-          <div class="flow" style="margin-top:6px">
-            <div class="flow-node">
-              <span class="step-n">1</span>
-              <h4>Realistic environment</h4>
-              <p>Web · Windows · macOS<br>Ubuntu · Mobile</p>
-            </div>
-            <div class="flow-arrow" aria-hidden="true">
-              <svg aria-hidden="true" width="22" height="12" viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="1.4">
-                <path d="M0 6h19M15 2l4 4-4 4" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </div>
-            <div class="flow-node human">
-              <span class="step-n">2</span>
-              <h4>TODO: authoring step</h4>
-              <p>who writes the tasks,<br>and against what rules</p>
-            </div>
-            <div class="flow-arrow" aria-hidden="true">
-              <svg aria-hidden="true" width="22" height="12" viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="1.4">
-                <path d="M0 6h19M15 2l4 4-4 4" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </div>
-            <div class="flow-node human">
-              <span class="step-n">3</span>
-              <h4>TODO: verification step</h4>
-              <p>how a task's<br>end state is checked</p>
-            </div>
-            <div class="flow-arrow" aria-hidden="true">
-              <svg aria-hidden="true" width="22" height="12" viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="1.4">
-                <path d="M0 6h19M15 2l4 4-4 4" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </div>
-            <div class="flow-node">
-              <span class="step-n">4</span>
-              <h4>Agent rollout</h4>
-              <p>TODO: which agents<br>screenshot → thought → action</p>
-            </div>
-            <div class="flow-arrow" aria-hidden="true">
-              <svg aria-hidden="true" width="22" height="12" viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="1.4">
-                <path d="M0 6h19M15 2l4 4-4 4" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </div>
-            <div class="flow-node out">
-              <span class="step-n">5</span>
-              <h4>Scored trajectories</h4>
-              <p>TODO: step budget<br>and what is recorded</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Views / splits -->
-        <div class="grid grid-3 rise" style="margin-top:24px">
-          <div class="card feature">
-            <div class="ico" style="color:var(--cyan-300)">
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-                <circle cx="12" cy="12" r="9" />
-                <path d="M3 12h18M12 3a15 15 0 0 1 0 18M12 3a15 15 0 0 0 0 18" />
-              </svg>
-            </div>
-            <h3>OS-Omni</h3>
-            <p>The full set. TODO: size, platform mix, action spaces, and the range of workflow lengths.</p>
-          </div>
-          <div class="card feature">
-            <div class="ico" style="color:#eb8b6e">
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-                <path d="M12 3 3 20h18L12 3Z" stroke-linejoin="round" />
-                <path d="M12 9v5M12 17h.01" stroke-linecap="round" />
-              </svg>
-            </div>
-            <h3>OS-Omni-Hard</h3>
-            <p>TODO: what makes the hard split hard, and how it was selected. Delete this card if
-              there is no such split.</p>
-          </div>
-          <div class="card feature">
-            <div class="ico" style="color:#b18bf2">
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-                <path d="M4 20V10M10 20V4M16 20v-7M22 20h-2M2 20h2" stroke-linecap="round" />
-                <circle cx="10" cy="4" r="1.6" fill="currentColor" stroke="none" />
-              </svg>
-            </div>
-            <h3>TODO: third view</h3>
-            <p>A finer grading, a per-milestone score, or a subset with extra labels. Delete this card
-              if there is only one view.</p>
-          </div>
-        </div>
-
-        <!-- Composition -->
-        <div class="grid grid-2 rise" style="margin-top:24px;align-items:start">
-          <div class="card chart-card">
-            <div class="chart-head"><h3>Outcome composition</h3></div>
-            <p class="chart-note">TODO: what the split bars and the length box plots show. Data comes
-              from <code>benchmark.full</code>, <code>benchmark.hard</code> and
-              <code>benchmark.length</code> in the data file.</p>
-            <div id="chart-composition"></div>
-          </div>
-          <div class="card chart-card">
-            <div class="chart-head"><h3>Platform mix</h3></div>
-            <p class="chart-note">TODO: one line on how the platforms are weighted and why. Data comes
-              from <code>benchmark.platforms</code>.</p>
-            <div id="chart-platform"></div>
-          </div>
-        </div>
-      </div>
-    </section>
+ <div class="wrap">
+  <div class="section-head"><span class="eyebrow">Benchmark / v1</span><h2 class="section-title">One release.<br><span class="gilt">Six platforms and two devices.</span></h2><p class="section-sub">48 tasks on each of Windows, Linux, macOS, iOS, Android, and Web, plus 12 cross-device workflows: six Linux + Android and six Windows + Android. Web tasks run in Chrome or Chromium on Ubuntu.</p></div>
+  <div class="cr-stats rise" id="cr-summary"></div>
+  <div class="grid grid-2 rise">
+   <div class="card chart-card"><h3>Data distribution · platform mix</h3><p class="chart-note">Each single-platform track accounts for 16% of v1; cross-device workflows account for 4%.</p><div id="dc-distribution"><p>Loading release distribution…</p></div><p class="cr-source">Source: Figure 5 and Section 3.6, pp. 7–8; counts checked against the release manifest. Counts are tasks, not trajectories.</p></div>
+   <div class="card chart-card"><h3>Workflow taxonomy</h3><p class="chart-note">The coarse task categories shown in the paper.</p><div id="cr-taxonomy"></div><p class="cr-source">Source: Figure 5, p. 8. Percentages transcribed from the figure; counts are not inferred from rounded percentages.</p></div>
+  </div>
+  <h3 class="dc-section-title">Composition. <span class="gilt">What is inside the release?</span></h3>
+  <div class="grid grid-2 rise">
+   <div class="card chart-card"><h3>Task sources</h3><p class="chart-note">The four mutually exclusive selection categories in the formal v1 manifest.</p><div id="dc-composition"><p>Loading composition…</p></div><p class="cr-source">Computed from tasks/v1/manifest.json: Open-series 181, reviewed supplement 31, legacy supplement 76, cross-device 12. Total: 300.</p></div>
+   <div class="card chart-card"><h3>How many applications does a task name?</h3><div id="dc-app-span"></div><p class="cr-source">Computed from declared App labels in the task specifications: one App, multiple Apps, or a cross-device workflow (counted separately). Labels can omit supporting applications; this is not the paper's semantic cross-application taxonomy.</p></div>
+  </div>
+  <div class="grid grid-2 rise" style="margin-top:24px">
+   <div class="card chart-card"><h3>Across devices, and back again</h3><div id="dc-device-flow"></div><p class="cr-source">12 cross-device tasks from the manifest: six Linux + Android and six Windows + Android. Each workflow transfers an artifact to the desktop and returns results to the phone.</p></div>
+   <div class="card feature"><span class="eyebrow">Explore the task collection</span><h3>From an App to its actual tasks.</h3><p>Office documents and spreadsheets, graphics, mail and messaging, finance, shopping, navigation, travel, and device settings. Explore the applications in the <a href="#playground-section">interactive devices</a>, or use Task Explorer for the released task instructions.</p><a class="btn" href="#tasks">Browse all 300 tasks ↗</a></div>
+  </div>
+  <div class="grid grid-3 rise" style="margin-top:24px">
+   <div class="card feature"><h3>Controlled applications</h3><p>181 of 300 tasks use Open-series applications. Accounts, carts, orders, and records stay under the benchmark runtime.</p></div>
+   <div class="card feature"><h3>Human-authored and checked</h3><p>30 computer science graduate students contributed over two months: approximately 2,400 annotation hours and 400 double-checking hours.</p></div>
+   <div class="card feature"><h3>Versioned releases</h3><p>v1 is a fixed 300-task release. Later waves add controlled applications and more demanding workflows while preserving the execution and evaluation protocol.</p></div>
+  </div>
+ </div>
+</section>
 
     <!-- ================================================================== -->
     <!-- Findings                                                            -->
     <!-- ================================================================== -->
+    <section class="band" id="leaderboard">
+ <div class="wrap wrap-wide">
+  <div class="section-head"><span class="eyebrow">Model leaderboard / v1</span><h2 class="section-title">Seven models.<br><span class="gilt">Every score, in the open.</span></h2><p class="section-sub">Seven evaluated models, six platforms, and cross-device workflows. Compare the full results below, with human performance as a separate reference.</p></div>
+  <div id="leaderboard-controls"></div>
+  <div id="leaderboard-highlights" class="lb-highlights"></div>
+  <div class="lb-table-panel"><div class="lb-table-heading"><span>THE COMPLETE RESULTS</span><span>Success rate (%) ↑ · Camera Ready Table 1</span></div><div id="table-leaderboard"><p>Loading published model results…</p></div><p class="cr-source"><b>Reading the table:</b> select any score column to sort. Gold marks the best model per column; underline marks the second-best distinct score. Human results are pinned and excluded from model ranks. Average is the equal-weight mean of all seven groups, retained at the paper’s published precision.</p><p class="cr-source"><b>Cross-device:</b> called “Cross-VM” in Table 1; these are the same 12 desktop + Android workflows. Values are the published success rates, not task counts. No confidence intervals or error bars are reported.</p></div>
+ </div>
+</section>
+
     <section class="band" id="findings">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="eyebrow">Findings</span>
-          <h2 class="section-title">What the <span class="gilt">evaluation</span> settles</h2>
-          <p class="section-sub">TODO: state the protocol in one sentence — what every agent is given,
-            what it is not given, and what counts as success.</p>
-        </div>
-
-        <div class="grid grid-2 rise">
-          <div class="takeaway">
-            <span class="k">01</span>
-            <p>TODO: the first finding. One claim, one number, no hedging.</p>
-          </div>
-          <div class="takeaway">
-            <span class="k">02</span>
-            <p>TODO: the second finding.</p>
-          </div>
-          <div class="takeaway">
-            <span class="k">03</span>
-            <p>TODO: the third finding.</p>
-          </div>
-          <div class="takeaway">
-            <span class="k">04</span>
-            <p>TODO: the fourth finding.</p>
-          </div>
-        </div>
-
-        <!-- Pareto. Set paretoPoints to [] in the data file and this card
-             prints a "figures being finalized" note instead of a chart. -->
-        <div class="card chart-card rise" style="margin-top:28px">
-          <div class="chart-head">
-            <h3>Cost against accuracy</h3>
-          </div>
-          <p class="chart-note" id="pareto-note">TODO: say how cost is computed and what the dashed
-            frontier means.</p>
-          <div id="chart-pareto"></div>
-        </div>
-
-        <!-- Error composition -->
-        <div class="card chart-card rise" style="margin-top:24px">
-          <div class="chart-head">
-            <h3>What agents get wrong</h3>
-          </div>
-          <p class="chart-note">TODO: name the error taxonomy and say what dominates. Categories are
-            defined in <code>failureModes.categories</code>; set <code>failureModes</code> to
-            <code>null</code> to hide this card.</p>
-          <div id="chart-failure"></div>
-        </div>
-
-        <!-- Hard-set breakdown -->
-        <div class="card chart-card rise" style="margin-top:24px">
-          <div class="chart-head">
-            <h3>Where the hard split bites</h3>
-          </div>
-          <p class="chart-note">TODO: read the two panels — which platform is hardest, and which
-            failure type is hardest to avoid.</p>
-          <div id="chart-hard"></div>
-        </div>
-
-        <!-- Ablations -->
-        <div class="card chart-card rise" style="margin-top:24px">
-          <div class="chart-head">
-            <h3>What actually drives the result</h3>
-          </div>
-          <p class="chart-note">TODO: name each ablation and say which one dominates. The
-            <code>avg</code> column is the mean across the models shown.</p>
-          <div id="chart-ablation"></div>
-        </div>
-      </div>
-    </section>
+ <div class="wrap">
+  <div class="section-head"><span class="eyebrow">Findings / Camera Ready</span><h2 class="section-title">Progress is real.<br><span class="gilt">Consistency is missing.</span></h2><p class="section-sub">Seven evaluated models, six platforms, and cross-device workflows. Results measure durable final-state correctness.</p></div>
+  <div class="grid grid-2 rise">
+   <div class="takeaway"><span class="k">01</span><p>Claude Opus 5.5 leads at <b>68.5%</b> average success, behind the <b>77.3%</b> human reference by <b>8.8 percentage points</b>.</p></div>
+   <div class="takeaway"><span class="k">02</span><p>GPT-6-Astra follows at <b>66.1%</b>, then Gemini 4 at <b>58.6%</b>. All three exceed the human reference on Linux.</p></div>
+   <div class="takeaway"><span class="k">03</span><p>The best iOS and macOS results are <b>41.7%</b> and <b>54.2%</b>, respectively: <b>33.5</b> and <b>25.6 points</b> below humans.</p></div>
+   <div class="takeaway"><span class="k">04</span><p>On the 12 cross-device workflows, Claude Opus 5.5 matches humans at <b>83.3%</b>. One task changes this split by about <b>8.3 points</b>.</p></div>
+  </div>
+  <div class="card chart-card rise cr-success-chart" style="margin-top:28px">
+   <div class="cr-chart-select"><h3>Task success, overall and by platform</h3><label class="cr-select-fallback">Evaluation group <select id="cr-track-select" aria-label="Choose average or platform for success-rate chart"></select></label></div><div id="cr-platform-tabs" class="cr-platform-tabs" role="group" aria-label="Choose average or platform"></div><p id="cr-results-context" class="chart-note" role="status" aria-live="polite"></p><div id="cr-platform-results"></div><p class="cr-source">Source: Camera Ready Table 1, p. 9. Success rate (%). Average is the unweighted mean over seven evaluation groups, retained at the paper’s published precision. Models are ranked within the selected view; the human reference stays pinned in gold.</p>
+  </div>
+  <div class="card rise" style="margin-top:24px;padding:28px"><h3>Where workflows break</h3><div class="cr-error-list">
+   <div><h4>Visual grounding</h4><p>Nearby controls and dense document or diagram interfaces lead to incorrect clicks or readings.</p></div>
+   <div><h4>State tracking</h4><p>Information is lost between applications or a required destination is forgotten.</p></div>
+   <div><h4>Persistence</h4><p>The visible interface looks complete, but the saved file or committed record is incorrect.</p></div>
+   <div><h4>Platform and timing</h4><p>Dialogs, delayed loading, and missing confirmations interrupt the workflow.</p></div>
+  </div><p class="cr-source">Section 4.3, p. 9. The paper reports these categories qualitatively; it does not provide numerical error frequencies.</p></div>
+ </div>
+</section>
 
     <!-- ================================================================== -->
     <!-- Leaderboard                                                         -->
     <!-- ================================================================== -->
-    <section class="band" id="leaderboard">
-      <div class="wrap wrap-wide">
-        <div class="section-head">
-          <span class="eyebrow">Leaderboard</span>
-          <h2 class="section-title">Every agent, <span class="gilt">one protocol</span></h2>
-          <p class="section-sub">TODO: define each column in plain words, so a reader never has to
-            guess what a metric means. The columns themselves are set by
-            <code>leaderboardCols</code> in the data file.</p>
-        </div>
-        <div class="card chart-card rise">
-          <div class="chart-head" style="margin-bottom:14px">
-            <h3>Main-setting results</h3>
-          </div>
-          <div id="table-leaderboard"></div>
-        </div>
-
-        <div class="grid grid-2 rise" style="margin-top:24px;align-items:start">
-          <div class="card chart-card">
-            <div class="chart-head"><h3>Finer-grained grading</h3></div>
-            <p class="chart-note">TODO: what the secondary table adds over the binary outcome, and
-              what its columns mean. Rows come from <code>multi</code> in the data file; the header
-              below is plain HTML, so rename the columns here.</p>
-            <div class="table-shell">
-              <div class="table-scroll">
-                <table class="data" id="table-multi">
-                  <thead>
-                    <tr class="group">
-                      <th></th>
-                      <th colspan="3" scope="colgroup">Macro-recall</th>
-                      <th></th>
-                    </tr>
-                    <tr>
-                      <th scope="col">Model</th>
-                      <th scope="col" title="TODO: define">Align</th>
-                      <th scope="col" title="TODO: define">Effic</th>
-                      <th scope="col" title="TODO: define">Multi</th>
-                      <th scope="col" title="threshold-free ranking quality">AUC</th>
-                    </tr>
-                  </thead>
-                  <tbody></tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-          <div class="card chart-card">
-            <div class="chart-head"><h3>TODO: the second panel</h3></div>
-            <p class="chart-note">A short list of standalone numbers — agreement, variance under
-              resampling, whatever the paper reports as one-liners.</p>
-            <ul style="list-style:none;padding:0;margin:0;font-size:15.5px;line-height:1.75">
-              <li style="padding:12px 0;border-bottom:1px solid var(--hairline-cool)">
-                <b style="color:var(--gold-200);font-family:var(--font-mono)">TODO</b> — first number,
-                and the sentence that makes it mean something.</li>
-              <li style="padding:12px 0;border-bottom:1px solid var(--hairline-cool)">
-                <b style="color:var(--gold-200);font-family:var(--font-mono)">TODO</b> — second number.</li>
-              <li style="padding:12px 0;border-bottom:1px solid var(--hairline-cool)">
-                <b style="color:var(--gold-200);font-family:var(--font-mono)">TODO</b> — third number.</li>
-              <li style="padding:12px 0">
-                <b style="color:var(--gold-200);font-family:var(--font-mono)">TODO</b> — fourth number.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
 
     <!-- ================================================================== -->
     <!-- Method                                                              -->
@@ -705,173 +474,56 @@
     <!-- contribution in the Overview.                                        -->
     <!-- ================================================================== -->
     <section class="band" id="method">
+ <div class="wrap">
+  <div class="section-head"><span class="eyebrow">Protocol</span><h2 class="section-title">Observe. Act.<br><span class="gilt">Verify what remains.</span></h2><p class="section-sub">Screenshot-only evaluation with the current screenshot and the three most recent interaction steps and screenshots. Each task is judged from its final environment state.</p></div>
+  <div class="cr-protocol rise">
+   <div class="card feature"><h3>Reproducible initialization</h3><p>Restore a platform baseline, materialize task-specific files and application records, and arrange the starting applications.</p></div>
+   <div class="card feature"><h3>Native interaction</h3><p>Desktop runtime adapters, Android ADB, and iOS Appium/XCUITest map a shared action interface to each platform.</p></div>
+   <div class="card feature"><h3>Executable final-state evaluation</h3><p>Check saved documents, databases, application records, and output artifacts after the episode ends. Plausible screenshots alone do not establish success.</p></div>
+  </div>
+  <div id="annotation-pipeline" class="story-widget"></div>
+  <div class="grid grid-2 rise" style="margin-top:24px">
+   <div class="card feature"><h3>Single-platform budget</h3><p>At most 300 steps and 180 seconds per step, subject to the task specification. Six platforms, 48 tasks each.</p></div>
+   <div class="card feature"><h3>Cross-device budget</h3><p>300–650 steps and 120 seconds per step. A desktop shows its companion Android phone; the agent transfers artifacts and returns results to the phone.</p></div>
+  </div>
+  <p class="cr-source">Sources: Sections 2.1–2.4 and 4.1. The Camera Ready does not report training gains, cost curves, quantitative ablations, or confidence intervals; those template charts have been removed.</p>
+ </div>
+</section>
+
+    <!-- ================================================================== -->
+    <!-- Task Explorer: real task briefs from the v1 release manifest.        -->
+    <!-- ================================================================== -->
+    <section class="band" id="tasks">
       <div class="wrap">
         <div class="section-head">
-          <span class="eyebrow">Method</span>
-          <h2 class="section-title">TODO: <span class="gilt">what we build on top</span></h2>
-          <p class="section-sub">TODO: the one-paragraph pitch — what this is, what problem from the
-            findings it targets, and why it is worth reading about.</p>
+          <span class="eyebrow">Task Explorer / v1 collection</span>
+          <h2 class="section-title">Small actions.<br><span class="gilt">Complex worlds.</span></h2>
+          <p class="section-sub">A field guide to the workflows behind OS-Omni. Follow your curiosity across platforms, applications, and the details that make a task a challenge.</p>
         </div>
-
-        <div class="grid grid-2 rise" style="align-items:start">
-          <div class="card chart-card">
-            <div class="chart-head"><h3>TODO: the corpus</h3></div>
-            <p class="chart-note">TODO: what one sample is, how many there are, and how they were
-              selected. Data comes from <code>corpus</code> in the data file.</p>
-            <div id="chart-corpus"></div>
-          </div>
-          <div class="card chart-card">
-            <div class="chart-head"><h3>TODO: the recipe</h3></div>
-            <p class="chart-note">TODO: the training setup in one line.</p>
-            <div class="flow" style="gap:12px;margin-top:8px">
-              <div class="flow-node" style="text-align:left">
-                <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
-                  <span class="step-n">1</span>
-                  <h4 style="margin:0">TODO: first stage</h4>
-                </div>
-                <p>What it does, and what it fixes.</p>
-              </div>
-              <div class="flow-node human" style="text-align:left">
-                <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px">
-                  <span class="step-n">2</span>
-                  <h4 style="margin:0">TODO: second stage</h4>
-                </div>
-                <p>What the first stage leaves behind, and how this targets it.</p>
-              </div>
-            </div>
-            <div class="takeaway" style="margin-top:16px">
-              <span class="k">Why</span>
-              <p>TODO: the design choice worth defending, in one sentence.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Data pipeline. Every caption is data-driven — relabel the funnel
-             from corpusFlow in the data file, not from the chart library. -->
-        <div class="card chart-card rise" style="margin-top:24px">
-          <div class="chart-head">
-            <h3>How the corpus is built</h3>
-          </div>
-          <p class="chart-note">TODO: walk the funnel left to right. Note that the unit changes
-            partway — the left columns count trajectories, the right two count something else — which
-            is why the chart restarts its scale there. Hover any band.</p>
-          <div id="chart-corpus-flow"></div>
-        </div>
-
-        <!-- Model cards -->
-        <div class="grid grid-2 rise" style="margin-top:24px">
-          <div class="card model-card">
-            <div class="top">
-              <img src="public/logos/Ours.png" alt="">
-              <h3>TODO: model A</h3>
-            </div>
-            <p style="font-size:15px;color:var(--text-dim);margin:0">TODO: two or three sentences on
-              what this checkpoint does well and what it costs to run.</p>
-            <dl>
-              <dt>TODO: metric</dt><dd>00.0<span class="up">+0.0</span></dd>
-              <dt>TODO: metric</dt><dd>00.0<span class="up">+0.0</span></dd>
-              <dt>TODO: metric</dt><dd>00.0<span class="up">+0.0</span></dd>
-              <dt>Base</dt><dd>TODO</dd>
-            </dl>
-          </div>
-          <div class="card model-card">
-            <div class="top">
-              <img src="public/logos/Ours.png" alt="">
-              <h3>TODO: model B</h3>
-            </div>
-            <p style="font-size:15px;color:var(--text-dim);margin:0">TODO: what changes at the larger
-              size, and what does not.</p>
-            <dl>
-              <dt>TODO: metric</dt><dd>00.0<span class="up">+0.0</span></dd>
-              <dt>TODO: metric</dt><dd>00.0<span class="up">+0.0</span></dd>
-              <dt>TODO: metric</dt><dd>00.0<span class="up">+0.0</span></dd>
-              <dt>Base</dt><dd>TODO</dd>
-            </dl>
-          </div>
-        </div>
-
-        <!-- Training deltas -->
-        <div class="card chart-card rise" style="margin-top:24px">
-          <div class="chart-head"><h3>Against the untuned base</h3></div>
-          <p class="chart-note">TODO: what the comparison shows. Rows come from
-            <code>training</code> in the data file; the column headers below are plain HTML.</p>
-          <div class="table-shell">
-            <div class="table-scroll">
-              <table class="data" id="table-training">
-                <thead>
-                  <tr class="group">
-                    <th></th>
-                    <th colspan="4" scope="colgroup">OS-Omni</th>
-                    <th colspan="4" scope="colgroup">OS-Omni-Hard</th>
-                  </tr>
-                  <tr>
-                    <th scope="col">Model</th>
-                    <th scope="col">Acc</th><th scope="col">sRec</th><th scope="col">fRec</th><th scope="col">BalAcc</th>
-                    <th scope="col">Acc</th><th scope="col">sRec</th><th scope="col">fRec</th><th scope="col">BalAcc</th>
-                  </tr>
-                </thead>
-                <tbody></tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-
-        <!-- Generalization -->
-        <div class="grid grid-2 rise" style="margin-top:24px;align-items:start">
-          <div class="card chart-card">
-            <div class="chart-head"><h3>Held-out benchmarks</h3></div>
-            <p class="chart-note">TODO: which benchmarks, scored against what, on which subsets — and
-              whether any of them contributed to training.</p>
-            <div id="chart-general"></div>
-          </div>
-          <div class="card chart-card">
-            <div class="chart-head"><h3>TODO: the transfer claim</h3></div>
-            <p class="chart-note">TODO: what this second chart adds. Series are defined in
-              <code>generalization.leniencySeries</code>.</p>
-            <div id="chart-leniency"></div>
-          </div>
-        </div>
-
-        <div class="takeaway rise" style="margin-top:24px">
-          <span class="k">Net</span>
-          <p>TODO: the closing claim for this section — what was shown, and what it does not yet show.</p>
-        </div>
+        <div id="task-explorer"><p role="status">Loading tasks…</p></div>
+        <noscript>Enable JavaScript to search and browse the task catalog.</noscript>
       </div>
     </section>
 
     <!-- ================================================================== -->
-    <!-- DataViewer                                                          -->
-    <!-- Fully wired. Content comes from OSOmniData.viewer; the placeholder   -->
-    <!-- banner is driven by its `placeholder` flag, not hardcoded here.      -->
+    <!-- Recorded cases                                                      -->
     <!-- ================================================================== -->
-    <section class="band" id="viewer">
-      <div class="wrap">
-        <div class="section-head">
-          <span class="eyebrow">Explore</span>
-          <h2 class="section-title">Data <span class="gilt">Viewer</span></h2>
-          <p class="section-sub">Look at the cases yourself. Step through a workflow the way an
-            evaluator sees it — the instruction, the agent's actions and its reasoning — make your own
-            call, then reveal what the annotators decided and how the models scored it.</p>
-        </div>
-        <div class="card chart-card rise" id="viewer-card">
-          <div id="viewer-body"></div>
-        </div>
+    <section class="band" id="case-studies">
+      <div class="wrap wrap-wide">
+        <div class="section-head"><span class="eyebrow">Recorded trajectories</span><h2 class="section-title">Real screens.<br><span class="gilt">The steps behind the result.</span></h2><p class="section-sub" id="case-library-summary">Choose a platform and application to explore recorded workflows through their original observations, actions and final-state verdicts.</p></div>
+        <div id="recorded-cases" class="recorded-cases"><p role="status">Loading recorded examples…</p></div>
+        <p class="cr-source">Source: selected runs from the OS-Omni result archive, each pinned to its source revision. Both passing and failing attempts are included; displayed instructions belong to the archived run. These examples are not aggregate benchmark results and do not replace Camera Ready Table 1. Playback uses lightweight previews; unmodified originals are available through “Open screenshot”. No action is executed by this replay.</p>
       </div>
     </section>
 
-    <!-- ================================================================== -->
-    <!-- Resources                                                           -->
-    <!-- ================================================================== -->
     <section class="band" id="resources">
       <div class="wrap">
         <div class="section-head">
           <span class="eyebrow">Resources</span>
-          <h2 class="section-title">Open <span class="gilt">code, data and models</span></h2>
-          <p class="section-sub">Each link goes live as its artifact lands. A parked card carries
-            <code>pending-card</code> and shows a "soon" badge; drop the class and add the
-            <code>href</code> to turn it on.</p>
+          <h2 class="section-title">Code, tasks.<br><span class="gilt">The execution environment.</span></h2>
+          <p class="section-sub">Browse task instructions and recorded cases on this page. The result archive is linked below; access may require a Hugging Face sign-in. Code and benchmark downloads remain forthcoming.</p>
         </div>
-        <div class="grid grid-4 rise">
+        <div class="grid grid-3 rise">
           <div class="card feature pending-card" data-link="benchmark">
             <span class="soon">soon</span>
             <div class="ico">
@@ -883,38 +535,27 @@
             <h3>OS-Omni</h3>
             <p>The benchmark: tasks, environments and verifiers.</p>
           </div>
-          <div class="card feature pending-card" data-link="corpus">
-            <span class="soon">soon</span>
+          <a class="card feature" href="#case-studies" data-link="case-studies">
             <div class="ico">
               <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
                 <path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z" stroke-linejoin="round" />
               </svg>
             </div>
             <h3>Trajectories</h3>
-            <p>The recorded rollouts behind every number on this page.</p>
-          </div>
-          <div class="card feature pending-card" data-link="models">
+            <p>Replay three recorded Windows, iOS and macOS examples with original screens and actions.</p>
+          </a>
+          <div class="card feature pending-card" data-link="code">
             <span class="soon">soon</span>
-            <div class="ico">
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
-                <circle cx="12" cy="12" r="3" />
-                <path d="M12 2v4M12 18v4M2 12h4M18 12h4M5 5l3 3M16 16l3 3M19 5l-3 3M8 16l-3 3" stroke-linecap="round" />
-              </svg>
-            </div>
-            <h3>TODO: models</h3>
-            <p>Delete this card if the project releases no weights.</p>
-          </div>
-          <a class="card feature" href="https://github.com/OS-Copilot/OS-Omni" target="_blank"
-            rel="noopener" data-link="code">
             <div class="ico">
               <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
                 <path d="m8 6-6 6 6 6M16 6l6 6-6 6M14 3l-4 18" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
             </div>
             <h3>Code</h3>
-            <p>Evaluation harness, the protocol, and the environment setup.</p>
-          </a>
+            <p>Evaluation harness, protocol, and environment setup. Public link forthcoming.</p>
+          </div>
         </div>
+        <p class="cr-source"><a href="https://huggingface.co/datasets/YUNTA88/osomniresult/tree/main" target="_blank" rel="noopener">Browse the source result archive ↗</a> · Sign-in may be required. Archive coverage and historical run outcomes are documented in its README.</p>
       </div>
     </section>
 
@@ -926,6 +567,7 @@
         <div class="section-head">
           <span class="eyebrow">Citation</span>
           <h2 class="section-title">BibTeX</h2>
+          <p class="section-sub">Draft citation. Author and publication metadata will be finalized with the public paper release.</p>
         </div>
         <div class="bibtex rise">
           <div class="bibtex-bar">
@@ -945,7 +587,7 @@
   title   = {OS-Omni: Benchmarking Generalist Computer-Using Agents on Long-Horizon
              Workflows Across Platforms},
   author  = {{OS-Omni Contributors}},
-  journal = {arXiv preprint},
+  note    = {Camera-ready manuscript; final publication metadata pending},
   year    = {2026}
 }</pre>
         </div>
@@ -974,10 +616,10 @@
           <ul>
             <li><a href="#abstract">Overview</a></li>
             <li><a href="#benchmark">Benchmark</a></li>
-            <li><a href="#findings">Findings</a></li>
             <li><a href="#leaderboard">Leaderboard</a></li>
-            <li><a href="#method">Method</a></li>
-            <li><a href="#viewer">DataViewer</a></li>
+            <li><a href="#findings">Findings</a></li>
+            <li><a href="#method">Protocol</a></li>
+            <li><a href="#tasks">Task Explorer</a></li>
             <li><a href="#cite">Cite</a></li>
           </ul>
         </div>
@@ -985,8 +627,7 @@
           <h2>Artifacts</h2>
           <ul>
             <li><a href="#resources">OS-Omni benchmark</a></li>
-            <li><a href="#resources">Trajectories</a></li>
-            <li><a href="#resources">Models</a></li>
+            <li><a href="#case-studies">Trajectories</a></li>
             <li><a href="#resources">Code</a></li>
           </ul>
         </div>
@@ -995,14 +636,25 @@
         <span>© 2026 OS-Omni Contributors.</span>
         <span>Page content licensed
           <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.</span>
-        <span style="margin-left:auto">Cover art and figures are placeholders.</span>
+        <span style="margin-left:auto">Results: Camera Ready Table 1 · OS-Omni v1.</span>
       </div>
     </div>
   </footer>
 
-  <script src="static/js/osomni-data.js"></script>
-  <script src="static/js/osomni-charts.js"></script>
-  <script src="static/js/main.js"></script>
+  <script src="static/js/osomni-data.js?v=camera-ready-2"></script>
+  <script src="static/js/paper-results.js?v=6"></script>
+  <script src="static/js/dataset-composition.js?v=4"></script>
+  <script src="static/js/main.js?v=preflight-3"></script>
+  <script src="static/js/browser-apps.js"></script>
+  <script src="static/js/device-profiles.js?v=20261110-app-visibility-2"></script>
+  <script src="static/js/task-explorer.js?v=7"></script>
+  <script src="static/js/android-device-controls.js"></script>
+  <script src="static/js/desktop-device-controls.js"></script>
+  <script src="static/js/ios-device-controls.js"></script>
+  <script src="static/js/browser-playground.js?v=20261110-preflight-9"></script>
+  <script src="static/js/device-showcase.js?v=2"></script>
+  <script src="static/js/research-stories.js?v=20261110-pipeline-smooth-9"></script>
+  <script src="static/js/case-studies.js?v=10-web-library"></script>
 </body>
 
 </html>

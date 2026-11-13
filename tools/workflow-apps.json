@@ -1,0 +1,478 @@
+[
+  {
+    "id": "deltachat",
+    "name": "DeltaChat",
+    "engine": "chat",
+    "platforms": [
+      "all"
+    ]
+  },
+  {
+    "id": "drawio",
+    "name": "draw.io",
+    "engine": "diagram",
+    "platforms": [
+      "desktop"
+    ]
+  },
+  {
+    "id": "libreoffice-draw",
+    "name": "LibreOffice Draw",
+    "engine": "diagram",
+    "platforms": [
+      "desktop"
+    ]
+  },
+  {
+    "id": "spotube",
+    "name": "Spotube",
+    "engine": "media",
+    "platforms": [
+      "all"
+    ]
+  },
+  {
+    "id": "vlc",
+    "name": "VLC",
+    "engine": "media",
+    "platforms": [
+      "desktop"
+    ]
+  },
+  {
+    "id": "mpv",
+    "name": "mpv",
+    "engine": "media",
+    "platforms": [
+      "desktop"
+    ]
+  },
+  {
+    "id": "rhythmbox",
+    "name": "Rhythmbox",
+    "engine": "media",
+    "platforms": [
+      "linux"
+    ]
+  },
+  {
+    "id": "chrome",
+    "name": "Google Chrome",
+    "engine": "browser",
+    "platforms": [
+      "desktop"
+    ]
+  },
+  {
+    "id": "safari",
+    "name": "Safari",
+    "engine": "browser",
+    "platforms": [
+      "macos",
+      "ios"
+    ]
+  },
+  {
+    "id": "document-viewer",
+    "name": "Document Viewer",
+    "engine": "pdf",
+    "platforms": [
+      "desktop"
+    ]
+  },
+  {
+    "id": "terminal",
+    "name": "Terminal",
+    "engine": "terminal",
+    "platforms": [
+      "desktop"
+    ]
+  },
+  {
+    "id": "thunderbird",
+    "name": "Thunderbird",
+    "engine": "openmail",
+    "platforms": [
+      "desktop"
+    ]
+  },
+  {
+    "id": "k9",
+    "name": "K-9 Mail",
+    "engine": "openmail",
+    "platforms": [
+      "android"
+    ]
+  },
+  {
+    "id": "maily",
+    "name": "Maily",
+    "engine": "openmail",
+    "platforms": [
+      "ios"
+    ]
+  },
+  {
+    "id": "fsnotes",
+    "name": "FSNotes",
+    "engine": "notes",
+    "platforms": [
+      "macos",
+      "ios"
+    ]
+  },
+  {
+    "id": "markor",
+    "name": "Markor",
+    "engine": "notes",
+    "platforms": [
+      "android"
+    ]
+  },
+  {
+    "id": "notepad",
+    "name": "Notepad",
+    "engine": "notes",
+    "platforms": [
+      "windows"
+    ]
+  },
+  {
+    "id": "notepadqq",
+    "name": "Notepadqq",
+    "engine": "notes",
+    "platforms": [
+      "linux"
+    ]
+  },
+  {
+    "id": "textedit",
+    "name": "TextEdit",
+    "engine": "notes",
+    "platforms": [
+      "macos"
+    ]
+  },
+  {
+    "id": "vim",
+    "name": "Vim",
+    "engine": "notes",
+    "platforms": [
+      "linux"
+    ]
+  },
+  {
+    "id": "actual-budget",
+    "name": "Actual Budget",
+    "engine": "openfinance",
+    "platforms": [
+      "desktop"
+    ]
+  },
+  {
+    "id": "flow",
+    "name": "Flow",
+    "engine": "openfinance",
+    "platforms": [
+      "ios"
+    ]
+  },
+  {
+    "id": "oinkoin",
+    "name": "Oinkoin",
+    "engine": "openfinance",
+    "platforms": [
+      "android"
+    ]
+  },
+  {
+    "id": "quickshop",
+    "name": "QuickShop",
+    "engine": "openshop",
+    "platforms": [
+      "ios"
+    ]
+  },
+  {
+    "id": "tasks-org",
+    "name": "Tasks.org",
+    "engine": "reminders",
+    "platforms": [
+      "android"
+    ]
+  },
+  {
+    "id": "fossify-calendar",
+    "name": "Fossify Calendar",
+    "engine": "calendar",
+    "platforms": [
+      "android"
+    ]
+  },
+  {
+    "id": "fossify-gallery",
+    "name": "Fossify Gallery",
+    "engine": "gallery",
+    "platforms": [
+      "android"
+    ]
+  },
+  {
+    "id": "material-files",
+    "name": "Material Files",
+    "engine": "files",
+    "platforms": [
+      "android"
+    ]
+  },
+  {
+    "id": "habit",
+    "name": "Habit",
+    "engine": "habits",
+    "platforms": [
+      "ios"
+    ]
+  },
+  {
+    "id": "photos",
+    "name": "Photos",
+    "engine": "gallery",
+    "platforms": [
+      "macos"
+    ]
+  },
+  {
+    "id": "maps",
+    "name": "Maps",
+    "engine": "opennavigation",
+    "platforms": [
+      "macos",
+      "android"
+    ]
+  },
+  {
+    "id": "marble",
+    "name": "Marble",
+    "engine": "opennavigation",
+    "platforms": [
+      "desktop"
+    ]
+  },
+  {
+    "id": "libreoffice-writer",
+    "name": "LibreOffice Writer",
+    "engine": "opendoc",
+    "platforms": [
+      "desktop"
+    ]
+  },
+  {
+    "id": "libreoffice-calc",
+    "name": "LibreOffice Calc",
+    "engine": "opensheet",
+    "platforms": [
+      "desktop"
+    ]
+  },
+  {
+    "id": "libreoffice-impress",
+    "name": "LibreOffice Impress",
+    "engine": "openslide",
+    "platforms": [
+      "desktop"
+    ]
+  },
+  {
+    "id": "libreoffice",
+    "name": "LibreOffice Viewer",
+    "engine": "opendoc",
+    "platforms": [
+      "android",
+      "macos"
+    ]
+  },
+  {
+    "id": "gimp",
+    "name": "GIMP",
+    "engine": "openphotoedit",
+    "platforms": [
+      "desktop"
+    ]
+  },
+  {
+    "id": "blender",
+    "name": "Blender",
+    "engine": "openblender",
+    "platforms": [
+      "desktop"
+    ]
+  },
+  {
+    "id": "wireshark",
+    "name": "Wireshark",
+    "engine": "openwireshark",
+    "platforms": [
+      "desktop"
+    ]
+  },
+  {
+    "id": "vscode",
+    "name": "Visual Studio Code",
+    "engine": "opencode",
+    "platforms": [
+      "desktop"
+    ]
+  },
+  {
+    "id": "vscodium",
+    "name": "VSCodium",
+    "engine": "opencode",
+    "platforms": [
+      "macos"
+    ]
+  },
+  {
+    "id": "zotero",
+    "name": "Zotero",
+    "engine": "openzotero",
+    "platforms": [
+      "desktop"
+    ]
+  },
+  {
+    "id": "shotwell",
+    "name": "Shotwell",
+    "engine": "gallery",
+    "platforms": [
+      "linux"
+    ]
+  },
+  {
+    "id": "image-viewer",
+    "name": "Image Viewer",
+    "engine": "imageviewer",
+    "platforms": [
+      "linux"
+    ]
+  },
+  {
+    "id": "google-maps",
+    "name": "Maps",
+    "engine": "opennavigation",
+    "platforms": [
+      "android"
+    ]
+  },
+  {
+    "id": "gmail",
+    "name": "Gmail",
+    "engine": "openmail",
+    "platforms": [
+      "android"
+    ]
+  },
+  {
+    "id": "messages",
+    "name": "Messages",
+    "engine": "chat",
+    "platforms": [
+      "android"
+    ]
+  },
+  {
+    "id": "edge",
+    "name": "Microsoft Edge",
+    "engine": "browser",
+    "platforms": [
+      "windows"
+    ]
+  },
+  {
+    "id": "paint",
+    "name": "Paint",
+    "engine": "drawing",
+    "platforms": [
+      "windows"
+    ]
+  },
+  {
+    "id": "outlook",
+    "name": "Outlook",
+    "engine": "openmail",
+    "platforms": [
+      "windows"
+    ]
+  },
+  {
+    "id": "sticky-notes",
+    "name": "Sticky Notes",
+    "engine": "notes",
+    "platforms": [
+      "windows"
+    ]
+  },
+  {
+    "id": "windows-media-player",
+    "name": "Windows Media Player Legacy",
+    "engine": "media",
+    "platforms": [
+      "windows"
+    ]
+  },
+  {
+    "id": "media-player",
+    "name": "Media Player",
+    "engine": "media",
+    "platforms": [
+      "windows"
+    ]
+  },
+  {
+    "id": "to-do",
+    "name": "Microsoft To Do",
+    "engine": "reminders",
+    "platforms": [
+      "windows"
+    ]
+  },
+  {
+    "id": "command-prompt",
+    "name": "Command Prompt",
+    "engine": "terminal",
+    "platforms": [
+      "windows"
+    ]
+  },
+  {
+    "id": "powershell",
+    "name": "Windows PowerShell",
+    "engine": "terminal",
+    "platforms": [
+      "windows"
+    ]
+  },
+  {
+    "id": "apple-music",
+    "name": "Music",
+    "engine": "media",
+    "platforms": [
+      "macos"
+    ]
+  },
+  {
+    "id": "quicktime",
+    "name": "QuickTime Player",
+    "engine": "media",
+    "platforms": [
+      "macos"
+    ]
+  },
+  {
+    "id": "preview",
+    "name": "Preview",
+    "engine": "pdf",
+    "platforms": [
+      "macos"
+    ]
+  }
+]
