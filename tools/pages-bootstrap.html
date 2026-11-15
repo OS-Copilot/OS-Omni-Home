@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#071426"><title>OS-Omni</title>
+<style>
+:root{color-scheme:dark}*{box-sizing:border-box}body{margin:0;min-height:100svh;display:grid;place-items:center;background:#071426;color:#e6edf5;font:17px/1.65 system-ui,sans-serif;text-align:center;padding:32px}.mark{font-size:32px;letter-spacing:.07em;margin-bottom:16px}.mark span{color:#ecd38e}.loader{width:40px;height:40px;margin:28px auto;border:2px solid #23364c;border-top-color:#ecd38e;border-radius:50%;animation:spin .9s linear infinite}p{color:#a8bacd;max-width:38em}a{color:#ecd38e}button{border:1px solid #40536a;border-radius:24px;color:inherit;background:transparent;padding:10px 22px;font:inherit;cursor:pointer}@keyframes spin{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){.loader{animation:none}}
+</style></head><body><main><div class="mark">OS-<span>Omni</span></div><div class="loader" aria-hidden="true"></div><p role="status" id="status">Preparing your interactive workspace…</p><button id="retry" hidden>Try again</button><p id="home" hidden><a href="__OSOMNI_BASE__">Return to the homepage</a></p></main>
+<script>
+(async function(){
+  "use strict";
+  var base=__OSOMNI_BASE_JSON__,status=document.getElementById("status");
+  document.getElementById("retry").onclick=function(){location.reload();};
+  try {
+    if(!("serviceWorker" in navigator)||typeof DecompressionStream==="undefined")throw Error("Please open this workspace in an up-to-date Chrome, Edge, Firefox or Safari browser.");
+    var workerURL=new URL(base+"osomni-pages-sw.js",location.origin).href;
+    if(navigator.serviceWorker.controller&&navigator.serviceWorker.controller.scriptURL===workerURL){
+      var exists=await new Promise(function(resolve,reject){var channel=new MessageChannel(),timer=setTimeout(function(){reject(Error("Please reload to finish loading your workspace."));},15000);channel.port1.onmessage=function(event){clearTimeout(timer);resolve(event.data.found);};navigator.serviceWorker.controller.postMessage({type:"OSOMNI_ROUTE_CHECK",url:location.href},[channel.port2]);});
+      if(exists){location.reload();return;}
+      status.textContent="This page could not be found.";document.getElementById("home").hidden=false;document.querySelector(".loader").hidden=true;return;
+    }
+    await navigator.serviceWorker.register(workerURL,{scope:base,updateViaCache:"none"});
+    await navigator.serviceWorker.ready;
+    if(!navigator.serviceWorker.controller)await new Promise(function(resolve,reject){
+      var timer=setTimeout(function(){reject(Error("Your workspace could not finish loading. Please reload."));},45000);
+      navigator.serviceWorker.addEventListener("controllerchange",function(){clearTimeout(timer);resolve();},{once:true});
+      if(navigator.serviceWorker.controller){clearTimeout(timer);resolve();}
+    });
+    location.reload();
+  }catch(error){status.textContent=error.message||"Your workspace could not load. Please try again.";document.querySelector(".loader").hidden=true;document.getElementById("retry").hidden=false;}
+})();
+</script><noscript>Enable JavaScript to explore the interactive workspace.</noscript></body></html>

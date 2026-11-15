@@ -15,3 +15,25 @@ exports/
 
 # Node (only if a build step is ever added)
 node_modules/
+
+# Local preview server bytecode
+__pycache__/
+*.pyc
+
+# Generated browser application pack (rebuild with tools/build_playground.py)
+public/playground/
+
+# Generated trajectory media; keep locally and package separately for deployment.
+# Rebuild with tools/import_case_studies.py using the pinned archive sources.
+public/case-studies/
+public/case-previews/
+
+# Local source downloads, preview logs, inventories and rendered paper pages.
+tmp/
+dist/
+
+# Local credentials are never website source.
+.env
+.env.*
+!.env.example
+.envv

@@ -1,0 +1,948 @@
+{
+  "platform": "macos",
+  "applications": [
+    {
+      "id": "zotero",
+      "name": "Zotero",
+      "bundle": "org.zotero.zotero",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": "spotube",
+      "name": "Spotube",
+      "bundle": "oss.krtirtho.spotube",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": "blender",
+      "name": "Blender",
+      "bundle": "org.blenderfoundation.blender",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": "deltachat",
+      "name": "DeltaChat",
+      "bundle": "chat.delta.desktop.electron",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": "thunderbird",
+      "name": "Thunderbird",
+      "bundle": "org.mozilla.thunderbird",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": "libreoffice",
+      "name": "LibreOffice",
+      "bundle": "org.libreoffice.script",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": "wireshark",
+      "name": "Wireshark",
+      "bundle": "org.wireshark.Wireshark",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": "gimp",
+      "name": "GIMP",
+      "bundle": "org.gimp.gimp",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": "vscodium",
+      "name": "VSCodium",
+      "bundle": "com.vscodium",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": "actual-budget",
+      "name": "Actual",
+      "bundle": "com.actualbudget.actual",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": "drawio",
+      "name": "draw.io",
+      "bundle": "com.jgraph.drawio.desktop",
+      "mode": "Original macos application frontend, browser adapted",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": null,
+      "name": "IDLE",
+      "bundle": "org.python.IDLE",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": null,
+      "name": "Python Launcher",
+      "bundle": "org.python.PythonLauncher",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": "openfood",
+      "name": "OpenFood",
+      "bundle": "local.osomni.openfood",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": "opentrip",
+      "name": "OpenTrip",
+      "bundle": "local.osomni.opentrip",
+      "mode": "Original macos application frontend, browser adapted",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": "opennavigation",
+      "name": "OpenNavigation",
+      "bundle": "local.osomni.opennavigation",
+      "mode": "Original macos application frontend, browser adapted",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": "opentwitter",
+      "name": "OpenTwitter",
+      "bundle": "local.osomni.opentwitter",
+      "mode": "Original macos application frontend, browser adapted",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": "openbank",
+      "name": "OpenBank",
+      "bundle": "local.osomni.openbank",
+      "mode": "Original macos application frontend, browser adapted",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": "opendriver",
+      "name": "OpenDriver",
+      "bundle": "local.osomni.opendriver",
+      "mode": "Original macos application frontend, browser adapted",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": "openphotoedit",
+      "name": "OpenPhotoEdit",
+      "bundle": "com.killt.openphotoedit",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": "openrednote",
+      "name": "OpenNote",
+      "bundle": "local.osomni.opennote",
+      "mode": "Original macos application frontend, browser adapted",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": "openshop",
+      "name": "OpenShop",
+      "bundle": "local.osomni.openshop",
+      "mode": "Original macos application frontend, browser adapted",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": null,
+      "name": "Siri",
+      "bundle": "com.apple.siri.launcher",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": "apple-music",
+      "name": "Music",
+      "bundle": "com.apple.Music",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": null,
+      "name": "FindMy",
+      "bundle": "com.apple.findmy",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": "quicktime",
+      "name": "QuickTime Player",
+      "bundle": "com.apple.QuickTimePlayerX",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": null,
+      "name": "Chess",
+      "bundle": "com.apple.Chess",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": null,
+      "name": "Games",
+      "bundle": "com.apple.games",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": null,
+      "name": "Photo Booth",
+      "bundle": "com.apple.PhotoBooth",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": null,
+      "name": "Books",
+      "bundle": "com.apple.iBooksX",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": null,
+      "name": "Weather",
+      "bundle": "com.apple.weather",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": "notes",
+      "name": "Notes",
+      "bundle": "com.apple.Notes",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": null,
+      "name": "Image Capture",
+      "bundle": "com.apple.Image_Capture",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": null,
+      "name": "Home",
+      "bundle": "com.apple.Home",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": null,
+      "name": "Freeform",
+      "bundle": "com.apple.freeform",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": null,
+      "name": "Passwords",
+      "bundle": "com.apple.Passwords",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": "preview",
+      "name": "Preview",
+      "bundle": "com.apple.Preview",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": null,
+      "name": "News",
+      "bundle": "com.apple.news",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": "textedit",
+      "name": "TextEdit",
+      "bundle": "com.apple.TextEdit",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": null,
+      "name": "Podcasts",
+      "bundle": "com.apple.podcasts",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": "settings",
+      "name": "System Settings",
+      "bundle": "com.apple.systempreferences",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": null,
+      "name": "TV",
+      "bundle": "com.apple.TV",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": null,
+      "name": "Apps",
+      "bundle": "com.apple.apps.launcher",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": null,
+      "name": "Stocks",
+      "bundle": "com.apple.stocks",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": "openmail",
+      "name": "Mail",
+      "bundle": "com.apple.mail",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": null,
+      "name": "Dictionary",
+      "bundle": "com.apple.Dictionary",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": "contacts",
+      "name": "Contacts",
+      "bundle": "com.apple.AddressBook",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": null,
+      "name": "Time Machine",
+      "bundle": "com.apple.backup.launcher",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": null,
+      "name": "Font Book",
+      "bundle": "com.apple.FontBook",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": null,
+      "name": "FaceTime",
+      "bundle": "com.apple.FaceTime",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": null,
+      "name": "Shortcuts",
+      "bundle": "com.apple.shortcuts",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": "maps",
+      "name": "Maps",
+      "bundle": "com.apple.Maps",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": null,
+      "name": "Mission Control",
+      "bundle": "com.apple.exposelauncher",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": "sticky-notes",
+      "name": "Stickies",
+      "bundle": "com.apple.Stickies",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": "photos",
+      "name": "Photos",
+      "bundle": "com.apple.Photos",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": "messages",
+      "name": "Messages",
+      "bundle": "com.apple.MobileSMS",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": null,
+      "name": "iPhone Mirroring",
+      "bundle": "com.apple.ScreenContinuity",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": "calculator",
+      "name": "Calculator",
+      "bundle": "com.apple.calculator",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": null,
+      "name": "VoiceMemos",
+      "bundle": "com.apple.VoiceMemos",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": null,
+      "name": "Journal",
+      "bundle": "com.apple.journal",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": null,
+      "name": "Image Playground",
+      "bundle": "com.apple.GenerativePlaygroundApp",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": "reminders",
+      "name": "Reminders",
+      "bundle": "com.apple.reminders",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": null,
+      "name": "App Store",
+      "bundle": "com.apple.AppStore",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": null,
+      "name": "Phone",
+      "bundle": "com.apple.mobilephone",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": "clock",
+      "name": "Clock",
+      "bundle": "com.apple.clock",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": null,
+      "name": "Automator",
+      "bundle": "com.apple.Automator",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": null,
+      "name": "Tips",
+      "bundle": "com.apple.helpviewer",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": "calendar",
+      "name": "Calendar",
+      "bundle": "com.apple.iCal",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": null,
+      "name": "AirPort Utility",
+      "bundle": "com.apple.airport.airportutility",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": null,
+      "name": "VoiceOver Utility",
+      "bundle": "com.apple.VoiceOverUtility",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": "terminal",
+      "name": "Terminal",
+      "bundle": "com.apple.Terminal",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": null,
+      "name": "Activity Monitor",
+      "bundle": "com.apple.ActivityMonitor",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": null,
+      "name": "Screenshot",
+      "bundle": "com.apple.screenshot.launcher",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": null,
+      "name": "Grapher",
+      "bundle": "com.apple.grapher",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": null,
+      "name": "Audio MIDI Setup",
+      "bundle": "com.apple.audio.AudioMIDISetup",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": null,
+      "name": "Screen Sharing",
+      "bundle": "com.apple.ScreenSharing",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": null,
+      "name": "System Information",
+      "bundle": "com.apple.SystemProfiler",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": null,
+      "name": "Print Center",
+      "bundle": "com.apple.printcenter",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": null,
+      "name": "Migration Assistant",
+      "bundle": "com.apple.MigrateAssistant",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": null,
+      "name": "Script Editor",
+      "bundle": "com.apple.ScriptEditor2",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": null,
+      "name": "ColorSync Utility",
+      "bundle": "com.apple.ColorSyncUtility",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": null,
+      "name": "Console",
+      "bundle": "com.apple.Console",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": null,
+      "name": "Disk Utility",
+      "bundle": "com.apple.DiskUtility",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": null,
+      "name": "Bluetooth File Exchange",
+      "bundle": "com.apple.BluetoothFileExchange",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": null,
+      "name": "Boot Camp Assistant",
+      "bundle": "com.apple.bootcampassistant",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": null,
+      "name": "Digital Color Meter",
+      "bundle": "com.apple.DigitalColorMeter",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": null,
+      "name": "Magnifier",
+      "bundle": "com.apple.Magnifier",
+      "mode": "Not implemented",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ]
+    },
+    {
+      "id": "files",
+      "name": "Finder",
+      "bundle": "com.apple.finder",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    },
+    {
+      "id": "safari",
+      "name": "Safari",
+      "bundle": "com.apple.Safari",
+      "mode": "Partial browser counterpart; native binary not ported",
+      "native_full_feature_parity": false,
+      "known_gaps": [
+        "Native operating-system services and advanced native features are not fully reproduced."
+      ],
+      "browser_load_check": "passed"
+    }
+  ],
+  "image_launcher_entries": 89,
+  "browser_implementations": 39,
+  "not_implemented": 50,
+  "note": "Original image resources do not imply native feature parity.",
+  "functional_checks": [
+    "Lock screen entry",
+    "Platform-specific native icon catalog",
+    "OpenShop cart and checkout",
+    "OpenNote post publication and persistence",
+    "Calendar event creation, week view and persistence",
+    "OpenDriver login",
+    "Control panel brightness and media volume",
+    "Original macOS draw.io palette and local XML save"
+  ]
+}

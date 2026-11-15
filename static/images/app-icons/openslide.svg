@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="OpenSlide">
+  <defs>
+    <linearGradient id="slide-bg" x1="20" x2="108" y1="12" y2="116" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#f97316"/>
+      <stop offset="1" stop-color="#9f2f14"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="128" rx="26" fill="url(#slide-bg)"/>
+  <rect x="27" y="28" width="74" height="48" rx="5" fill="#fff"/>
+  <path d="M38 43h30" stroke="#c43e1c" stroke-width="7" stroke-linecap="round"/>
+  <path d="M38 58h50" stroke="#f2b39f" stroke-width="6" stroke-linecap="round"/>
+  <path d="M45 92h38M64 76v16" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+  <path d="M82 28l19 17v-9a8 8 0 0 0-8-8z" fill="#ffd7c8"/>
+</svg>
