@@ -2,6 +2,9 @@
 
 更新：2026-11-15。正式地址固定为 **https://os-copilot.github.io/OS-Omni-Home/**。
 
+**已正式上线。** Pages 构建完成，正式地址的发布文件与版本 `8d437234d605571d` 一致；
+通过正式 HTTPS 域名完成了 299 个响应和 30 项协议检查。浏览器视觉/逐项交互验收仍未完成。
+
 ## 文件已全部上传
 
 所有内容均在现有仓库 `OS-Copilot/OS-Omni-Home`，不需要创建其他仓库。
@@ -20,12 +23,12 @@
 并通过 299 个响应和 30 项协议检查，包括公开读取、跨域许可、gzip、Range 与大小写兼容。
 全部 60 条案例、4,681 张截图及既有预览保留。
 
-## 剩下的一次设置
+## Pages 配置（已完成）
 
-当前 Git 登录账号 `Kiky-88` 有 push 权限，但没有仓库 maintainer/admin 权限。
-启用 Pages 的 API 请求返回 `HTTP 404: Not Found`，正式地址仍返回 404；尚不能视为上线成功。
+当前 Git 登录账号 `Kiky-88` 的 admin、maintain、push 权限均已生效。
+Pages 已设为 `gh-pages`、`/(root)`，并已开启 HTTPS。此前的无权限问题已解除。
 
-请仓库维护者/管理员：
+后续需检查发布源时，使用以下设置（当前已经保存）：
 
 1. 打开 https://github.com/OS-Copilot/OS-Omni-Home/settings/pages 。
 2. **Source** 选择 **Deploy from a branch**。

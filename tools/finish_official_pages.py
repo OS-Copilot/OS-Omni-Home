@@ -61,7 +61,15 @@ def main():
         if not current or current.get("build_type") != "legacy" or current.get("source") != settings["source"]:
             api(auth, "PUT" if current else "POST", endpoint, settings)
         result["pagesConfigured"] = True
-        api(auth, "POST", endpoint + "/builds")
+        try:
+            api(auth, "POST", endpoint + "/builds")
+        except RuntimeError:
+            # Enabling Pages can start the same release automatically. GitHub
+            # may reject a duplicate request while that first build is running.
+            build = api(auth, "GET", endpoint + "/builds/latest", allow404=True)
+            if not build or build.get("commit") != commit or build.get("status") not in ("queued", "building", "built"):
+                raise
+            result["buildRequestNote"] = "The matching Pages build was already started by GitHub"
         save()
     except RuntimeError as error:
         if live_matches():

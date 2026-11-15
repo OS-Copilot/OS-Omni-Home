@@ -238,12 +238,14 @@ listen for the page's theme-change event.
 
 ## Deploying
 
-For GitHub Pages, use the new [pure-static multi-project package](tools/PURE_STATIC_PAGES.md).
+For GitHub Pages, use the [pure-static release package](tools/PURE_STATIC_PAGES.md).
 The current official release uses a 178 MiB `gh-pages` homepage and five 401–750
 MiB resource branches in the existing official repository. All files are uploaded;
-no production Python server or additional repositories are needed. A maintainer
-must enable Pages on `gh-pages` / `(root)`, followed by public-release and browser
-verification. See the [current deployment status](tools/OFFICIAL_DEPLOYMENT.md).
+no production Python server or additional repositories are needed. The official
+site is live at https://os-copilot.github.io/OS-Omni-Home/ with Pages configured
+on `gh-pages` / `(root)`. Public resource/protocol verification passed; browser
+visual and exhaustive App interaction testing remain separate checks.
+See the [current deployment status](tools/OFFICIAL_DEPLOYMENT.md).
 
 The source checkout's configured remote is
 `https://github.com/OS-Copilot/OS-Omni-Home`, branch `main`. Push website source
