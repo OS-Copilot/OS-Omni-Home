@@ -1,0 +1,4 @@
+TODO
+- clean object names
+- keep proxy exports separate from final blends
+- render one small preview before changing lighting

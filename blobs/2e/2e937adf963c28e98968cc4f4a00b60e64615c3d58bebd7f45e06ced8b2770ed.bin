@@ -1,0 +1,2 @@
+Task: blender_preview_resolution
+Open product_stage_seed.blend and set output resolution to 1280 x 720 at 100 percent. Reference: product_stage_1280x720_expected.blend

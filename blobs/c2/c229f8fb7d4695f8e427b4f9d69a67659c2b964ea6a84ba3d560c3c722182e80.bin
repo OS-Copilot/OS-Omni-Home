@@ -1,0 +1,3 @@
+Robot rig notes
+
+IK target is usable for screenshots, but claw fingers are still proxy meshes. Next pass should add vertex groups and drivers.

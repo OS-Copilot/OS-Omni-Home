@@ -1,0 +1,5 @@
+# Personal export checklist
+
+- Freeze object names before OBJ export.
+- Keep .blend1 until client accepts final pass.
+- Put quick preview PNGs in 05_render_outputs/daily_previews.

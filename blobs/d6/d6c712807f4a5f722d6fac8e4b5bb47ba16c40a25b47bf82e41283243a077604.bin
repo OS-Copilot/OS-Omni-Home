@@ -1,0 +1,6 @@
+resolution_x	1280
+resolution_y	720
+resolution_percentage	100
+render_engine	BLENDER_EEVEE
+frame_start	1
+frame_end	120
