@@ -1,6 +1,6 @@
 /* Static-only resource adapter. No API server, VM or remote execution. */
 "use strict";
-const CONFIG = {"base": "/OS-Omni-Home/", "manifest": "osomni-resources.8d631c695cf87f39.json", "revision": "8d631c695cf87f39"};
+const CONFIG = {"base": "/OS-Omni-Home/", "manifest": "osomni-resources.8d437234d605571d.json", "revision": "8d437234d605571d"};
 const BASE = new URL(CONFIG.base, self.location.origin);
 const MANIFEST = new URL(CONFIG.manifest, BASE).href;
 const CACHE_NAME = "osomni-pages-manifest-" + CONFIG.revision;
@@ -118,7 +118,15 @@ async function handleRequest(request) {
   if (request.mode === "navigate" && !url.pathname.startsWith(BASE.pathname)) {
     return Response.redirect(new URL(route + url.search, BASE).href, 302);
   }
-  if (data.physicalSet.has(route)) return fetch(request);
+  if (data.physicalSet.has(route)) {
+    // Windows development filesystems ignore case; Pages does not. Always use
+    // the index's canonical spelling for physical assets as well.
+    const canonical = new URL(route.split("/").map(encodeURIComponent).join("/") + url.search, BASE);
+    return fetch(canonical.href, {method: request.method, headers: request.headers,
+      credentials: request.credentials || "same-origin", mode: "same-origin",
+      cache: request.cache || "default", redirect: request.redirect || "follow",
+      signal: request.signal});
+  }
   return resourceResponse(request, data, route);
 }
 
