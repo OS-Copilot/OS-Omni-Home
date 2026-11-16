@@ -1,0 +1,137 @@
+/* OS-Omni Orbit: colors drawn from the robot, teal orbit and gold stars.
+   The charcoal stylesheet supplies structure; these overrides are page-only. */
+:root[data-theme="light"],:root[data-theme="dark"]{
+ color-scheme:light;
+ --bg:#dce8e2;--surface-1:#eaf0eb;--surface-1b:#e1ece6;--surface-2:#d0e0d9;--surface-3:#f2f3e8;--ring:#dce8e2;
+ --text-hi:#173d4b;--text:#31545c;--text-dim:#486663;--text-faint:#536c64;
+ --gold-100:#174e4a;--gold-200:#1b655c;--gold-300:#21756a;--gold-400:#328777;--gold-500:#61a18b;--gold-600:#94baa5;
+ --cyan-200:#174e6c;--cyan-300:#206e86;--cyan-400:#3592a1;--cyan-500:#58aeb0;
+ --hairline:#234f4720;--hairline-strong:#234f4745;--hairline-cool:#24596f20;
+ --chart-grid:#234f4714;--chart-grid-minor:#234f470a;--chart-axis:#234f4738;--chart-track:#234f470d;
+ --logo-plate:#f3f3e7;--shadow:0 9px 25px #1b4a3a08;--ok:#18735d;--bad:#a24f45;
+}
+body.charcoal.orbit{background:var(--bg);color:var(--text)}
+.charcoal.orbit .nav{background:#dce8e2ee;border-color:var(--hairline)}
+.charcoal.orbit .nav-brand{color:#174e5b}
+.charcoal.orbit .nav-links a{color:#456668}
+.charcoal.orbit .nav-links a:hover,.charcoal.orbit .nav-links a.active{color:#163f4a}
+.charcoal.orbit .nav-tools .icon-btn{color:#24555d;border-color:var(--hairline)}
+.charcoal.orbit .charcoal-compare{color:#476d6b}
+.charcoal.orbit .hero{position:relative;padding-top:88px;background:linear-gradient(130deg,#e3ebda 0%,#d7e8df 48%,#d4e7e8 100%)}
+.charcoal.orbit .charcoal-hero-grid{gap:68px;min-height:480px}
+.charcoal.orbit .charcoal-kicker{color:#506f67}
+.charcoal.orbit .charcoal-kicker i{background:#af8535}
+.charcoal.orbit .charcoal-brand-name{font-weight:600;letter-spacing:-.06em;color:#17475c;font-size:clamp(48px,5vw,70px)}
+.charcoal.orbit .hero .charcoal-paper-title{font-size:clamp(23px,2.25vw,31px);line-height:1.3;color:#1e4755;font-weight:500;letter-spacing:-.035em}
+.charcoal.orbit .hero .lede{color:#4a6a69;max-width:560px}
+.charcoal.orbit .charcoal-brand-visual{max-width:590px;position:relative;padding:2px}
+.charcoal.orbit .charcoal-brand-art{filter:none}
+.charcoal.orbit .btn{border-color:#2b625b45;border-radius:9px;color:#235953;background:#e9f0e52b}
+.charcoal.orbit .btn:hover{border-color:#2b625b90;background:#eaf2e99c}
+.charcoal.orbit .charcoal-primary,.charcoal.orbit .btn-gold{color:#f1f3e7;background:#236e60;border-color:#236e60}
+.charcoal.orbit .charcoal-primary:hover,.charcoal.orbit .btn-gold:hover{color:#f5f6ec;background:#175d51;border-color:#175d51}
+.charcoal.orbit .charcoal-text-link,.charcoal.orbit .charcoal-paper-link{color:#376575}
+.charcoal.orbit .charcoal-text-link:hover,.charcoal.orbit .charcoal-paper-link:hover{color:#174e6c}
+.charcoal.orbit .charcoal-facts{border-color:#2b625b27;padding:26px 0;margin-top:42px}
+.charcoal.orbit .charcoal-facts>div{border-color:#2b625b27}
+.charcoal.orbit .charcoal-facts strong{color:#1d5261;font-weight:500}
+.charcoal.orbit .charcoal-facts span{color:#486663}
+.charcoal.orbit .section-title,.charcoal.orbit #tasks .section-title{color:#1e4c55;font-weight:500}
+.charcoal.orbit .gilt{color:#236e60}
+.charcoal.orbit .eyebrow{color:#486663}
+.charcoal.orbit .section-sub{color:#486663}
+.charcoal.orbit .band,.charcoal.orbit .band-tight{background:transparent!important}
+.charcoal.orbit .device-showcase.band{background:#d5e4de!important}
+.charcoal.orbit #leaderboard{background:#d3e1dd!important}
+.charcoal.orbit #method{background:#d7e6e1!important}
+.charcoal.orbit #case-studies{background:#d2e2df!important}
+.charcoal.orbit .byline{background:#c5d8ca45;color:#526f67}
+.charcoal.orbit .card,.charcoal.orbit .lb-highlight,.charcoal.orbit .lb-table-panel,.charcoal.orbit .cs-player,.charcoal.orbit .te-task,.charcoal.orbit .annotation-story,.charcoal.orbit .bibtex{background:var(--surface-1)!important;border-color:#2d5f4f21!important;border-radius:14px;box-shadow:none!important}
+.charcoal.orbit .card h3,.charcoal.orbit .lb-highlight h3{color:#234c55}
+.charcoal.orbit .card.feature{background:#e5ede3!important}
+.charcoal.orbit .lb-highlight:hover{border-color:#2d5f4f45!important}
+.charcoal.orbit .lb-human-highlight{background:#ecebd7!important}
+.charcoal.orbit .lb-highlight-rank{color:#356455}
+.charcoal.orbit .lb-table-heading{color:#57716b}
+.charcoal.orbit .lb-model-family{color:#6b7e77}
+.charcoal.orbit #leaderboard .cr-table tbody td{background-image:linear-gradient(90deg,#5284780c var(--lb-score,0%),transparent var(--lb-score,0%))}
+.charcoal.orbit #leaderboard .cr-table .cr-human td,.charcoal.orbit #leaderboard .cr-table .cr-human th{background-color:#e9e9d5}
+.charcoal.orbit #leaderboard .cr-table .cr-avg{background-color:#4f897a0b}
+.charcoal.orbit #leaderboard .cr-table .lb-active-column{background-color:#3c887d0d}
+.charcoal.orbit #leaderboard .cr-table .lb-row-focus td,.charcoal.orbit #leaderboard .cr-table .lb-row-focus th{background-color:#539d891c!important;box-shadow:inset 0 1px #539d8930,inset 0 -1px #539d8930}
+.charcoal.orbit .cr-platform-tabs button[aria-pressed=true]{color:#1b6258;border-color:#2e8777;background:#2e877713}
+.charcoal.orbit .cr-stat{background:#e7eee7;border-color:var(--hairline);border-radius:9px}
+.charcoal.orbit .cr-stat strong{color:#255960}
+.charcoal.orbit .bp-tabs button{color:#4e6c66}
+.charcoal.orbit .bp-tabs button:hover{background:#2e72630a;color:#1d5c51}
+.charcoal.orbit .bp-tabs button[aria-selected=true],.charcoal.orbit .bp-tabs button[aria-pressed=true]{background:#236e60;color:#f1f3e7;border-color:#236e60}
+.charcoal.orbit .device-showcase .bp-app-list button{color:#36574e;background:#e5eee44a;border:1px solid transparent;border-radius:9px}
+.charcoal.orbit .device-showcase .bp-app-list button:hover,.charcoal.orbit .device-showcase .bp-app-list button[aria-pressed=true]{background:#edf2e7;border-color:#2e726340}
+.charcoal.orbit .bp-search{background:#eaf0e8;border-color:#2e72632c;color:#2b554b}
+.charcoal.orbit .bp-search::placeholder{color:#71867b}
+.charcoal.orbit .te-platforms{border-color:#2d5f4f25}
+.charcoal.orbit .te-platforms button{color:#4c7066}
+.charcoal.orbit .te-platforms button[aria-pressed=true]{background:#2e72630d;color:#194f43;border-bottom-color:#2f826e}
+.charcoal.orbit .te-task-title{color:#244f56}
+.charcoal.orbit .te-task[data-track=linux]{--te-color:#277383}.charcoal.orbit .te-task[data-track=windows]{--te-color:#356d96}.charcoal.orbit .te-task[data-track=macos]{--te-color:#6a5a8c}.charcoal.orbit .te-task[data-track=android]{--te-color:#4b7646}.charcoal.orbit .te-task[data-track=ios]{--te-color:#946054}.charcoal.orbit .te-task[data-track=web]{--te-color:#5b6590}.charcoal.orbit .te-task[data-track=cross_device]{--te-color:#8a6c32}
+.charcoal.orbit .te-controls{background:#e7eee6;border-radius:10px}
+.charcoal.orbit .te-task:hover{border-color:#2d5f4f48!important}
+.charcoal.orbit .cs-tabs>button{background:#e3ece6;border-color:#355d5030;color:#31594f}
+.charcoal.orbit .cs-tabs>button[aria-pressed=true]{border-color:#2c7c6e;box-shadow:inset 0 -2px #2c7c6e}
+.charcoal.orbit .recorded-cases{--cs-accent:#2d6e83}
+.charcoal.orbit .recorded-cases[data-platform=ios]{--cs-accent:#8f596f}.charcoal.orbit .recorded-cases[data-platform=macos]{--cs-accent:#6b5a8c}
+.charcoal.orbit .cs-verdict{background:#3985700d;border-color:#39857030}
+.charcoal.orbit .cs-verdict>strong,.charcoal.orbit .cs-action-status{color:#27745e}
+.charcoal.orbit .cs-action{background:#dce7e0}
+.charcoal.orbit .annotation-story{--ap-accent:#99613f;--ap-glow:#99613f0b}
+.charcoal.orbit .annotation-story[data-annotation-stage="1"]{--ap-accent:#3e6d92;--ap-glow:#3e6d920b}
+.charcoal.orbit .annotation-story[data-annotation-stage="2"]{--ap-accent:#776090;--ap-glow:#7760900b}
+.charcoal.orbit .annotation-story[data-annotation-stage="3"]{--ap-accent:#2f7b64;--ap-glow:#2f7b640b}
+.charcoal.orbit .annotation-story[data-annotation-stage="4"]{--ap-accent:#90732e;--ap-glow:#90732e0b}
+.charcoal.orbit .ap-core-symbol{border-color:#2e72632c;background:#d9e6dc}
+.charcoal.orbit .bibtex-bar{background:#d4e2d8;border-color:#2e726328}
+.charcoal.orbit .bibtex pre{background:#e7eee6;color:#32584d}
+.charcoal.orbit .site{background:#244d48;color:#d5e4d8;border-color:transparent}
+.charcoal.orbit .site .brand-line,.charcoal.orbit .site h2{color:#ecf0e2}
+.charcoal.orbit .site a{color:#c1d9ca}
+.charcoal.orbit .site p[style]{color:#b1c8bc!important}
+.charcoal.orbit .site .fine{border-color:#d8e6dc26;color:#b1c8bc}
+.charcoal.orbit a:focus-visible,.charcoal.orbit button:focus-visible,.charcoal.orbit input:focus-visible{outline-color:#236e60}
+@media(max-width:800px){.charcoal.orbit .hero{padding-top:54px}.charcoal.orbit .charcoal-hero-grid{gap:20px}.charcoal.orbit .nav-links{background:#e2ece5;border-color:#2b625b30}.charcoal.orbit .charcoal-facts{margin-top:28px}}
+@media(max-width:480px){.charcoal.orbit .charcoal-brand-name{font-size:46px}.charcoal.orbit .hero .charcoal-paper-title{font-size:23px}}
+.orbit-explore-guide{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--hairline);border-bottom:1px solid var(--hairline);margin:0 0 35px}
+.orbit-explore-guide a{position:relative;display:grid;grid-template-columns:25px 1fr;gap:6px 12px;padding:22px 24px 22px 0;color:var(--text);border-right:1px solid var(--hairline);margin:14px 0}
+.orbit-explore-guide a+a{padding-left:25px}.orbit-explore-guide a:last-child{border-right:0}.orbit-explore-guide a>span{grid-row:1/3;font:11px/1.8 var(--font-mono);color:var(--text-dim)}
+.orbit-explore-guide strong{font:500 16px/1.5 var(--font-body);letter-spacing:-.025em}.orbit-explore-guide small{font:12px/1.7 var(--font-body);color:var(--text-dim)}.orbit-explore-guide b{position:absolute;right:20px;top:22px;font-size:14px;font-weight:400;color:var(--gold-300)}
+.orbit-explore-guide a:hover strong{color:var(--gold-200)}
+@media(max-width:800px){.orbit-explore-guide{grid-template-columns:1fr}.orbit-explore-guide a,.orbit-explore-guide a+a{padding:15px 25px 15px 0;margin:0;border-right:0;border-bottom:1px solid var(--hairline)}.orbit-explore-guide a:last-child{border-bottom:0}.orbit-explore-guide b{top:15px}}
+
+/* Compact playground: keep space for the device rather than its introduction. */
+.charcoal.orbit .device-showcase.band{padding-top:54px;padding-bottom:58px}
+.charcoal.orbit .device-showcase .section-head{margin-bottom:20px}
+.charcoal.orbit .device-showcase .section-head .eyebrow{margin-bottom:8px}
+.charcoal.orbit .device-showcase .section-title{font-size:clamp(28px,3vw,40px);line-height:1.15;margin-bottom:12px}
+.charcoal.orbit .device-showcase .section-sub{max-width:850px;font-size:15px;line-height:1.7;margin-top:0}
+.charcoal.orbit .device-showcase .orbit-explore-guide{margin-bottom:16px}
+.charcoal.orbit .device-showcase .orbit-explore-guide a{display:flex;align-items:center;gap:10px;margin:0;padding:12px 28px 12px 0}
+.charcoal.orbit .device-showcase .orbit-explore-guide a+a{padding-left:20px}
+.charcoal.orbit .device-showcase .orbit-explore-guide strong{font-size:13px;line-height:1.5}
+.charcoal.orbit .device-showcase .orbit-explore-guide a>span{font-size:10px;line-height:1.5}
+.charcoal.orbit .device-showcase .orbit-explore-guide small{display:none}
+.charcoal.orbit .device-showcase .orbit-explore-guide b{top:12px;right:15px;font-size:12px}
+.charcoal.orbit .device-showcase .bp-tabs{margin-top:0;margin-bottom:16px;padding-bottom:10px;gap:6px}
+.charcoal.orbit .device-showcase .bp-tabs button{padding:8px 14px;font-size:13px;min-height:36px}
+.charcoal.orbit .device-showcase .bp-layout{align-items:start;gap:28px}
+.charcoal.orbit .device-showcase .bp-stage{align-self:start}
+.charcoal.orbit .device-showcase .bp-details{align-self:start;padding-top:0}
+.charcoal.orbit .device-showcase .bp-details>.eyebrow,.charcoal.orbit .device-showcase .bp-details>h3,.charcoal.orbit .device-showcase .bp-details>p:not(.bp-feedback){display:none}
+.charcoal.orbit .device-showcase .bp-search-label{margin:0 0 8px;font-size:12px}
+.charcoal.orbit .device-showcase .bp-search{min-height:40px;font-size:13px}
+.charcoal.orbit .device-showcase .bp-app-list{gap:4px;margin-top:10px;max-height:320px}
+.charcoal.orbit .device-showcase .bp-app-list button{min-height:68px;padding:8px 4px;gap:6px;font-size:11px}
+.charcoal.orbit .device-showcase .bp-app-list button>img,.charcoal.orbit .device-showcase .bp-app-list button>.bp-system-icon{width:28px;height:28px}
+.charcoal.orbit .device-showcase .bp-device-tools{margin-top:12px}
+.charcoal.orbit .device-showcase .bp-inventory{margin-top:8px;font-size:11px;line-height:1.6}
+.charcoal.orbit .device-showcase .bp-details>small{margin-top:8px;font-size:11px;line-height:1.6}
+@media(max-width:800px){.charcoal.orbit .device-showcase.band{padding-top:38px;padding-bottom:42px}.charcoal.orbit .device-showcase .orbit-explore-guide{grid-template-columns:repeat(3,minmax(0,1fr))}.charcoal.orbit .device-showcase .orbit-explore-guide a,.charcoal.orbit .device-showcase .orbit-explore-guide a+a{padding:10px 5px;gap:6px;border-bottom:0}.charcoal.orbit .device-showcase .orbit-explore-guide b{display:none}.charcoal.orbit .device-showcase .orbit-explore-guide strong{font-size:11px}.charcoal.orbit .device-showcase .bp-layout{gap:20px}.charcoal.orbit .device-showcase .bp-app-list{max-height:270px}}
+@media(max-width:480px){.charcoal.orbit .device-showcase .section-title{font-size:29px}.charcoal.orbit .device-showcase .section-sub{font-size:13px}.charcoal.orbit .device-showcase .orbit-explore-guide a>span{display:none}}

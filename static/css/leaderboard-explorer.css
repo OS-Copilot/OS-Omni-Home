@@ -1,0 +1,62 @@
+/* Results-first layout inspired by LCB; adapted to OS-Omni's fixed release. */
+.orbit #leaderboard .wrap{max-width:1400px;width:min(calc(100% - 96px),1400px)}
+.orbit #leaderboard .section-head{margin-bottom:30px}
+.orbit #leaderboard .section-title{font-size:clamp(34px,4vw,55px);margin-bottom:20px}
+.orbit #leaderboard .section-sub{max-width:800px;font-size:17px}
+.lex-root{--lex-ink:#214a4c;--lex-muted:#58706a;--lex-line:#305c4d27;--lex-bg:#eaf0e9;--lex-accent:#246e60}
+#leaderboard-explorer{border:1px solid var(--lex-line);border-radius:13px;background:var(--lex-bg);color:var(--lex-ink);overflow:hidden}
+.lex-scope{display:flex;align-items:center;gap:22px;padding:20px 25px;border-bottom:1px solid var(--lex-line);font-size:13px;color:var(--lex-muted)}
+.lex-release{font-weight:600;color:var(--lex-ink)}.lex-scope>a{margin-left:auto;color:var(--lex-accent);font-size:12px}
+.lex-metrics{display:flex;gap:5px;flex-wrap:wrap;padding:22px 25px 12px}
+.lex-metrics button{display:flex;align-items:center;gap:8px;border:1px solid transparent;border-radius:6px;background:transparent;color:var(--lex-muted);font:500 13px var(--font-body);padding:10px 12px;cursor:pointer}
+.lex-metrics button small{font:10px var(--font-mono);opacity:.7}
+.lex-metrics button:hover{background:#3d7a6810}.lex-metrics button[aria-pressed=true]{border-color:#246e60;background:#246e60;color:#f0f2e6}
+.lex-toolbar{display:flex;align-items:flex-end;gap:16px;flex-wrap:wrap;padding:12px 25px 24px}
+.lex-toolbar>label:not(.lex-human-toggle){display:grid;gap:7px;font-size:11px;letter-spacing:.025em;color:var(--lex-muted)}
+.lex-search{flex:1;min-width:190px;max-width:330px}
+.lex-toolbar input[type=search],.lex-toolbar select{appearance:auto;background:#f1f4ec;border:1px solid var(--lex-line);border-radius:6px;color:var(--lex-ink);padding:10px 12px;min-height:42px;font:13px var(--font-body);width:100%}
+.lex-toolbar input::placeholder{color:#75877e}.lex-toolbar select{min-width:150px}
+.lex-human-toggle{display:flex;align-items:center;gap:8px;min-height:42px;cursor:pointer;font-size:12px;white-space:nowrap}
+#leaderboard-explorer input[type=checkbox]{accent-color:var(--lex-accent);width:15px;height:15px;cursor:pointer;margin:0}
+.lex-toolbar button{border:1px solid var(--lex-line);border-radius:6px;min-height:42px;background:transparent;color:var(--lex-ink);padding:10px 13px;font:12px var(--font-body);cursor:pointer}
+.lex-toolbar button:hover{border-color:var(--lex-accent);background:#246e6009}.lex-download{margin-left:auto}
+.lex-viewbar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:0 25px;border-top:1px solid var(--lex-line);border-bottom:1px solid var(--lex-line)}
+.lex-viewbar>div{display:flex;gap:20px}.lex-viewbar button{border:0;border-bottom:2px solid transparent;background:none;padding:17px 0 15px;font:500 13px var(--font-body);color:var(--lex-muted);cursor:pointer}
+.lex-viewbar button[aria-pressed=true]{color:var(--lex-accent);border-bottom-color:var(--lex-accent)}
+.lex-viewbar button span{display:inline-block;background:#346e5b13;border-radius:9px;padding:1px 6px;margin-left:3px;font-size:10px}
+.lex-viewbar p{font:11px/1.7 var(--font-mono);color:var(--lex-muted);margin:0;padding:12px 0}
+.lex-scroll{overflow:auto;max-height:690px;scrollbar-width:thin;scrollbar-color:#79988a transparent}
+.lex-scroll table{width:100%;min-width:1090px;border-collapse:separate;border-spacing:0;font-size:14px;font-variant-numeric:tabular-nums;background:var(--lex-bg)}
+.lex-scroll thead th{position:sticky;top:0;z-index:3;background:#dfe9df;border-bottom:1px solid var(--lex-line);padding:16px 12px;white-space:nowrap;text-align:right;font:500 12px var(--font-body);color:var(--lex-muted)}
+.lex-scroll thead th button{border:0;background:none;color:inherit;cursor:pointer;font:inherit;padding:0;white-space:nowrap}.lex-scroll thead th button span{font-size:11px;opacity:.55;margin-left:2px}
+.lex-scroll .lex-name-heading{position:sticky;left:0;z-index:5;text-align:left;min-width:220px}.lex-scroll .lex-choose{width:36px;min-width:36px;text-align:center;padding-left:15px;padding-right:7px}
+.lex-scroll .lex-rank{width:54px;text-align:center;padding-left:5px;padding-right:5px;font-size:12px;color:var(--lex-muted)}
+.lex-scroll tbody th,.lex-scroll tbody td{border-bottom:1px solid #305c4d15;padding:18px 12px;vertical-align:middle;background:var(--lex-bg)}
+.lex-scroll tbody th{position:sticky;left:0;z-index:1;text-align:left;min-width:220px;font-weight:500;box-shadow:5px 0 8px #d3dfd540}
+.lex-model-name{display:flex;align-items:center;gap:8px;font-size:14px;line-height:1.5;color:var(--lex-ink)}
+.lex-model-name i{width:6px;height:6px;border-radius:50%;flex:none}.lex-scroll tbody th small{display:block;font:10px/1.7 var(--font-body);color:var(--lex-muted);margin:3px 0 0 14px}
+.lex-scroll tbody td{text-align:right;font-family:var(--font-mono);font-size:13px}
+.lex-scroll tbody tr:hover td,.lex-scroll tbody tr:hover th{background:#dfeadf}
+.lex-scroll tbody tr:last-child td,.lex-scroll tbody tr:last-child th{border-bottom:0}
+.lex-scroll .lex-active-score{background:#3c866f0a;color:#205c4b}
+.lex-scroll .lex-best{font-weight:700}
+.lex-rank-badge{display:inline-grid;place-items:center;min-width:25px;height:25px;border-radius:5px;font:500 12px var(--font-body)}
+.lex-top-1{color:#866520;background:#dbcb952f}.lex-top-2{color:#526c71;background:#b8c9c12f}.lex-top-3{color:#906445;background:#d5b59825}
+.lex-scroll .lex-reference-body td,.lex-scroll .lex-reference-body th{border-top:2px solid #c1cbb9;background:#e8e9d8;color:#72663c}
+.lex-scroll .lex-reference-body .lex-model-name{color:#6d6038}
+.lex-compare{padding:26px}.lex-compare-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.lex-compare-head h3{font-size:21px;margin:0 0 8px}.lex-compare-head p{font-size:12px;color:var(--lex-muted);margin:0}
+.lex-model-picks{display:flex;flex-wrap:wrap;gap:7px;margin:18px 0 25px}.lex-model-picks button{display:flex;align-items:center;gap:7px;padding:8px 10px;border:1px solid var(--lex-line);border-radius:5px;background:transparent;color:var(--lex-muted);cursor:pointer;font:11px var(--font-body)}
+.lex-model-picks button i,.lex-plot-legend i{width:7px;height:7px;border-radius:50%;display:inline-block;flex:none}.lex-model-picks button[aria-pressed=true]{border-color:var(--lex-accent);background:#246e600c;color:var(--lex-ink)}
+.lex-plot-host{overflow:auto}.lex-plot-host svg{display:block;width:100%;min-width:650px;height:auto}.lex-grid-line{stroke:#305c4d20;stroke-width:1}.lex-axis{fill:#58706a;font:12px var(--font-body)}
+.lex-plot-host circle{outline:none;transition:r .15s}.lex-plot-host circle:hover,.lex-plot-host circle:focus{r:7;stroke:#f5f4e9;stroke-width:2}
+.lex-plot-legend{display:flex;gap:18px;flex-wrap:wrap;padding:7px 0 4px;font-size:11px;color:var(--lex-muted)}.lex-plot-legend span{display:flex;align-items:center;gap:7px}
+.lex-note,.lex-source{padding:0 25px;font-size:12px!important;line-height:1.8!important;color:var(--lex-muted);margin:19px 0 0!important}
+.lex-source{margin:7px 0 22px!important;font-size:11px!important}.lex-note b{font-weight:500;color:var(--lex-ink)}
+.lex-empty{text-align:center!important;padding:45px 18px!important;font:14px/1.8 var(--font-body)!important;color:var(--lex-muted)}
+.lex-sr-only{position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;clip:rect(0,0,0,0);overflow:hidden;white-space:nowrap}
+#leaderboard-explorer [hidden]{display:none!important}
+#leaderboard-explorer :focus-visible{outline:2px solid var(--lex-accent);outline-offset:3px}
+@media(max-width:800px){.orbit #leaderboard .wrap{width:calc(100% - 40px)}.lex-scope{padding:17px;gap:15px;font-size:11px}.lex-metrics{padding:17px 12px 8px;gap:2px}.lex-metrics button{font-size:12px;padding:9px}.lex-toolbar{padding:12px 17px 18px;gap:12px}.lex-toolbar .lex-search{max-width:none}.lex-viewbar{padding:0 17px;flex-wrap:wrap;gap:0}.lex-viewbar p{font-size:10px;padding:4px 0 11px;width:100%}.lex-compare{padding:18px}.lex-note,.lex-source{padding:0 17px}.lex-scroll tbody th{min-width:190px}.lex-model-name{font-size:13px}.lex-scroll .lex-name-heading{min-width:190px}}
+@media(max-width:480px){.lex-scope{flex-wrap:wrap;gap:8px 16px}.lex-scope>a{margin-left:0;width:100%}.lex-toolbar>label:not(.lex-human-toggle){flex:1;min-width:130px}.lex-toolbar .lex-search{flex-basis:100%}.lex-toolbar .lex-human-toggle{width:100%;min-height:28px}.lex-reset,.lex-download{flex:1;margin:0}.lex-scroll tbody th{min-width:175px}.lex-scroll .lex-name-heading{min-width:175px}}
+@media(prefers-reduced-motion:reduce){#leaderboard-explorer *{transition:none!important}}
