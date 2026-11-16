@@ -1,0 +1,44 @@
+/* Meaningful score/rank/filter/export checks without a browser dependency. */
+const fs=require('node:fs');
+const path=require('node:path');
+const vm=require('node:vm');
+const assert=require('node:assert/strict');
+const root=path.resolve(__dirname,'..');
+const context=vm.createContext({console});
+context.window=context;
+vm.runInContext(fs.readFileSync(path.join(root,'static/js/osomni-data.js'),'utf8'),context);
+vm.runInContext(fs.readFileSync(path.join(root,'static/js/leaderboard-explorer.js'),'utf8'),context);
+const api=context.OSOmniLeaderboardExplorer,data=context.OSOmniData;
+const state={metric:'average',direction:'desc',query:'',family:'all',human:true};
+const view=(changes={})=>api.ranked(data,{...state,...changes});
+assert.equal(view().length,7);
+assert.equal(view()[0].row.name,'Claude Opus 5.5');
+assert.equal(view()[0].row.average,68.5);
+assert.equal(view()[1].row.name,'GPT-6-Astra');
+assert.equal(view().at(-1).row.name,'Qwen 3.8 9B');
+assert.equal(view({metric:'1'})[0].row.name,'Gemini 4');
+assert.equal(api.value(view({metric:'1'})[0].row,'1'),95.8);
+assert.equal(view({metric:'0'})[0].row.name,'GPT-6-Astra');
+assert.equal(view({metric:'6'})[0].row.name,'Claude Opus 5.5');
+assert.equal(view({metric:'6'})[0].rank,1);
+const ios=view({metric:'3'});
+assert.equal(ios.find(x=>x.row.name==='Qwen 3.8 Max').rank,4);
+assert.equal(ios.find(x=>x.row.name==='DeepSeek V4.1 Flash').rank,4);
+assert.equal(ios.find(x=>x.row.name==='Qwen 3.8 27B').rank,6);
+const qwen=view({family:'qwen'});
+assert.equal(qwen.length,3);
+assert.equal(qwen[0].rank,5); // Provider filtering must not renumber global ranks.
+assert.equal(view({query:'google'})[0].row.name,'Gemini 4');
+assert.equal(view({query:'gPt-6'})[0].row.average,66.1);
+assert.equal(view({query:'no such model'}).length,0);
+assert.equal(view({direction:'asc'})[0].row.average,0);
+assert.ok(!view().some(x=>x.row.human));
+const exported=api.csv(data,state).split('\r\n');
+assert.equal(exported.length,9); // Header + seven models + one reference.
+assert.ok(exported[1].includes('"Claude Opus 5.5","Anthropic","68.5"'));
+assert.ok(exported.at(-1).startsWith('"Reference","Human Performance"'));
+assert.equal(api.csv(data,{...state,human:false}).split('\r\n').length,8);
+assert.equal(api.csv(data,{...state,family:'qwen',human:false}).split('\r\n').length,4);
+assert.equal(api.csv(data,{...state,query:'no such model',human:false}).split('\r\n').length,1);
+assert.equal(data.results.find(r=>r.name==='GPT-6-Astra').average,66.1);
+console.log('PASS: published values, eight ranking views, global competition ranks, ties, filters, search, human exclusion, and CSV scope.');
