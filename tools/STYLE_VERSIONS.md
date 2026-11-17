@@ -69,3 +69,38 @@ The approved dark research version includes the original-palette 3D robot, corre
 Current builder: `python tools/build_research_preview.py`. Publication overlay: `python tools/prepare_research_release.py --output dist/research-release-20261116-companion`. This release supersedes the earlier local-only status above. The unused 2D mask prototype was archived outside the repo. Native application and trajectory resources remain pinned to their existing immutable resource commits.
 
 Validation covers companion DOM transitions, minimize/restore, focus, reduced motion, articulated geometry, near/far ray intersections, and the static Pages runtime. Visual browser automation remains unavailable; the user reviewed screenshots and approved the current version.
+
+
+## Exploration motion preview ? 2026-11-16
+
+Local research entries load `exploration-motion.css` and `exploration-motion.js`. Added a thin reading-progress line, wide-screen section waypoints, one-time entrance animations, chart-bar reveals, card pointer highlights, gentle filter feedback and three continuation links. The companion caption and click greeting reflect the section being read; they are preset navigation hints, not a chat-model connection.
+
+The approved robot model, orbit, site palette, published data, task catalog and replay code are unchanged. Dynamic lists remove stale observations. Reduced-motion preferences cancel entrance animations and disable hover movement. DOM-level regression checks: `tools/check_exploration_motion.cjs`; these do not claim browser visual validation. Current production remains companion release `ca5443c022facbc02493b6150ff4673c478f21b3` until publication is requested. Previous approved source is archived outside this checkout under `site-version-backups/before-exploration-motion-20261116-213741.zip`.
+
+
+## Galactic environment preview ? 2026-11-16
+
+Added `mascot-galaxy.js` and `galaxy.css`: a runtime-generated layered nebula with a winding dark dust lane, a depth-distributed 1,800-point star belt, slow parallax and gentle twinkling. The companion uses a reduced 440-point field and dimmer nebula. The hero grid fades behind the illustration while the existing navy/cyan/gold palette remains in place. No downloaded image or large media asset is required. Robot geometry, task data and numeric results are unchanged. Exploration motion remains included.
+
+Validation: deterministic finite star data, scene transforms, compact/full draw ranges, reduced motion, CSS parsing and HTTP dependency checks. Browser visual acceptance is pending. This is local-only; official production remains the approved companion release.
+
+
+## Continuous page galaxy preview ? 2026-11-16
+
+Added `page-galaxy.js` and `page-galaxy.css`. A fixed, non-interactive backdrop now spans every section. It paints two native Canvas2D layers only on initialization/resize, then uses composited parallax and CSS opacity/glint animations. Full-width opaque section fills and the hero grid give way to the continuous scene; cards, tables, app frames and controls retain their original solid surfaces. No new WebGL context or external asset is used. Reduced motion, background-tab pause, bounded pixel density and mobile density limits are included.
+
+Verified all eight primary section background winners using CSS cascade resolution; checked density, deterministic positions, no canvas repaint on scroll, reduced motion, pause/cleanup and HTTP references. Visual browser acceptance remains pending. Local preview only; official production is unchanged.
+
+
+## Shared interactive galaxy preview ? 2026-11-16
+
+Supersedes the static page-backdrop behavior above. The nebula texture is still painted only on resize, but the foreground star canvas now runs at a bounded 30fps with autonomous drift/twinkle, depth-dependent scroll inertia and short scroll streaks. Pointer proximity attracts/highlights nearby points. Primary clicks in non-interactive page areas emit a bounded, short-lived ring of star dust; links, controls, selectable text, tables, canvases and iframes are excluded.
+
+A ready/dispose event switches off/on the robot-local galaxy, so only the shared full-page galaxy is visible while the page background is active. Hero and companion both sit in this shared environment. Character geometry and palette are unchanged.
+
+Regression command: `node tools/check_page_galaxy.cjs` verifies drift, scrolling, blank click response, interactive-control exclusion, animation lifecycle, reduced-motion stop, hidden-tab pause and local fallback. This remains a local preview pending user visual review and publication.
+
+
+## Approved shared-galaxy publication ? 2026-11-16
+
+The user approved the interactive full-page galaxy and requested cleanup/publication. Release package: `dist/research-release-20261116-interactive-galaxy`, revision `5b574ea126235ddb`. This supersedes earlier local-only status entries for exploration and galaxy previews. Previous published worker indexes and homepage blobs are preserved for upgrades. See `tools/CLEANUP_20261116_GALAXY.md` for cleanup and verification scope.

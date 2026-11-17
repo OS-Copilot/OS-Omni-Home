@@ -28,15 +28,9 @@ export function createExplorationOrbit(scene,devices){
     const coin=new T.Mesh(new T.SphereGeometry(.065,20,16),new T.MeshToonMaterial({color:0xffc42b}));beacon.add(coin);
     const sparkle=new T.Mesh(new T.SphereGeometry(.019,12,8),new T.MeshBasicMaterial({color:0xfff1ac}));sparkle.position.set(-.022,.025,.048);beacon.add(sparkle);group.add(beacon);beacons.push(beacon);
   }
-  const starPositions=[];
-  for(let i=0;i<45;i++){
-    const angle=i*2.39996,r=2.7+(i%7)*.095;
-    starPositions.push(Math.cos(angle)*r,1.6+Math.sin(angle)*r*.70,-2.8-(i%5)*.18);
-  }
-  const stars=new T.Points(new T.BufferGeometry().setAttribute('position',new T.Float32BufferAttribute(starPositions,3)),new T.PointsMaterial({color:0xb3d3f2,size:.014,transparent:true,opacity:.45,depthWrite:false}));scene.add(stars);
   const point=new T.Vector3();
   return {
-    setVisible(value){group.visible=value;stars.visible=value;},
+    setVisible(value){group.visible=value;},
     update(time,camera,reduced=false){
       const clock=reduced?0:time;
       devices.forEach(({device,tilt},i)=>{
@@ -52,7 +46,6 @@ export function createExplorationOrbit(scene,devices){
         positions.needsUpdate=true;trail.visible=!reduced;
       });
       beacons.forEach((beacon,i)=>orbitPoint(i*Math.PI*2/3+1.1+clock*.11,beacon.position));
-      stars.rotation.y=clock*.007;
     }
   };
 }

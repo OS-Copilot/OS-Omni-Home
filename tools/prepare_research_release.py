@@ -96,10 +96,11 @@ def main():
         assert relative in manifest['routes'] or (target / relative).is_file(), relative
     assert gzip.decompress(blob.read_bytes()) == data
     assert 'research-dark.css?v=20261116-3' in page
-    assert 'mascot-3d.js?v=companion-8' in page
+    assert 'src="static/js/mascot-3d.js?v=' in page
     # Modules must resolve on Pages, including the locally vendored renderer.
     for relative in ['static/js/mascot-3d.js','static/js/mascot-model.js','static/js/mascot-platforms.js',
-                     'static/js/mascot-orbit.js','static/js/mascot-companion.js']:
+                     'static/js/mascot-orbit.js','static/js/mascot-companion.js',
+                     'static/js/mascot-galaxy.js','static/js/page-galaxy.js','static/js/exploration-motion.js']:
         text=(target/relative).read_text(encoding='utf-8')
         for imported in re.findall(r"from\s+['\"]([^'\"]+)['\"]",text):
             assert imported.startswith('./'), imported

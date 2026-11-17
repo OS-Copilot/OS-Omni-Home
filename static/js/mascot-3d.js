@@ -1,8 +1,9 @@
 import * as T from './vendor/three.module.min.js';
 import {createRobot,poseRobot} from './mascot-model.js?v=orbit-proportions-7';
 import {createPlatforms} from './mascot-platforms.js?v=orbit-proportions-7';
-import {createExplorationOrbit} from './mascot-orbit.js?v=orbit-proportions-7';
-import {createCompanion} from './mascot-companion.js?v=companion-8';
+import {createExplorationOrbit} from './mascot-orbit.js?v=galaxy-10';
+import {createCompanion} from './mascot-companion.js?v=exploration-9';
+import {createGalaxy} from './mascot-galaxy.js?v=unified-galaxy-12';
 
 const host=document.querySelector('.charcoal-brand-visual');
 if(host)try{start(host);}catch(error){console.warn('3D mascot unavailable; original project logo retained.',error.message);}
@@ -41,6 +42,9 @@ function start(host){
   const glow=new T.Mesh(new T.PlaneGeometry(5,5),new T.MeshBasicMaterial({map:new T.CanvasTexture(glowCanvas),transparent:true,depthWrite:false}));glow.rotation.x=-Math.PI/2;glow.position.y=-.18;scene.add(glow);
   const {devices,pickable}=createPlatforms(scene);
   const orbit=createExplorationOrbit(scene,devices);
+  const galaxy=createGalaxy(scene,renderer.getPixelRatio());
+  galaxy.setUnified(document.body.classList.contains('has-page-galaxy'));
+  document.addEventListener('osomni:galaxy',event=>{galaxy.setUnified(event.detail.active);if(reduced.matches)renderOnce();});
   const sparkles=[];
   for(let i=0;i<6;i++){
     const star=new T.Mesh(new T.OctahedronGeometry(.025+i%3*.012),new T.MeshBasicMaterial({color:0xffd337,transparent:true,opacity:.7}));
@@ -51,9 +55,10 @@ function start(host){
   controls.innerHTML='<button type="button" class="om3d-hello" aria-label="Make the 3D robot wave"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 13 5 8a1.5 1.5 0 0 1 2.6-1.5L10 10l-2-6a1.5 1.5 0 0 1 2.8-1L13 9l-.5-5a1.5 1.5 0 0 1 3-.2L16 11l1-3a1.5 1.5 0 0 1 2.8 1L18 17c-1 5-8 5-11 1l-3-4a1.5 1.5 0 0 1 2.3-2L9 15"/></svg>Say hello</button><span class="om3d-hint">Drag to turn · Tap to play</span>';
   const message=document.createElement('div');message.className='om3d-message';message.setAttribute('role','status');host.append(controls,message);
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
-  let look={x:0,y:0},target={x:0,y:0},yaw=-.15,yawTarget=-.15,waveStart=-100,last=performance.now(),elapsed=0,visible=true,paused=false,frame=0,down=null,dragged=false,messageTimer,orbitTime=0,orbitRate=1,orbitHover=false,companion=null,miniMode=false;
+  let look={x:0,y:0},target={x:0,y:0},yaw=-.15,yawTarget=-.15,waveStart=-100,last=performance.now(),elapsed=0,visible=true,paused=false,frame=0,down=null,dragged=false,messageTimer,orbitTime=0,orbitRate=1,orbitHover=false,companion=null,miniMode=false,explorationContext=document.body.dataset.explorationSection||'top';
   const raycaster=new T.Raycaster();
-  function wave(){waveStart=elapsed;message.textContent=['Hello, human. Let’s explore.','Six platforms. One curious little robot.','Ready when you are.'][Math.floor(Math.random()*3)];message.classList.add('is-visible');clearTimeout(messageTimer);messageTimer=setTimeout(()=>message.classList.remove('is-visible'),2600);if(reduced.matches)renderOnce();}
+  function wave(){waveStart=elapsed;const tips={abstract:'Explore what the benchmark is designed to measure.','playground-section':'Pick a platform. Open an App. Make it yours.',benchmark:'Explore how the released tasks are distributed.',leaderboard:'Select models to compare their results.',method:'Follow how tasks are designed and checked.',tasks:'Choose an App to discover its tasks.','case-studies':'Pick a workflow and follow its recorded steps.',resources:'The research materials are gathered here.'};message.textContent=tips[explorationContext]||['Hello, human. Let’s explore.','Six platforms. One curious little robot.','Ready when you are.'][Math.floor(Math.random()*3)];message.classList.add('is-visible');clearTimeout(messageTimer);messageTimer=setTimeout(()=>message.classList.remove('is-visible'),2600);if(reduced.matches)renderOnce();}
+  document.addEventListener('osomni:explore',event=>{explorationContext=event.detail.id;});
   controls.querySelector('button').addEventListener('click',wave);
   canvas.addEventListener('pointerdown',e=>{down={x:e.clientX,y:e.clientY,yaw:yawTarget};dragged=false;});
   canvas.addEventListener('pointermove',e=>{
@@ -91,6 +96,7 @@ function start(host){
       orbit.update(orbitTime,camera,reduced.matches);
       sparkles.forEach((star,i)=>{star.rotation.y=elapsed*.4;star.material.opacity=.25+(Math.sin(elapsed*1.4+i)+1)*.25;});
     }
+    galaxy.update(elapsed,look,reduced.matches);
     renderer.render(scene,camera);
   }
   function renderOnce(){draw(1/60);}
@@ -99,7 +105,7 @@ function start(host){
   document.addEventListener('visibilitychange',()=>{paused=document.hidden;resume();});
   companion=createCompanion({host,canvas,message,onChange:state=>{
     const entering=state.docked&&!miniMode;
-    miniMode=state.docked;visible=state.visible;orbitHover=false;
+    miniMode=state.docked;visible=state.visible;orbitHover=false;galaxy.setCompact(miniMode);
     devices.forEach(({device})=>{device.visible=!miniMode;});
     orbit.setVisible(!miniMode);sparkles.forEach(star=>{star.visible=!miniMode;});
     if(miniMode){camera.position.set(0,1.85,5.3);camera.lookAt(0,1.40,0);}

@@ -9,7 +9,10 @@ export function createCompanion({host,canvas,message,onChange}){
   minimize.innerHTML='<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10h10"/></svg>';
   toolbar.append(home,minimize);
   const stage=document.createElement('div');stage.className='om3d-companion-stage';stage.id='om3d-companion-stage';
-  const caption=document.createElement('div');caption.className='om3d-companion-caption';caption.innerHTML='<i aria-hidden="true"></i>OS-Omni';
+  const caption=document.createElement('div');caption.className='om3d-companion-caption';caption.innerHTML='<i aria-hidden="true"></i>';
+  const context=document.createElement('span');context.textContent='OS-Omni';caption.appendChild(context);
+  const onExplore=event=>{context.textContent=event.detail.label;caption.title='Exploring '+event.detail.label;};
+  document.addEventListener('osomni:explore',onExplore);
   dock.append(toolbar,stage,caption);
   const launcher=document.createElement('button');launcher.type='button';launcher.className='om3d-companion-launcher';launcher.hidden=true;
   launcher.setAttribute('aria-label','Show OS-Omni companion');launcher.setAttribute('aria-controls',stage.id);launcher.setAttribute('aria-expanded','false');
@@ -48,6 +51,6 @@ export function createCompanion({host,canvas,message,onChange}){
     stage,
     get docked(){return away;},
     get minimized(){return minimized;},
-    disable(){disabled=true;observer.disconnect();host.classList.remove('om3d-away');host.append(canvas,message);dock.remove();launcher.remove();}
+    disable(){disabled=true;observer.disconnect();document.removeEventListener('osomni:explore',onExplore);host.classList.remove('om3d-away');host.append(canvas,message);dock.remove();launcher.remove();}
   };
 }

@@ -1,0 +1,24 @@
+/* A single, continuous galaxy underneath the complete research page. */
+body.charcoal.orbit.research.research-dark.has-page-galaxy{position:relative;isolation:isolate;background:#0c1524}
+.site-galaxy{position:fixed;inset:-4%;z-index:-1;overflow:hidden;pointer-events:none;contain:strict;background:#0c1524}
+.site-galaxy canvas{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none}
+.site-galaxy-nebula{opacity:.82;transform:translate3d(var(--galaxy-x,0px),var(--galaxy-y,0px),0);animation:site-galaxy-breathe 24s ease-in-out infinite}
+.site-galaxy-stars{opacity:.82;transform:translate3d(var(--stars-x,0px),var(--stars-y,0px),0)}
+.site-galaxy:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#0c15241a,#0c152470 27%,#0c15244d 69%,#0c152414),linear-gradient(0deg,#0c15242e,transparent 30%,transparent 72%,#0c152436)}
+.site-galaxy-glint{position:absolute;width:3px;height:3px;z-index:1;background:#d4ecff;border-radius:50%;box-shadow:0 0 7px 1px #a6d4ff55;animation:site-galaxy-glint var(--glint-period,7s) ease-in-out var(--glint-delay,0s) infinite}
+.site-galaxy-glint:before,.site-galaxy-glint:after{content:"";position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);background:linear-gradient(90deg,transparent,#c4eaff88,transparent);width:13px;height:1px}
+.site-galaxy-glint:after{transform:translate(-50%,-50%) rotate(90deg)}
+body.charcoal.orbit.research.research-dark.has-page-galaxy .hero,
+body.charcoal.orbit.research.research-dark.has-page-galaxy .band,
+body.charcoal.orbit.research.research-dark.has-page-galaxy .band-tight,
+body.charcoal.orbit.research.research-dark.has-page-galaxy .byline,
+body.charcoal.orbit.research.research-dark.has-page-galaxy #leaderboard,
+body.charcoal.orbit.research.research-dark.has-page-galaxy #method,
+body.charcoal.orbit.research.research-dark.has-page-galaxy #case-studies{background:transparent!important}
+body.charcoal.orbit.research.research-dark.has-page-galaxy .site{background:#080f1bc9}
+/* Actual data panels and native app frames keep their existing opaque surfaces. */
+@keyframes site-galaxy-breathe{0%,100%{opacity:.74}50%{opacity:.90}}
+@keyframes site-galaxy-glint{0%,100%{opacity:.25;scale:.75}45%{opacity:.9;scale:1.05}60%{opacity:.55;scale:.9}}
+.site-galaxy[data-paused=true] .site-galaxy-nebula,.site-galaxy[data-paused=true] .site-galaxy-glint{animation-play-state:paused}
+@media(max-width:600px){.site-galaxy-nebula{opacity:.72}.site-galaxy-stars{opacity:.70}.site-galaxy:after{background:linear-gradient(90deg,#0c152440,#0c152466 50%,#0c152440)}}
+@media(prefers-reduced-motion:reduce){.site-galaxy-nebula,.site-galaxy-glint{animation:none}.site-galaxy-nebula,.site-galaxy-stars{transform:none}}
