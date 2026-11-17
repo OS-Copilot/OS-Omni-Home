@@ -1,5 +1,6 @@
 """Overlay the approved theme onto the existing immutable Pages resource release."""
 from pathlib import Path
+import argparse
 import gzip
 import hashlib
 import json
@@ -8,12 +9,17 @@ import shutil
 
 HOME = Path(__file__).resolve().parents[1]
 OLD = HOME / 'dist/pages-ready'
-OUT = HOME / 'dist/research-release-20261116-v2'
 
 def digest(data):
     return hashlib.sha256(data).hexdigest()
 
 def main():
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--output',type=Path,default=HOME/'dist/research-release-20261116-companion')
+    args=parser.parse_args()
+    OUT=args.output.resolve()
+    if not OUT.is_relative_to((HOME/'dist').resolve()):
+        raise RuntimeError('Release output must stay beneath this website dist directory')
     if OUT.exists():
         raise RuntimeError('Release directory already exists; preserve it')
     report = json.loads((OLD / 'pages-build-report.json').read_text())
@@ -23,7 +29,7 @@ def main():
     shutil.copytree(OLD / project['directory'], target, ignore=shutil.ignore_patterns('.git'))
     changed = []
     for folder in ('static/css', 'static/js'):
-        for source in (HOME / folder).glob('*'):
+        for source in (HOME / folder).rglob('*'):
             if not source.is_file():
                 continue
             relative = source.relative_to(HOME).as_posix()
@@ -73,6 +79,15 @@ def main():
         assert relative in manifest['routes'] or (target / relative).is_file(), relative
     assert gzip.decompress(blob.read_bytes()) == data
     assert 'research-dark.css?v=20261116-3' in page
+    assert 'mascot-3d.js?v=companion-8' in page
+    # Modules must resolve on Pages, including the locally vendored renderer.
+    for relative in ['static/js/mascot-3d.js','static/js/mascot-model.js','static/js/mascot-platforms.js',
+                     'static/js/mascot-orbit.js','static/js/mascot-companion.js']:
+        text=(target/relative).read_text(encoding='utf-8')
+        for imported in re.findall(r"from\s+['\"]([^'\"]+)['\"]",text):
+            assert imported.startswith('./'), imported
+            dependency=((target/relative).parent/imported.split('?')[0]).resolve()
+            assert dependency.is_relative_to(target.resolve()) and dependency.is_file(),imported
     assert len(json.loads((target / 'static/data/case-studies.json').read_text())['cases']) == 60
     assert manifest['shards'][:5] == json.loads((OLD / report['manifest']).read_text())['shards']
     project['bytes'] = sum(p.stat().st_size for p in target.rglob('*') if p.is_file())

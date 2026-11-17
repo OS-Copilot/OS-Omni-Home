@@ -26,6 +26,8 @@ def main():
                       'href="index.research.light.saved.html" title="Compare with the saved light research version">Light version',1)
     assert re.findall(r'<script\s+src="([^"]+)"',html)==re.findall(r'<script\s+src="([^"]+)"',mint)
     assert 'class="charcoal-brand-art"' in html and 'Long-Horizon Workflows Across Platforms</h1>' in html
+    html=html.replace('</head>','  <link rel="stylesheet" href="static/css/mascot-3d.css?v=companion-8">\n</head>',1)
+    html=html.replace('</body>','  <script type="module" src="static/js/mascot-3d.js?v=companion-8"></script>\n</body>',1)
     for entry in ['index.research.html','index.orbit.html','index.charcoal.html']:
         (ROOT/entry).write_text(html,encoding='utf-8')
     print(json.dumps({'entry':'index.research.html','active_aliases':['index.orbit.html','index.charcoal.html'],

@@ -1,0 +1,31 @@
+.charcoal .charcoal-brand-visual.om3d-ready{position:relative;isolation:isolate;aspect-ratio:1;overflow:visible}
+.om3d-ready>.charcoal-brand-art{visibility:hidden}
+.om3d-canvas{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:grab;touch-action:pan-y;outline-offset:-8px;border-radius:24px}
+.om3d-canvas:active{cursor:grabbing}
+.om3d-canvas:focus-visible{outline:2px solid #8dbfff}
+.om3d-controls{position:absolute;bottom:0;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:12px;white-space:nowrap;z-index:2}
+.om3d-hello{display:flex;align-items:center;gap:8px;border:1px solid #85bfff40;background:#122139c9;color:#dcefff;padding:9px 15px;border-radius:24px;font:12px/1.4 var(--font-body,sans-serif);cursor:pointer;backdrop-filter:blur(12px);transition:background .2s,border-color .2s}
+.om3d-hello:hover{background:#23416a;border-color:#94d3ff90}.om3d-hello svg{width:16px;height:16px;fill:none;stroke:#8ddfff;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.om3d-hint{font:10px/1.5 var(--font-mono,monospace);color:#8fa7c5}
+.om3d-message{position:absolute;top:12%;left:50%;transform:translateX(-50%);width:max-content;max-width:90%;padding:11px 17px;border:1px solid #85bfff40;border-radius:16px 16px 16px 3px;background:#15273eea;color:#dff2ff;font:13px/1.5 var(--font-body,sans-serif);backdrop-filter:blur(14px);pointer-events:none;opacity:0;transition:opacity .25s,top .3s;text-align:center}
+.om3d-message.is-visible{opacity:1;top:10%}
+@media(max-width:480px){.om3d-hint{font-size:9px}.om3d-controls{gap:8px}.om3d-hello{font-size:11px;padding:8px 12px}}
+@media(prefers-reduced-motion:reduce){.om3d-message,.om3d-hello{transition:none}}
+.om3d-away .om3d-controls{visibility:hidden}
+.om3d-companion{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));width:172px;z-index:90;isolation:isolate;animation:om3d-arrive .28s ease-out both;filter:drop-shadow(0 9px 20px #020a1860)}
+.om3d-companion[hidden],.om3d-companion-launcher[hidden]{display:none!important}
+.om3d-companion-stage{position:relative;width:100%;aspect-ratio:1;background:radial-gradient(ellipse at 50% 75%,#17395b4d,transparent 68%);border-radius:30px}
+.om3d-companion-tools{position:absolute;top:0;left:3px;right:3px;display:flex;justify-content:space-between;z-index:3;pointer-events:none}
+.om3d-companion-tools button{pointer-events:auto;display:grid;place-items:center;width:28px;height:28px;border:1px solid #8cb8ff35;border-radius:50%;background:#101f33ec;color:#b9d2f1;cursor:pointer;backdrop-filter:blur(10px);transition:background .2s,color .2s}
+.om3d-companion-tools button:hover{background:#274361;color:#fff}
+.om3d-companion-tools svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.om3d-companion-caption{display:flex;align-items:center;justify-content:center;gap:6px;width:max-content;margin:-2px auto 0;padding:5px 11px;background:#102138d9;border:1px solid #8cb8ff26;border-radius:20px;font:10px/1.5 var(--font-mono,monospace);letter-spacing:.03em;color:#a9c5e7;backdrop-filter:blur(10px)}
+.om3d-companion-caption i{width:4px;height:4px;background:#7bdac5;border-radius:50%}
+.om3d-companion .om3d-message{top:-22px;left:auto;right:5px;transform:none;width:170px;max-width:230px;font-size:12px;padding:10px 13px;border-radius:13px 13px 3px 13px}
+.om3d-companion .om3d-message.is-visible{top:-32px}
+.om3d-companion-launcher{position:fixed;right:max(20px,env(safe-area-inset-right));bottom:max(20px,env(safe-area-inset-bottom));z-index:90;display:flex;align-items:center;gap:7px;padding:5px 12px 5px 5px;border:1px solid #8cb8ff45;border-radius:30px;background:#101f33ed;color:#bdd5f2;font:11px/1.4 var(--font-body,sans-serif);cursor:pointer;backdrop-filter:blur(12px);box-shadow:0 6px 24px #0003}
+.om3d-companion-launcher img{width:34px;height:34px;object-fit:contain}
+.om3d-companion-tools button:focus-visible,.om3d-companion-launcher:focus-visible{outline:2px solid #8dbfff;outline-offset:3px}
+@keyframes om3d-arrive{from{opacity:0;transform:translateY(12px) scale(.93)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(max-width:600px){.om3d-companion{width:126px;right:max(9px,env(safe-area-inset-right));bottom:max(12px,env(safe-area-inset-bottom))}.om3d-companion-caption{font-size:9px}.om3d-companion-tools button{width:25px;height:25px}.om3d-companion .om3d-message{width:155px}}
+@media(prefers-reduced-motion:reduce){.om3d-companion{animation:none}.om3d-companion-tools button{transition:none}}

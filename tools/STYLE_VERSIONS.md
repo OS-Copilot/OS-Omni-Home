@@ -53,3 +53,19 @@ Open `index.html` or `index.classic.html`; no source restoration is required bec
 - Navy surfaces, cold white text and electric-blue actions; tables, inputs, charts and replay shell all receive dark-specific colors.
 - Light research snapshot: `index.research.light.saved.html`; archive: `D:/OTHER/osomni/site-version-backups/light-research-20261116-025412/source.zip`.
 - Current URLs remain `index.research.html`, `index.orbit.html`, and `index.charcoal.html`.
+
+
+## Interactive 3D mascot ? 2026-11-16
+
+Current local research entries now load `mascot-3d.js` as a module and `mascot-3d.css`. The robot is native jointed Three.js geometry (`mascot-model.js`); it replaces the earlier SVG-mask prototype. The original project image stays as a WebGL fallback and in the navigation. Three.js r169 is vendored locally with its MIT license. This iteration is local-only; production release `04b302e2198880ec29b252ea4ec132fe99071433` remains unchanged.
+
+Validation: 200 finite animation poses, model bounds and blink limits, JS syntax, CSS parse, and HTTP module dependency checks passed. Browser rendering has not been visually accepted because the browser access host is unavailable.
+
+
+## Approved companion release ? 2026-11-16
+
+The approved dark research version includes the original-palette 3D robot, corrected mouth and suit silhouette, rear explorer equipment, true near/far satellite orbit, and a collapsible companion while scrolling. Hero and companion share one WebGL renderer and canvas. The approved pre-companion source is archived outside the repository as `site-version-backups/approved-mascot-before-companion-20261116-183338.zip`.
+
+Current builder: `python tools/build_research_preview.py`. Publication overlay: `python tools/prepare_research_release.py --output dist/research-release-20261116-companion`. This release supersedes the earlier local-only status above. The unused 2D mask prototype was archived outside the repo. Native application and trajectory resources remain pinned to their existing immutable resource commits.
+
+Validation covers companion DOM transitions, minimize/restore, focus, reduced motion, articulated geometry, near/far ray intersections, and the static Pages runtime. Visual browser automation remains unavailable; the user reviewed screenshots and approved the current version.
