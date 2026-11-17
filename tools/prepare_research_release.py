@@ -27,6 +27,23 @@ def main():
     project = report['projects'][0]
     target = OUT / project['directory']
     shutil.copytree(OLD / project['directory'], target, ignore=shutil.ignore_patterns('.git'))
+    # A still-active previous worker must be able to load its homepage while
+    # the new worker installs. Retain immutable old indexes and local blobs.
+    for previous in sorted((HOME/'dist').glob('research-release-*')):
+        prior_report=previous/'pages-build-report.json'
+        published=previous/'official-deployment.json'
+        if previous.resolve()==OUT or not prior_report.is_file() or not published.is_file():
+            continue
+        state=json.loads(published.read_text(encoding='utf-8'))
+        if not state.get('homepageBranchPushed'):
+            continue
+        prior=json.loads(prior_report.read_text(encoding='utf-8'))
+        previous_main=previous/prior['projects'][0]['directory']
+        for index in previous_main.glob('osomni-resources.*.json'):
+            destination=target/index.name
+            if not destination.exists():shutil.copy2(index,destination)
+        if (previous_main/'blobs').exists():
+            shutil.copytree(previous_main/'blobs',target/'blobs',dirs_exist_ok=True)
     changed = []
     for folder in ('static/css', 'static/js'):
         for source in (HOME / folder).rglob('*'):
