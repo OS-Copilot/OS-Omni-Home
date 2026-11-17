@@ -159,6 +159,7 @@ export function createRobot() {
 export function poseRobot(robot, time, look, wave=0, delight=0, reduced=false) {
   const {root,torso,head,eyes,arms,legs,antenna}=robot;
   const idle=reduced?0:1;
+  torso.rotation.x=0;root.rotation.z=0;
   robot.reactor.scale.setScalar(reduced?1:1+Math.sin(time*1.8)*.035);
   root.position.y=idle*(Math.sin(time*1.7)*.045+delight*.18);
   torso.rotation.z=idle*(Math.sin(time*.85)*.035-look.x*.035);
@@ -178,5 +179,5 @@ export function poseRobot(robot, time, look, wave=0, delight=0, reduced=false) {
     if(sign===1){shoulder.rotation.z+=wave*1.65;elbow.rotation.z+=wave*(.25+Math.sin(time*12)*.30);hand.rotation.z=wave*Math.sin(time*12)*.2;}
     else{shoulder.rotation.z-=delight*.5;}
   }
-  legs.forEach((leg,i)=>{leg.rotation.x=idle*Math.sin(time*1.7+i)*.025;});
+  legs.forEach((leg,i)=>{leg.rotation.x=idle*Math.sin(time*1.7+i)*.025;leg.rotation.z=0;});
 }
