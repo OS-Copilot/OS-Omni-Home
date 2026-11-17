@@ -1,0 +1,6 @@
+/* The nebula is rendered behind the mascot. Fade the technical grid only here. */
+body.charcoal.orbit.research.research-dark .hero{
+ background-image:radial-gradient(ellipse at 79% 46%,#0c1524 0%,#0d1728e8 32%,#0e192b70 53%,transparent 72%),linear-gradient(90deg,#8cb8ff09 1px,transparent 1px),linear-gradient(#8cb8ff09 1px,transparent 1px),linear-gradient(125deg,#0e192b 0%,#112139 100%);
+ background-size:100% 100%,48px 48px,48px 48px,100% 100%;
+}
+.om3d-companion-stage{background:radial-gradient(ellipse at 50% 63%,#15365470,#0c152400 73%)}

@@ -1,0 +1,27 @@
+/* The existing navy/blue palette remains authoritative. Motion adds feedback. */
+.exp-reading-progress{position:fixed;top:0;left:0;width:100%;height:2px;z-index:1200;pointer-events:none;background:transparent}
+.exp-reading-progress i{display:block;width:100%;height:100%;transform:scaleX(0);transform-origin:left;background:linear-gradient(90deg,#8cb8ff,#7bdac5);box-shadow:0 0 11px #8cb8ff70}
+.exp-journey{position:fixed;left:clamp(14px,calc((100vw - 1400px)/2 - 24px),48px);top:50%;transform:translateY(-50%);z-index:70;display:grid;gap:0}
+.exp-journey:before{content:"";position:absolute;left:13px;top:17px;bottom:17px;width:1px;background:#8cb8ff20;pointer-events:none}
+.exp-journey a{position:relative;display:flex;align-items:center;justify-content:center;width:28px;height:35px;border-radius:20px;text-decoration:none}
+.exp-journey a>i{width:5px;height:5px;border:1px solid #839bbb;border-radius:50%;background:#0c1524;z-index:1;transition:background .25s,box-shadow .25s,transform .25s}
+.exp-journey a.is-past>i{background:#8cb8ff;border-color:#8cb8ff}
+.exp-journey a.is-current>i{background:#a6d2ff;border-color:#bde7ff;transform:scale(1.45);box-shadow:0 0 0 4px #8cb8ff13,0 0 12px #8cb8ff50}
+.exp-journey a>span{position:absolute;left:34px;top:6px;white-space:nowrap;padding:4px 9px;border:1px solid #8cb8ff30;border-radius:5px;background:#102039f5;color:#b9d3f2;font:10px/1.4 var(--font-mono,monospace);letter-spacing:.025em;opacity:0;transform:translateX(-3px);pointer-events:none;transition:opacity .16s,transform .16s}
+.exp-journey a:hover>span,.exp-journey a:focus-visible>span{opacity:1;transform:none}
+.exp-journey a:focus-visible{outline:2px solid #8cb8ff;outline-offset:2px}
+.exp-surface{transition:border-color .25s,box-shadow .25s,translate .25s}
+body.charcoal.orbit.research.research-dark .exp-surface:hover{background-image:radial-gradient(340px circle at var(--exp-x,50%) var(--exp-y,0%),#8cb8ff0b,transparent 75%)!important;border-color:#8cb8ff50!important;box-shadow:0 7px 28px #020b181f!important}
+.te-task.exp-surface:not([open]):hover{translate:0 -3px}
+.orbit-explore-guide>a.exp-surface:hover{translate:0 -2px}
+.orbit-explore-guide>a>b{display:inline-block;transition:translate .22s}
+.orbit-explore-guide>a:hover>b{translate:3px -3px}
+.cr-bar-track>i{transform-origin:left center}
+.dc-ring{transform-origin:center}
+.exp-next{display:flex;justify-content:flex-end;align-items:center;gap:14px;width:100%;margin-top:32px;padding:16px 0 0;border-top:1px solid #8cb8ff1c;color:#a8c9f5;font:12px/1.6 var(--font-body,sans-serif);text-decoration:none;transition:color .2s}
+.exp-next svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:1.25;stroke-linecap:round;stroke-linejoin:round;transition:translate .22s}
+.exp-next:hover{color:#e7f3ff}.exp-next:hover svg{translate:4px 0}
+.exp-next:focus-visible{outline:2px solid #8cb8ff;outline-offset:5px}
+@media(max-width:1490px){.exp-journey{display:none}}
+@media(hover:none){body.charcoal.orbit.research.research-dark .exp-surface:hover{background-image:none!important;box-shadow:none!important}.te-task.exp-surface:not([open]):hover,.orbit-explore-guide>a.exp-surface:hover{translate:none}}
+@media(prefers-reduced-motion:reduce){.exp-surface,.exp-journey a>i,.exp-journey a>span,.exp-next,.exp-next svg,.orbit-explore-guide>a>b{transition:none}.te-task.exp-surface:not([open]):hover,.orbit-explore-guide>a.exp-surface:hover{translate:none}}
