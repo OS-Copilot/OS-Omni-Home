@@ -21,8 +21,8 @@
 .om3d-companion-tools svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
 .om3d-companion-caption{display:flex;align-items:center;justify-content:center;gap:6px;width:max-content;margin:-2px auto 0;padding:5px 11px;background:#102138d9;border:1px solid #8cb8ff26;border-radius:20px;font:10px/1.5 var(--font-mono,monospace);letter-spacing:.03em;color:#a9c5e7;backdrop-filter:blur(10px)}
 .om3d-companion-caption i{width:4px;height:4px;background:#7bdac5;border-radius:50%}
-.om3d-companion .om3d-message{top:-22px;left:auto;right:5px;transform:none;width:170px;max-width:230px;font-size:12px;padding:10px 13px;border-radius:13px 13px 3px 13px}
-.om3d-companion .om3d-message.is-visible{top:-32px}
+.om3d-companion .om3d-message{top:28px;left:auto;right:calc(100% + 10px);transform:translateY(4px);width:180px;max-width:calc(100vw - 190px);font-size:12px;padding:10px 13px;border-radius:13px 13px 3px 13px}
+.om3d-companion .om3d-message.is-visible{top:28px;transform:translateY(0)}
 .om3d-companion-launcher{position:fixed;right:max(20px,env(safe-area-inset-right));bottom:max(20px,env(safe-area-inset-bottom));z-index:90;display:flex;align-items:center;gap:7px;padding:5px 12px 5px 5px;border:1px solid #8cb8ff45;border-radius:30px;background:#101f33ed;color:#bdd5f2;font:11px/1.4 var(--font-body,sans-serif);cursor:pointer;backdrop-filter:blur(12px);box-shadow:0 6px 24px #0003}
 .om3d-companion-launcher img{width:34px;height:34px;object-fit:contain}
 .om3d-companion-tools button:focus-visible,.om3d-companion-launcher:focus-visible{outline:2px solid #8dbfff;outline-offset:3px}

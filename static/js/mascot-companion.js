@@ -1,5 +1,5 @@
 // Reuse the existing canvas: a companion does not create a second WebGL scene.
-export function createCompanion({host,canvas,message,onChange}){
+export function createCompanion({host,canvas,message,onChange,onPlay}){
   const dock=document.createElement('aside');dock.className='om3d-companion';dock.hidden=true;
   dock.setAttribute('aria-label','OS-Omni companion');
   const toolbar=document.createElement('div');toolbar.className='om3d-companion-tools';
@@ -7,12 +7,18 @@ export function createCompanion({host,canvas,message,onChange}){
   home.innerHTML='<svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 11 5-5 5 5M10 6v10"/></svg>';
   const minimize=document.createElement('button');minimize.type='button';minimize.title='Minimize companion';minimize.setAttribute('aria-label','Minimize companion');
   minimize.innerHTML='<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 10h10"/></svg>';
-  toolbar.append(home,minimize);
+  const play=document.createElement('button');play.type='button';play.title='Next robot action';play.setAttribute('aria-label','Play a different robot action');
+  play.innerHTML='<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 5h3l8 10h3M13 12l4 3-4 2M3 15h3l3-4M11 7l3-2h3M14 3l3 2-3 2"/></svg>';
+  play.addEventListener('click',()=>onPlay?.());
+  toolbar.append(home,play,minimize);
   const stage=document.createElement('div');stage.className='om3d-companion-stage';stage.id='om3d-companion-stage';
   const caption=document.createElement('div');caption.className='om3d-companion-caption';caption.innerHTML='<i aria-hidden="true"></i>';
-  const context=document.createElement('span');context.textContent='OS-Omni';caption.appendChild(context);
-  const onExplore=event=>{context.textContent=event.detail.label;caption.title='Exploring '+event.detail.label;};
+  const context=document.createElement('span');context.textContent='OS-Omni';caption.appendChild(context);let sectionLabel='OS-Omni',actionLabel='';
+  const refreshCaption=()=>{context.textContent=actionLabel||sectionLabel;};
+  const onExplore=event=>{sectionLabel=event.detail.label;refreshCaption();caption.title='Exploring '+event.detail.label;};
+  const onAction=event=>{actionLabel=event.detail.label||'';refreshCaption();};
   document.addEventListener('osomni:explore',onExplore);
+  document.addEventListener('osomni:robot-action',onAction);
   dock.append(toolbar,stage,caption);
   const launcher=document.createElement('button');launcher.type='button';launcher.className='om3d-companion-launcher';launcher.hidden=true;
   launcher.setAttribute('aria-label','Show OS-Omni companion');launcher.setAttribute('aria-controls',stage.id);launcher.setAttribute('aria-expanded','false');
@@ -51,6 +57,6 @@ export function createCompanion({host,canvas,message,onChange}){
     stage,
     get docked(){return away;},
     get minimized(){return minimized;},
-    disable(){disabled=true;observer.disconnect();document.removeEventListener('osomni:explore',onExplore);host.classList.remove('om3d-away');host.append(canvas,message);dock.remove();launcher.remove();}
+    disable(){disabled=true;observer.disconnect();document.removeEventListener('osomni:explore',onExplore);document.removeEventListener('osomni:robot-action',onAction);host.classList.remove('om3d-away');host.append(canvas,message);dock.remove();launcher.remove();}
   };
 }

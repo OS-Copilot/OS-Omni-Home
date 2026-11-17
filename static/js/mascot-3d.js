@@ -1,12 +1,13 @@
 import * as T from './vendor/three.module.min.js';
-import {createRobot,poseRobot} from './mascot-model.js?v=orbit-proportions-7';
+import {createRobot,poseRobot} from './mascot-model.js?v=actions-13';
+import {ACTION_LABELS,createActionSequence,applyRobotAction} from './mascot-actions.js?v=companion-actions-15';
 import {createPlatforms} from './mascot-platforms.js?v=orbit-proportions-7';
 import {createExplorationOrbit} from './mascot-orbit.js?v=galaxy-10';
-import {createCompanion} from './mascot-companion.js?v=exploration-9';
+import {createCompanion} from './mascot-companion.js?v=companion-actions-15';
 import {createGalaxy} from './mascot-galaxy.js?v=unified-galaxy-12';
 
 const host=document.querySelector('.charcoal-brand-visual');
-if(host)try{start(host);}catch(error){console.warn('3D mascot unavailable; original project logo retained.',error.message);}
+if(host)try{start(host);}catch(error){console.warn('3D mascot unavailable; original project logo retained.',error.message);window.OSOmniBoot?.fail('robot','3D graphics could not start on this browser.');}
 
 function start(host){
   const renderer=new T.WebGLRenderer({alpha:true,antialias:true,powerPreference:'low-power'});
@@ -17,7 +18,7 @@ function start(host){
   const canvas=renderer.domElement;
   canvas.className='om3d-canvas';canvas.tabIndex=0;
   canvas.setAttribute('role','img');
-  canvas.setAttribute('aria-label','Interactive 3D OS-Omni robot. Drag or use arrow keys to turn; press Enter to wave.');
+  canvas.setAttribute('aria-label','Interactive 3D OS-Omni robot. Drag or use arrow keys to turn; press Enter to play an action.');
   const scene=new T.Scene();
   const camera=new T.PerspectiveCamera(36,1,.1,50);
   camera.position.set(0,2.35,8.9);camera.lookAt(0,1.57,0);
@@ -52,18 +53,21 @@ function start(host){
   }
   host.appendChild(canvas);
   const controls=document.createElement('div');controls.className='om3d-controls';
-  controls.innerHTML='<button type="button" class="om3d-hello" aria-label="Make the 3D robot wave"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 13 5 8a1.5 1.5 0 0 1 2.6-1.5L10 10l-2-6a1.5 1.5 0 0 1 2.8-1L13 9l-.5-5a1.5 1.5 0 0 1 3-.2L16 11l1-3a1.5 1.5 0 0 1 2.8 1L18 17c-1 5-8 5-11 1l-3-4a1.5 1.5 0 0 1 2.3-2L9 15"/></svg>Say hello</button><span class="om3d-hint">Drag to turn · Tap to play</span>';
+  controls.innerHTML='<button type="button" class="om3d-hello" aria-label="Play the next robot action"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 2.3 6.7L21 12l-6.7 2.3L12 21l-2.3-6.7L3 12l6.7-2.3L12 3ZM20 2v4m-2-2h4M3 18v4m-2-2h4"/></svg>Play with me</button><span class="om3d-hint">Drag to turn · Tap to play</span>';
   const message=document.createElement('div');message.className='om3d-message';message.setAttribute('role','status');host.append(controls,message);
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
-  let look={x:0,y:0},target={x:0,y:0},yaw=-.15,yawTarget=-.15,waveStart=-100,last=performance.now(),elapsed=0,visible=true,paused=false,frame=0,down=null,dragged=false,messageTimer,orbitTime=0,orbitRate=1,orbitHover=false,companion=null,miniMode=false,explorationContext=document.body.dataset.explorationSection||'top';
+  let look={x:0,y:0},target={x:0,y:0},yaw=-.15,yawTarget=-.15,action={name:'wave',start:0},actionSequence=createActionSequence(),lastInteraction=0,nextIdleAt=16,last=performance.now(),elapsed=0,visible=true,paused=false,frame=0,down=null,dragged=false,messageTimer,orbitTime=0,orbitRate=1,orbitHover=false,companion=null,miniMode=false,explorationContext=document.body.dataset.explorationSection||'top';
   const raycaster=new T.Raycaster();
-  function wave(){waveStart=elapsed;const tips={abstract:'Explore what the benchmark is designed to measure.','playground-section':'Pick a platform. Open an App. Make it yours.',benchmark:'Explore how the released tasks are distributed.',leaderboard:'Select models to compare their results.',method:'Follow how tasks are designed and checked.',tasks:'Choose an App to discover its tasks.','case-studies':'Pick a workflow and follow its recorded steps.',resources:'The research materials are gathered here.'};message.textContent=tips[explorationContext]||['Hello, human. Let’s explore.','Six platforms. One curious little robot.','Ready when you are.'][Math.floor(Math.random()*3)];message.classList.add('is-visible');clearTimeout(messageTimer);messageTimer=setTimeout(()=>message.classList.remove('is-visible'),2600);if(reduced.matches)renderOnce();}
+  function announceAction(name){document.dispatchEvent(new CustomEvent('osomni:robot-action',{detail:{name,label:ACTION_LABELS[name]||''}}));}
+  function stopAction(){if(action?.name==='twirl'){yaw=robot.root.rotation.y;yawTarget=yaw;}action=null;announceAction(null);}
+  function playAction(name){stopAction();action=reduced.matches?null:{name,start:elapsed};actionSequence.note(name);announceAction(reduced.matches?null:name);lastInteraction=elapsed;nextIdleAt=elapsed+8+Math.random()*4;}
+  function wave(){playAction(actionSequence.next());const tips={abstract:'Explore what the benchmark is designed to measure.','playground-section':'Pick a platform. Open an App. Make it yours.',benchmark:'Explore how the released tasks are distributed.',leaderboard:'Select models to compare their results.',method:'Follow how tasks are designed and checked.',tasks:'Choose an App to discover its tasks.','case-studies':'Pick a workflow and follow its recorded steps.',resources:'The research materials are gathered here.'};message.textContent=tips[explorationContext]||['Hello, human. Let’s explore.','Six platforms. One curious little robot.','Ready when you are.'][Math.floor(Math.random()*3)];message.classList.add('is-visible');clearTimeout(messageTimer);messageTimer=setTimeout(()=>message.classList.remove('is-visible'),2600);if(reduced.matches)renderOnce();}
   document.addEventListener('osomni:explore',event=>{explorationContext=event.detail.id;});
   controls.querySelector('button').addEventListener('click',wave);
-  canvas.addEventListener('pointerdown',e=>{down={x:e.clientX,y:e.clientY,yaw:yawTarget};dragged=false;});
+  canvas.addEventListener('pointerdown',e=>{lastInteraction=elapsed;nextIdleAt=elapsed+12;down={x:e.clientX,y:e.clientY,yaw:yawTarget};dragged=false;});
   canvas.addEventListener('pointermove',e=>{
     const r=canvas.getBoundingClientRect();target={x:T.MathUtils.clamp((e.clientX-r.left)/r.width*2-1,-1,1),y:T.MathUtils.clamp(1-(e.clientY-r.top)/r.height*2,-1,1)};
-    if(down&&Math.abs(e.clientX-down.x)>5){dragged=true;yawTarget=down.yaw+(e.clientX-down.x)*.008;}
+    if(down&&Math.abs(e.clientX-down.x)>5){if(!dragged){stopAction();down.yaw=yawTarget;}dragged=true;yawTarget=down.yaw+(e.clientX-down.x)*.008;}
     raycaster.setFromCamera(new T.Vector2((e.clientX-r.left)/r.width*2-1,1-(e.clientY-r.top)/r.height*2),camera);
     orbitHover=!miniMode&&Boolean(raycaster.intersectObjects(pickable)[0]);
     canvas.style.cursor=orbitHover?'pointer':down?'grabbing':'grab';
@@ -72,7 +76,7 @@ function start(host){
   window.addEventListener('pointerup',()=>{down=null;});
   canvas.addEventListener('pointercancel',()=>{down=null;});
   canvas.addEventListener('pointerleave',()=>{orbitHover=false;if(!down)target={x:0,y:0};});
-  canvas.addEventListener('pointerenter',()=>{if(elapsed-waveStart>5)waveStart=elapsed;});
+
   canvas.addEventListener('click',e=>{
     if(dragged)return;
     if(miniMode){wave();return;}
@@ -87,9 +91,9 @@ function start(host){
   const sizeObserver=new ResizeObserver(resize);sizeObserver.observe(host);
   function draw(dt){
     look.x=T.MathUtils.damp(look.x,target.x,5,dt);look.y=T.MathUtils.damp(look.y,target.y,5,dt);yaw=T.MathUtils.damp(yaw,yawTarget,6,dt);robot.root.rotation.y=yaw;
-    const age=elapsed-waveStart;
-    const waveAmount=reduced.matches?0:age>=0&&age<2.5?Math.sin(Math.min(1,age/.35)*Math.PI/2)*Math.min(1,(2.5-age)/.5):elapsed<2?Math.sin(elapsed*Math.PI/2)*.8:0;
-    poseRobot(robot,elapsed,look,waveAmount,age>=0&&age<1&&!reduced.matches?Math.sin(age*Math.PI):0,reduced.matches);
+    if(!reduced.matches&&!action&&!down&&elapsed>=nextIdleAt)playAction(actionSequence.next());
+    poseRobot(robot,elapsed,look,0,0,reduced.matches);
+    if(action&&!reduced.matches&&!applyRobotAction(robot,action.name,elapsed-action.start)){action=null;announceAction(null);}
     if(!miniMode){
       orbitRate=T.MathUtils.damp(orbitRate,orbitHover?.18:1,4,dt);
       if(!reduced.matches)orbitTime+=dt*orbitRate;
@@ -100,17 +104,17 @@ function start(host){
     renderer.render(scene,camera);
   }
   function renderOnce(){draw(1/60);}
-  function animate(now){frame=0;if(!visible||paused||reduced.matches)return;const dt=Math.min((now-last)/1000,.05);last=now;elapsed+=dt;draw(dt);frame=requestAnimationFrame(animate);}
-  function resume(){last=performance.now();if(!frame&&visible&&!paused&&!reduced.matches)frame=requestAnimationFrame(animate);else if(reduced.matches)renderOnce();}
+  function animate(now){frame=0;if(!visible||paused||reduced.matches||(window.OSOmniBoot&&!window.OSOmniBoot.released))return;const dt=Math.min((now-last)/1000,.05);last=now;elapsed+=dt;draw(dt);frame=requestAnimationFrame(animate);}
+  function resume(){last=performance.now();if(!frame&&visible&&!paused&&!reduced.matches&&(!window.OSOmniBoot||window.OSOmniBoot.released))frame=requestAnimationFrame(animate);else if(reduced.matches)renderOnce();}
   document.addEventListener('visibilitychange',()=>{paused=document.hidden;resume();});
-  companion=createCompanion({host,canvas,message,onChange:state=>{
+  companion=createCompanion({host,canvas,message,onPlay:wave,onChange:state=>{
     const entering=state.docked&&!miniMode;
     miniMode=state.docked;visible=state.visible;orbitHover=false;galaxy.setCompact(miniMode);
     devices.forEach(({device})=>{device.visible=!miniMode;});
     orbit.setVisible(!miniMode);sparkles.forEach(star=>{star.visible=!miniMode;});
     if(miniMode){camera.position.set(0,1.85,5.3);camera.lookAt(0,1.40,0);}
     else{camera.position.set(0,2.35,8.9);camera.lookAt(0,1.57,0);}
-    if(entering&&!state.minimized){yawTarget=-.15;waveStart=elapsed;}
+    if(entering&&!state.minimized){playAction('bow');yawTarget=-.15;}
     resize();resume();
   }});
   sizeObserver.observe(companion.stage);
@@ -119,7 +123,8 @@ function start(host){
     const rect=canvas.getBoundingClientRect();
     target={x:T.MathUtils.clamp((event.clientX-rect.left-rect.width/2)/innerWidth*2,-.85,.85),y:T.MathUtils.clamp((rect.top+rect.height/2-event.clientY)/innerHeight*2,-.65,.65)};
   },{passive:true});
-  reduced.addEventListener('change',resume);
+  reduced.addEventListener('change',()=>{action=null;nextIdleAt=elapsed+18;resume();});
   canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();paused=true;companion?.disable();host.classList.remove('om3d-ready');canvas.hidden=true;controls.hidden=true;});
-  resize();host.classList.add('om3d-ready');resume();
+  document.addEventListener('osomni:app-enter',()=>{playAction('wave');resume();});
+  resize();host.classList.add('om3d-ready');resume();window.OSOmniBoot?.ready('robot');
 }

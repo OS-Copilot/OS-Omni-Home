@@ -26,8 +26,8 @@ def main():
                       'href="index.research.light.saved.html" title="Compare with the saved light research version">Light version',1)
     assert re.findall(r'<script\s+src="([^"]+)"',html)==re.findall(r'<script\s+src="([^"]+)"',mint)
     assert 'class="charcoal-brand-art"' in html and 'Long-Horizon Workflows Across Platforms</h1>' in html
-    html=html.replace('</head>','  <link rel="stylesheet" href="static/css/mascot-3d.css?v=companion-8">\n</head>',1)
-    html=html.replace('</body>','  <script type="module" src="static/js/mascot-3d.js?v=unified-galaxy-12"></script>\n</body>',1)
+    html=html.replace('</head>','  <link rel="stylesheet" href="static/css/mascot-3d.css?v=companion-actions-15">\n</head>',1)
+    html=html.replace('</body>','  <script type="module" src="static/js/mascot-3d.js?v=companion-actions-15"></script>\n</body>',1)
     html=html.replace('</head>','  <link rel="stylesheet" href="static/css/exploration-motion.css?v=exploration-9">\n</head>',1)
     html=html.replace('</body>','  <script type="module" src="static/js/exploration-motion.js?v=exploration-9"></script>\n</body>',1)
     html=html.replace('</head>','  <link rel="stylesheet" href="static/css/galaxy.css?v=galaxy-10">\n</head>',1)
