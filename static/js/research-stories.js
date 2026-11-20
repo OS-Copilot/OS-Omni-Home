@@ -40,7 +40,7 @@
       if(lastTime!==null)elapsed=(elapsed+Math.max(0,now-lastTime))%total;
       lastTime=now;render(false);animationFrame=global.requestAnimationFrame(tick);
     }
-    function start(){if(playing||!visible||document.hidden||scrubbing)return;playing=true;lastTime=null;root.dataset.playing='true';render(false);animationFrame=global.requestAnimationFrame(tick);}
+    function start(){if(playing||!visible||document.hidden||scrubbing||(global.OSOmniBoot&&!global.OSOmniBoot.released))return;playing=true;lastTime=null;root.dataset.playing='true';render(false);animationFrame=global.requestAnimationFrame(tick);}
     function seek(ms){stop();elapsed=Math.max(0,Math.min(total-1,Number(ms)||0));render(false);start();}
     buttons.forEach(function(button){button.onclick=function(){seek(Number(button.dataset.stage)*stageDuration);};});
     scrubber.addEventListener('input',function(){seek(this.value);});
@@ -50,6 +50,7 @@
     scrubber.addEventListener('pointercancel',releaseScrubber);
     scrubber.addEventListener('change',releaseScrubber);
     scrubber.addEventListener('blur',releaseScrubber);
+    document.addEventListener('osomni:app-enter',start);
     document.addEventListener('visibilitychange',function(){if(document.hidden)stop();else start();});
     if('IntersectionObserver'in global)new global.IntersectionObserver(function(entries){visible=entries[0].isIntersecting;if(visible)start();else stop();}).observe(root);
     render(true);start();return {refresh:function(){render(true);},reset:function(){seek(0);},getState:function(){return {index:index,playing:playing,elapsed:elapsed,total:total,stageDuration:stageDuration};}};
@@ -95,7 +96,7 @@
     var root=host.querySelector('.st-player');
     var api=player(root,['Design','Review','Calibrate','Validate','Revise'],function(index){var stage=stages[index];return {html:'<div class="ap-stage-art"><div class="ap-orbit-glow" aria-hidden="true"></div>'+diagram(index)+'</div><div class="ap-stage-copy"><span class="ap-stage-index">STAGE 0'+(index+1)+' / 05</span><h4>'+esc(stage.title)+'</h4><p>'+esc(stage.text)+'</p></div>',caption:''};});
     root.querySelectorAll('[data-stage]').forEach(function(button,i){button.innerHTML='<span class="ap-step-symbol">'+symbol(i)+'</span><span class="ap-step-label"><small>0'+(i+1)+'</small>'+['Design','Review','Calibrate','Validate','Revise'][i]+'</span>';});
-    host.osomniStory=api;
+    host.osomniStory=api;global.OSOmniBoot?.ready('pipeline');
   }
   function init(){pipeline();}
   global.OSOmniResearchStories={player:player,stages:stages};

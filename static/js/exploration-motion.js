@@ -42,11 +42,13 @@ if(stops.length){
     const animation=el.animate(frames,{fill:'backwards',...options});running.add(animation);
     animation.finished.then(()=>running.delete(animation),()=>running.delete(animation));
   }
-  const observer=new IntersectionObserver(entries=>{
+  const waitingForEntry=new Set();
+  function reveal(entries){
     let stagger=0;
     for(const entry of entries){
       if(!entry.isIntersecting)continue;
       const el=entry.target;observer.unobserve(el);
+      if(window.OSOmniBoot&&!window.OSOmniBoot.released){waitingForEntry.add(el);continue;}
       if(played.has(el))continue;played.add(el);
       const delay=Math.min(stagger++*45,150);
       if(el.matches('.cr-bar-track>i')){
@@ -57,7 +59,9 @@ if(stops.length){
         animate(el,[{opacity:.10,translate:'0 18px'},{opacity:1,translate:'0 0'}],{duration:620,delay,easing:'cubic-bezier(.22,1,.36,1)'});
       }
     }
-  },{threshold:.10,rootMargin:'0px 0px -24px 0px'});
+  }
+  const observer=new IntersectionObserver(reveal,{threshold:.10,rootMargin:'0px 0px -24px 0px'});
+  document.addEventListener('osomni:app-enter',()=>{const entries=Array.from(waitingForEntry,target=>({target,isIntersecting:true}));waitingForEntry.clear();reveal(entries);});
   const revealSelector='.hero-content>*,.section-head,.charcoal-facts>div,.cr-stats>div,.te-task,.lex-scroll tbody tr,.cr-bar-track>i,.dc-ring,main .chart-card:not(.rise)';
   const surfaceSelector='main .card:not(.annotation-story):not(.story-widget),.te-task,.orbit-explore-guide>a';
   function collect(root){
@@ -103,4 +107,5 @@ if(stops.length){
     (section.querySelector('.wrap')||section).appendChild(next);
   }
   reduced.addEventListener('change',()=>{if(reduced.matches){for(const a of running)a.cancel();running.clear();}});
+  window.OSOmniBoot?.ready('navigation');
 }

@@ -1,8 +1,8 @@
 import * as T from './vendor/three.module.min.js';
-import {createRobot,poseRobot} from './mascot-model.js?v=actions-13';
+import {createRobot,poseRobot} from './mascot-model.js?v=studio-22';
 import {ACTION_LABELS,createActionSequence,applyRobotAction} from './mascot-actions.js?v=companion-actions-15';
-import {createPlatforms} from './mascot-platforms.js?v=orbit-proportions-7';
-import {createExplorationOrbit} from './mascot-orbit.js?v=galaxy-10';
+import {createPlatforms} from './mascot-platforms.js?v=studio-22';
+import {createExplorationOrbit} from './mascot-orbit.js?v=studio-22';
 import {createCompanion} from './mascot-companion.js?v=companion-actions-15';
 import {createGalaxy} from './mascot-galaxy.js?v=unified-galaxy-12';
 
@@ -11,10 +11,12 @@ if(host)try{start(host);}catch(error){console.warn('3D mascot unavailable; origi
 
 function start(host){
   const renderer=new T.WebGLRenderer({alpha:true,antialias:true,powerPreference:'low-power'});
-  renderer.setPixelRatio(Math.min(devicePixelRatio,1.7));
+  renderer.setPixelRatio(Math.min(Math.max(devicePixelRatio,1.5),2));
   renderer.outputColorSpace=T.SRGBColorSpace;
   renderer.toneMapping=T.NeutralToneMapping;
-  renderer.toneMappingExposure=1;
+  renderer.toneMappingExposure=.95;
+  renderer.shadowMap.enabled=true;
+  renderer.shadowMap.type=T.PCFSoftShadowMap;
   const canvas=renderer.domElement;
   canvas.className='om3d-canvas';canvas.tabIndex=0;
   canvas.setAttribute('role','img');
@@ -22,13 +24,19 @@ function start(host){
   const scene=new T.Scene();
   const camera=new T.PerspectiveCamera(36,1,.1,50);
   camera.position.set(0,2.35,8.9);camera.lookAt(0,1.57,0);
-  scene.add(new T.HemisphereLight(0xffffff,0x7c8895,1.0));
-  const key=new T.DirectionalLight(0xffffff,1.6);key.position.set(-3,5,6);scene.add(key);
-  const rim=new T.DirectionalLight(0xffffff,1.5);rim.position.set(4,3,-3);scene.add(rim);
-  const fill=new T.PointLight(0xffffff,8,15);fill.position.set(-3,1,-2);scene.add(fill);
+  scene.add(new T.HemisphereLight(0xf4f8ff,0x334663,.9));
+  const key=new T.DirectionalLight(0xffffff,2.8);key.position.set(-3,5,6);scene.add(key);
+  key.castShadow=true;
+  const shadowResolution=innerWidth<600?512:1024;
+  key.shadow.mapSize.set(shadowResolution,shadowResolution);
+  key.shadow.camera.left=-2;key.shadow.camera.right=2;key.shadow.camera.top=3.5;key.shadow.camera.bottom=-1;
+  key.shadow.camera.near=.1;key.shadow.camera.far=16;
+  key.shadow.bias=-.00015;key.shadow.normalBias=.012;
+  const rim=new T.DirectionalLight(0xd8eaff,1.6);rim.position.set(4,3,-3);scene.add(rim);
+  const fill=new T.PointLight(0xe7f5ff,4,15);fill.position.set(-3,1,-2);scene.add(fill);
   // An inexpensive studio environment provides broad reflections on the shell.
-  const studio=new T.Scene();studio.background=new T.Color(0x6b727c);
-  for(const [color,x,y,z,sx,sy] of [[0xffffff,-3,4,2,4,5],[0xffffff,4,2,0,2,5],[0x465064,0,-2,0,10,10]]){
+  const studio=new T.Scene();studio.background=new T.Color(0x3c4656);
+  for(const [color,x,y,z,sx,sy] of [[0xf8fcff,-3,4,3,4,5],[0xb7d2ea,4,2,1,2,4],[0x1a2538,0,-2,0,10,10]]){
     const p=new T.Mesh(new T.PlaneGeometry(sx,sy),new T.MeshBasicMaterial({color,side:T.DoubleSide}));p.position.set(x,y,z);p.lookAt(0,1,0);studio.add(p);
   }
   const pmrem=new T.PMREMGenerator(renderer);const environment=pmrem.fromScene(studio,.08);scene.environment=environment.texture;pmrem.dispose();
@@ -36,12 +44,20 @@ function start(host){
   const robot=createRobot();scene.add(robot.root);
   const floor=new T.Group();floor.position.y=-.1;scene.add(floor);
   const base=new T.Mesh(new T.CylinderGeometry(.85,.88,.075,80),new T.MeshStandardMaterial({color:0x17669e,metalness:.25,roughness:.3}));floor.add(base);
-  const inset=new T.Mesh(new T.CylinderGeometry(.83,.83,.018,80),new T.MeshStandardMaterial({color:0x64cdbd,metalness:.18,roughness:.3}));inset.position.y=.075;floor.add(inset);
+  const inset=new T.Mesh(new T.CylinderGeometry(.83,.83,.018,80),new T.MeshStandardMaterial({color:0x64cdbd,metalness:.18,roughness:.3}));inset.position.y=.075;inset.receiveShadow=true;floor.add(inset);
   const halo=new T.Mesh(new T.TorusGeometry(.84,.010,12,100),new T.MeshBasicMaterial({color:0xa5f4c9}));halo.rotation.x=Math.PI/2;halo.position.y=.08;floor.add(halo);
+  // Soft grounding rather than a floating white silhouette. This is a small
+  // procedural texture, with no shadow-map render pass on every animation frame.
+  const shadowCanvas=document.createElement('canvas');shadowCanvas.width=shadowCanvas.height=128;
+  const sc=shadowCanvas.getContext('2d'),sg=sc.createRadialGradient(64,64,8,64,64,64);
+  sg.addColorStop(0,'rgba(5,20,39,.30)');sg.addColorStop(.5,'rgba(5,20,39,.15)');sg.addColorStop(1,'rgba(5,20,39,0)');
+  sc.fillStyle=sg;sc.fillRect(0,0,128,128);
+  const contact=new T.Mesh(new T.PlaneGeometry(1.28,.82),new T.MeshBasicMaterial({map:new T.CanvasTexture(shadowCanvas),transparent:true,depthWrite:false}));
+  contact.rotation.x=-Math.PI/2;contact.position.set(0,.087,.08);floor.add(contact);
   const glowCanvas=document.createElement('canvas');glowCanvas.width=glowCanvas.height=128;
   const gc=glowCanvas.getContext('2d');const gradient=gc.createRadialGradient(64,64,0,64,64,64);gradient.addColorStop(0,'rgba(45,166,228,.24)');gradient.addColorStop(1,'rgba(45,166,228,0)');gc.fillStyle=gradient;gc.fillRect(0,0,128,128);
   const glow=new T.Mesh(new T.PlaneGeometry(5,5),new T.MeshBasicMaterial({map:new T.CanvasTexture(glowCanvas),transparent:true,depthWrite:false}));glow.rotation.x=-Math.PI/2;glow.position.y=-.18;scene.add(glow);
-  const {devices,pickable}=createPlatforms(scene);
+  const {devices,pickable,ready:platformSurfacesReady}=createPlatforms(scene);
   const orbit=createExplorationOrbit(scene,devices);
   const galaxy=createGalaxy(scene,renderer.getPixelRatio());
   galaxy.setUnified(document.body.classList.contains('has-page-galaxy'));
@@ -126,5 +142,9 @@ function start(host){
   reduced.addEventListener('change',()=>{action=null;nextIdleAt=elapsed+18;resume();});
   canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();paused=true;companion?.disable();host.classList.remove('om3d-ready');canvas.hidden=true;controls.hidden=true;});
   document.addEventListener('osomni:app-enter',()=>{playAction('wave');resume();});
-  resize();host.classList.add('om3d-ready');resume();window.OSOmniBoot?.ready('robot');
+  resize();host.classList.add('om3d-ready');resume();
+  platformSurfacesReady.then(()=>{renderOnce();window.OSOmniBoot?.ready('robot');}).catch(error=>{
+    console.warn('Platform screen surfaces could not finish.',error.message);
+    window.OSOmniBoot?.fail('robot','Platform screen surfaces could not finish.');
+  });
 }

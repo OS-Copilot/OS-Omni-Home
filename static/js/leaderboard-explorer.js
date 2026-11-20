@@ -85,7 +85,7 @@
     host.querySelector('[data-lex-human]').onchange=function(e){state.human=e.target.checked;update();};
     host.querySelector('[data-lex-reset]').onclick=function(){state.metric='average';state.direction='desc';state.query='';state.family='all';state.human=true;host.querySelector('[data-lex-search]').value='';host.querySelector('[data-lex-family]').value='all';host.querySelector('[data-lex-human]').checked=true;update();};
     host.querySelector('[data-lex-download]').onclick=function(){var blob=new Blob(['\ufeff'+csv(data,state)],{type:'text/csv;charset=utf-8'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='os-omni-v1-'+metric().label.toLowerCase().replace(/[^a-z0-9]+/g,'-')+'.csv';document.body.appendChild(a);a.click();a.remove();global.setTimeout(function(){URL.revokeObjectURL(url);},1000);};
-    update();
+    update();global.OSOmniBoot?.ready('leaderboard');
   }
   if(typeof document!=='undefined'){
     if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();

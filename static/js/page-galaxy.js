@@ -92,7 +92,7 @@ export function createPageGalaxy(){
     root.style.setProperty('--stars-x',(-x*.4).toFixed(2)+'px');root.style.setProperty('--stars-y',(-y*.4+travel*.25).toFixed(2)+'px');
   }
   function tick(now){
-    frame=0;if(destroyed||document.hidden||reduced.matches)return;
+    frame=0;if(destroyed||document.hidden||reduced.matches||(window.OSOmniBoot&&!window.OSOmniBoot.released))return;
     frame=requestAnimationFrame(tick);
     if(now-lastDraw<1000/30)return;
     const dt=Math.min(.06,Math.max(.001,(now-lastTime)/1000));lastTime=now;lastDraw=now;clock+=dt;
@@ -100,7 +100,7 @@ export function createPageGalaxy(){
     drawStars();composite();
   }
   function schedule(){
-    if(destroyed||document.hidden)return;
+    if(destroyed||document.hidden||(window.OSOmniBoot&&!window.OSOmniBoot.released))return;
     if(reduced.matches){drawStars();composite();return;}
     if(!frame){lastTime=performance.now();lastDraw=lastTime;frame=requestAnimationFrame(tick);}
   }
@@ -116,7 +116,9 @@ export function createPageGalaxy(){
   function onVisibility(){root.dataset.paused=String(document.hidden);if(document.hidden){cancelAnimationFrame(frame);frame=0;}else schedule();}
   document.body.prepend(root);
   paint();document.body.classList.add('has-page-galaxy');document.dispatchEvent(new CustomEvent('osomni:galaxy',{detail:{active:true}}));schedule();
+  document.addEventListener('osomni:app-enter',schedule);
+  window.OSOmniBoot?.ready('galaxy');
   addEventListener('scroll',schedule,{passive:true});addEventListener('resize',onResize,{passive:true});document.addEventListener('pointermove',onPointer,{passive:true});document.addEventListener('pointerleave',onLeave);document.addEventListener('click',onClick);document.addEventListener('visibilitychange',onVisibility);reduced.addEventListener('change',onPreference);
-  return{root,paint,destroy(){destroyed=true;clearTimeout(timer);cancelAnimationFrame(frame);removeEventListener('scroll',schedule);removeEventListener('resize',onResize);document.removeEventListener('pointermove',onPointer);document.removeEventListener('pointerleave',onLeave);document.removeEventListener('click',onClick);document.removeEventListener('visibilitychange',onVisibility);reduced.removeEventListener('change',onPreference);document.body.classList.remove('has-page-galaxy');document.dispatchEvent(new CustomEvent('osomni:galaxy',{detail:{active:false}}));root.remove();}};
+  return{root,paint,destroy(){destroyed=true;clearTimeout(timer);cancelAnimationFrame(frame);removeEventListener('scroll',schedule);removeEventListener('resize',onResize);document.removeEventListener('osomni:app-enter',schedule);document.removeEventListener('pointermove',onPointer);document.removeEventListener('pointerleave',onLeave);document.removeEventListener('click',onClick);document.removeEventListener('visibilitychange',onVisibility);reduced.removeEventListener('change',onPreference);document.body.classList.remove('has-page-galaxy');document.dispatchEvent(new CustomEvent('osomni:galaxy',{detail:{active:false}}));root.remove();}};
 }
-if(typeof document!=='undefined')createPageGalaxy();
+if(typeof document!=='undefined'){const scene=createPageGalaxy();if(!scene)window.OSOmniBoot?.fail('galaxy','The galaxy canvas could not start.');}

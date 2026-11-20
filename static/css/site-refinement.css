@@ -1,0 +1,146 @@
+/* Presentation shell only. Embedded device applications keep their own styles. */
+body.charcoal.orbit.research.research-dark {
+  --polish-edge: #a2bde523;
+  --polish-panel: linear-gradient(145deg, #17263bd9, #101c2ee8);
+  --polish-focus: #91baff;
+  -webkit-font-smoothing: antialiased;
+}
+.charcoal.orbit.research.research-dark .wrap,
+.charcoal.orbit.research.research-dark #leaderboard .wrap {
+  width: min(1280px, calc(100% - 64px));
+  max-width: 1280px;
+}
+.charcoal.orbit.research.research-dark .band { padding-block: 84px; }
+.charcoal.orbit.research.research-dark .band-tight { padding-block: 54px; }
+.charcoal.orbit.research.research-dark .section-title,
+.charcoal.orbit.research.research-dark #tasks .section-title {
+  font-size: clamp(32px, 3.7vw, 48px);
+  line-height: 1.14;
+  letter-spacing: -.035em;
+  text-wrap: balance;
+}
+.charcoal.orbit.research.research-dark .section-sub {
+  font-size: 17px;
+  line-height: 1.8;
+  max-width: 760px;
+  margin-top: 18px;
+  color: #adbed5;
+  text-wrap: pretty;
+}
+.charcoal.orbit.research.research-dark .eyebrow {
+  font-size: 11px;
+  letter-spacing: .15em;
+  color: #92b5e8;
+}
+.charcoal.orbit.research.research-dark .nav {
+  background: #0c1524e8;
+  border-bottom: 1px solid #aac6ec1c;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+.charcoal.orbit.research.research-dark .nav-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #eaf0fb;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: -.025em;
+}
+.charcoal.orbit.research.research-dark .nav-brand img { width: 32px; height: 32px; object-fit: contain; }
+.charcoal.orbit.research.research-dark .nav-links a { font-size: 14px; padding-block: 12px; }
+.charcoal.orbit.research.research-dark .hero .lede { font-size: 17px; line-height: 1.85; color: #b6c7df; }
+.charcoal.orbit.research.research-dark .charcoal-facts { padding-block: 25px; }
+.charcoal.orbit.research.research-dark .charcoal-facts strong { font-size: 30px; font-variant-numeric: tabular-nums; }
+.charcoal.orbit.research.research-dark .charcoal-facts span { font-size: 13px; color: #a7bad3; }
+.charcoal.orbit.research.research-dark :is(main .card, .lb-highlight, .lb-table-panel, .cs-player, .te-task, .annotation-story, .bibtex),
+.charcoal.orbit.research.research-dark main .card.feature {
+  background: var(--polish-panel) !important;
+  border: 1px solid var(--polish-edge) !important;
+  border-radius: 14px;
+  box-shadow: inset 0 1px 0 #d9e7ff06, 0 12px 36px #02081616;
+}
+.charcoal.orbit.research.research-dark main .card h3 { font-size: 22px; line-height: 1.35; letter-spacing: -.025em; }
+.charcoal.orbit.research.research-dark main .card p { line-height: 1.8; }
+.charcoal.orbit.research.research-dark .chart-note { font-size: 13px; line-height: 1.75; color: #a5b7d1; }
+.charcoal.orbit.research.research-dark :is(.btn, .bp-tabs button, .te-platform, .cs-tabs > button, .lex-metrics button) {
+  border-radius: 8px;
+  transition: background .2s ease, border-color .2s ease, color .2s ease, box-shadow .2s ease;
+}
+.charcoal.orbit.research.research-dark .btn { min-height: 42px; font-size: 14px; border-color: #a2bde537; }
+.charcoal.orbit.research.research-dark .btn:hover { background: #233954; border-color: #91baff75; }
+.charcoal.orbit.research.research-dark :is(.charcoal-primary, .btn-gold) {
+  background: #679ffc;
+  color: #081527;
+  border-color: #89b6ff;
+  box-shadow: inset 0 1px 0 #ffffff26;
+}
+.charcoal.orbit.research.research-dark :is(.charcoal-primary, .btn-gold):hover { background: #89b6ff; color: #081527; }
+.charcoal.orbit.research.research-dark :is(.btn, .bp-tabs button, .bp-search, .te-platform, .te-controls input, .te-controls select, .te-task > summary, .lex-root button, .lex-root input, .lex-root select, .cs-task-option, .cs-choice-toolbar input, .cs-choice-toolbar select):focus-visible {
+  outline: 2px solid var(--polish-focus);
+  outline-offset: 4px;
+}
+/* A compact launch area: the device remains the visual focus. */
+.charcoal.orbit.research.research-dark .orbit-explore-guide { margin-block: 24px; }
+.charcoal.orbit.research.research-dark .bp-tabs { gap: 8px; padding-block: 12px; }
+.charcoal.orbit.research.research-dark .bp-tabs button { min-height: 42px; }
+.charcoal.orbit.research.research-dark .device-showcase .bp-app-list button {
+  border: 1px solid #a2bde512;
+  border-radius: 10px;
+  background: #16263a85;
+}
+.charcoal.orbit.research.research-dark .device-showcase .bp-app-list button:hover { background: #233c58; border-color: #91baff55; }
+.charcoal.orbit.research.research-dark .bp-search { min-height: 44px; border-radius: 8px; border-color: #a2bde533; }
+/* Explorer cards keep their compact three-column layout and expandable content. */
+.charcoal.orbit.research.research-dark #task-explorer { margin-top: 28px; }
+.charcoal.orbit.research.research-dark .te-platform { padding: 14px; gap: 12px; }
+.charcoal.orbit.research.research-dark .te-controls { padding: 20px; border: 1px solid var(--polish-edge); border-radius: 12px; }
+.charcoal.orbit.research.research-dark .te-controls :is(input, select) { font-size: 15px; min-height: 42px; }
+.charcoal.orbit.research.research-dark #task-explorer .te-task > summary { padding: 20px; gap: 15px; }
+.charcoal.orbit.research.research-dark #task-explorer .te-task-title { font-size: 19px; line-height: 1.4; min-height: 0; }
+.charcoal.orbit.research.research-dark #task-explorer .te-task:hover { border-color: #91baff66 !important; }
+.charcoal.orbit.research.research-dark #task-explorer .te-task[open] { border-color: #91baff66 !important; }
+.charcoal.orbit.research.research-dark #task-explorer .te-task[open] .te-task-title { font-size: 23px; }
+/* The results table is deliberately quieter than the interactive devices. */
+.charcoal.orbit.research.research-dark #leaderboard-explorer { border-radius: 14px; border-color: var(--polish-edge); }
+.charcoal.orbit.research.research-dark .lex-scope { padding: 18px 24px; line-height: 1.7; }
+.charcoal.orbit.research.research-dark .lex-toolbar { padding: 14px 24px 22px; }
+.charcoal.orbit.research.research-dark .lex-metrics { gap: 8px; padding: 20px 24px 8px; }
+.charcoal.orbit.research.research-dark .lex-scroll :is(th, td) { padding-block: 16px; font-variant-numeric: tabular-nums; }
+.charcoal.orbit.research.research-dark .lex-scroll thead th { font-size: 12px; background: #1a2b43; }
+.charcoal.orbit.research.research-dark .lex-scroll tbody td { font-size: 13px; }
+.charcoal.orbit.research.research-dark :is(.lex-source, .lex-note) { font-size: 13px; line-height: 1.75; }
+/* Unified process and replay surfaces; source screenshots are never cropped. */
+.charcoal.orbit.research.research-dark .annotation-story { padding: clamp(22px, 3vw, 38px) !important; }
+.charcoal.orbit.research.research-dark .ap-header h3 { font-size: clamp(28px, 3.2vw, 40px); line-height: 1.2; }
+.charcoal.orbit.research.research-dark .ap-header p { font-size: 16px; line-height: 1.8; }
+.charcoal.orbit.research.research-dark .st-steps button { border-radius: 10px; font-size: 15px; }
+.charcoal.orbit.research.research-dark .cs-task-chooser { border-radius: 14px; border-color: var(--polish-edge); background: #122137b8; }
+.charcoal.orbit.research.research-dark .cs-task-option { padding: 14px; border-radius: 10px; }
+.charcoal.orbit.research.research-dark .cs-task-text strong { font-size: 14px; line-height: 1.5; }
+.charcoal.orbit.research.research-dark .cs-task-text small { font-size: 12px; }
+.charcoal.orbit.research.research-dark .cs-player { padding: 24px; }
+.charcoal.orbit.research.research-dark .cs-action { background: #091322; border-color: #a2bde529; border-radius: 10px; }
+.charcoal.orbit.research.research-dark .cs-action code { font-size: 12px; line-height: 1.85; }
+.charcoal.orbit.research.research-dark .cs-instruction p { font-size: 14px; line-height: 1.85; }
+.charcoal.orbit.research.research-dark .bibtex pre { padding: 24px; font-size: 13px; line-height: 1.85; background: #0c1728; }
+.charcoal.orbit.research.research-dark .bibtex-bar { background: #182a42; padding: 15px 22px; }
+@media (max-width: 800px) {
+  .charcoal.orbit.research.research-dark .wrap,
+  .charcoal.orbit.research.research-dark #leaderboard .wrap { width: calc(100% - 40px); }
+  .charcoal.orbit.research.research-dark .band { padding-block: 58px; }
+  .charcoal.orbit.research.research-dark .band-tight { padding-block: 38px; }
+  .charcoal.orbit.research.research-dark .section-sub { font-size: 16px; }
+  .charcoal.orbit.research.research-dark .cs-player { padding: 18px; }
+}
+@media (max-width: 600px) {
+  .charcoal.orbit.research.research-dark .charcoal-compare { display: none; }
+  .charcoal.orbit.research.research-dark .nav-brand { font-size: 14px; gap: 7px; }
+  .charcoal.orbit.research.research-dark .nav-brand img { width: 28px; height: 28px; }
+  .charcoal.orbit.research.research-dark .te-controls { padding: 16px; }
+  .charcoal.orbit.research.research-dark #task-explorer .te-task > summary { padding: 18px; }
+  .charcoal.orbit.research.research-dark .st-steps button { font-size: 13px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .charcoal.orbit.research.research-dark :is(.btn, .bp-tabs button, .te-platform, .cs-tabs > button, .lex-metrics button) { transition: none; }
+}
