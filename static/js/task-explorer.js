@@ -61,6 +61,6 @@
     intro.querySelector('.te-surprise').onclick=function(){var query=search.value.trim().toLowerCase();var pool=rows.filter(function(row){return (!track.value||row.track===track.value)&&(!app.value||row.apps.includes(app.value))&&(!query||[row.id,row.description,row.instruction,row.apps.join(' ')].join(' ').toLowerCase().includes(query));});if(!pool.length)return;spotlight=pool[Math.floor(Math.random()*pool.length)].id;render();var selected=root.querySelector('.te-task[open]');if(selected)selected.scrollIntoView({block:'center',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});};
     root.querySelectorAll('[data-page]').forEach(function(button){button.onclick=function(){spotlight=null;page+=button.dataset.page==='next'?1:-1;render();root.scrollIntoView({block:'start',behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});};});
     window.OSOmniTaskExplorer={filter:function(selection){track.value=selection.track||'';page=0;spotlight=selection.taskId||null;search.value='';updateApps();app.value=selection.app||'';render();}};
-    updateApps();render();
-  }).catch(function(error){root.textContent=error.message+' Please reload the page.';});
+    updateApps();render();window.OSOmniBoot?.ready('tasks');
+  }).catch(function(error){root.textContent=error.message+' Please reload the page.';window.OSOmniBoot?.fail('tasks','The task catalog could not be loaded.');});
 })();

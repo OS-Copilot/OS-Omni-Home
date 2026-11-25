@@ -98,9 +98,9 @@
             }else previous.remove();
           }
           host.querySelector('.cs-original').href=shot.src;
-          present();warmScreens();schedule();
+          present();warmScreens();schedule();global.OSOmniBoot?.ready('replays');
         }).catch(function(){
-          if(version!==imageVersion)return;clearTimeout(loadingTimer);stop();screen.setAttribute('aria-busy','false');loading.hidden=false;loading.textContent='This recorded screenshot could not be loaded.';
+          if(version!==imageVersion)return;clearTimeout(loadingTimer);stop();screen.setAttribute('aria-busy','false');loading.hidden=false;loading.textContent='This recorded screenshot could not be loaded.';global.OSOmniBoot?.fail('replays','The initial recorded screen could not be loaded.');
         });
       }
       function schedule(){
@@ -149,7 +149,7 @@
       if('IntersectionObserver'in global)new global.IntersectionObserver(function(entries){if(!entries[0].isIntersecting)stop();}).observe(host);
       host.osomniCaseStudy={state:function(){return {caseId:cases[selected].id,index:index,after:after,playing:playing};}};
       choose(0);
-    }).catch(function(error){host.textContent=error.message;});
+    }).catch(function(error){host.textContent=error.message;global.OSOmniBoot?.fail('replays','The trajectory library could not be loaded.');});
   }
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init);else init();
 })(window);

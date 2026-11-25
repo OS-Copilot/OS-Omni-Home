@@ -7,9 +7,11 @@
   <title>OS-Omni: Benchmarking Generalist Computer-Using Agents on Long-Horizon Workflows Across Platforms</title>
   <meta name="description"
     content="OS-Omni benchmarks generalist computer-using agents on long-horizon workflows across web, Windows, macOS, Ubuntu and mobile.">
-  <meta name="color-scheme" content="light dark">
-  <meta name="theme-color" content="#02091a">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0c1524">
 
+  <link rel="stylesheet" href="static/css/site-boot.css?v=boot-14">
+  <script src="static/js/site-boot.js?v=boot-14"></script>
   <link rel="icon" href="public/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="public/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="public/favicon-16.png">
@@ -55,51 +57,72 @@
        JS is running; and the theme must be set before first paint. Both happen
        here, before the body renders. -->
   <script>
-    (function () {
-      var d = document.documentElement;
-      d.className += " js";
-      var t;
-      try { t = localStorage.getItem("osomni-theme"); } catch (e) { /* private mode */ }
-      if (t !== "light" && t !== "dark") {
-        t = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
-      }
-      d.setAttribute("data-theme", t);
-    })();
+    (function(){var d=document.documentElement;d.className+=" js";d.setAttribute("data-theme","dark");})();
   </script>
-</head>
+  <link rel="stylesheet" href="static/css/charcoal-preview.css?v=20261116-3">
+  <link rel="stylesheet" href="static/css/orbit-preview.css?v=20261116-3">
+  <link rel="stylesheet" href="static/css/leaderboard-explorer.css?v=20261116-1">
+  <link rel="stylesheet" href="static/css/research-preview.css?v=20261116-1">
+  <link rel="stylesheet" href="static/css/research-dark.css?v=20261116-3">
+  <link rel="stylesheet" href="static/css/mascot-3d.css?v=companion-actions-15">
+  <link rel="stylesheet" href="static/css/exploration-motion.css?v=exploration-9">
+  <link rel="stylesheet" href="static/css/galaxy.css?v=galaxy-10">
+  <link rel="stylesheet" href="static/css/page-galaxy.css?v=page-galaxy-11">
+  <link rel="stylesheet" href="static/css/site-refinement.css?v=refinement-23">
+  <link rel="stylesheet" href="static/css/navigation.css?v=20261125">
+<script data-osomni-pages-update>(function(){if(!("serviceWorker" in navigator))return;navigator.serviceWorker.addEventListener("controllerchange",function(){location.reload();},{once:true});navigator.serviceWorker.getRegistration("/OS-Omni-Home/").then(function(r){if(r)return r.update();}).catch(function(){});})();</script></head>
 
-<body>
+<body class="charcoal orbit research research-dark">
+  <div class="site-loader" id="site-loader" role="region" aria-label="Preparing OS-Omni">
+    <div class="site-loader-panel">
+      <div class="site-loader-mark"><img src="public/favicon-512.png" alt="OS-Omni" width="104" height="104"></div>
+      <h2>Preparing your universe.</h2>
+      <p class="site-loader-status" id="site-boot-status" role="status" aria-live="polite">Getting the interactive workspace ready…</p>
+      <div class="site-boot-progress" id="site-boot-progress" role="progressbar" aria-label="Ready interaction modules" aria-valuemin="0" aria-valuemax="9" aria-valuenow="0"></div>
+      <p class="site-boot-count" id="site-boot-count">0 / 9 modules ready</p>
+      <div class="site-loader-modules">
+        <div data-boot-module="playground"><span>Five platform workspaces</span><small>Preparing</small></div>
+        <div data-boot-module="tasks"><span>Task Explorer</span><small>Preparing</small></div>
+        <div data-boot-module="leaderboard"><span>Model results</span><small>Preparing</small></div>
+        <div data-boot-module="pipeline"><span>Annotation walkthrough</span><small>Preparing</small></div>
+        <div data-boot-module="replays"><span>Trajectory player</span><small>Preparing</small></div>
+        <div data-boot-module="robot"><span>Interactive 3D robot</span><small>Preparing</small></div>
+        <div data-boot-module="galaxy"><span>Interactive galaxy</span><small>Preparing</small></div>
+        <div data-boot-module="navigation"><span>Page interactions</span><small>Preparing</small></div>
+        <div data-boot-module="assets"><span>Device artwork and icons</span><small>Preparing</small></div>
+      </div>
+      <p class="site-boot-error" id="site-boot-error" hidden></p>
+      <div class="site-loader-actions"><button type="button" data-boot-retry hidden>Retry loading</button><button type="button" data-boot-continue hidden>Continue with available features</button></div>
+      <p class="site-loader-note">Preparing page interactions and the first recorded screen. App content and further replay media load when opened.</p>
+    </div>
+  </div>
+
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="cosmos" aria-hidden="true"></div>
-  <canvas id="starfield" aria-hidden="true"></canvas>
 
   <!-- ==================================================================== -->
   <!-- Navigation                                                            -->
   <!-- ==================================================================== -->
-  <nav class="nav" id="nav">
+  <nav class="nav" id="nav" aria-label="Main navigation">
     <div class="wrap">
       <a class="nav-brand" href="#top">
         <img src="public/favicon-512.png" alt="">
         <span>OS-Omni</span>
       </a>
-      <button class="icon-btn nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Menu">
-        <svg aria-hidden="true" width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6">
-          <path d="M2 4h12M2 8h12M2 12h12" stroke-linecap="round" />
-        </svg>
-      </button>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#playground-section">Playground</a></li>
         <li class="nav-more" id="navMore" data-open="false">
-          <button type="button" aria-expanded="false" aria-haspopup="true">
+          <button type="button" aria-expanded="false" aria-controls="navResearch">
             More research
             <svg viewBox="0 0 10 10" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
               <path d="M1.5 3.5 5 7l3.5-3.5" stroke-linecap="round" stroke-linejoin="round" />
             </svg>
           </button>
-          <ul>
+          <ul id="navResearch">
             <li><a href="https://os-copilot.github.io/OSReward-Home/" target="_blank" rel="noopener">
               <img src="public/logos/projects/osreward.png" alt="">
               <span>OSReward <small>CUA Reward Eval &amp; Open Models</small></span></a></li>
+            <li><a href="https://os-copilot.github.io/OpenMobile2-Home/" target="_blank" rel="noopener">
+              <img src="public/logos/projects/openmobile.png" alt="">
+              <span>OpenMobile-2 <small>Mobile agents &amp; app-native tools</small></span></a></li>
             <li><a href="https://qiushisun.github.io/OS-Sentinel-Home/" target="_blank" rel="noopener">
               <img src="public/logos/projects/os-sentinel.png" alt="">
               <span>OS-Sentinel <small>Mobile GUI Safety</small></span></a></li>
@@ -121,32 +144,24 @@
           </ul>
         </li>
         <li><a href="#abstract">Overview</a></li>
+        <li><a href="#playground-section">Playground</a></li>
         <li><a href="#benchmark">Benchmark</a></li>
-        <li><a href="#leaderboard">Leaderboard</a></li>
-        <li><a href="#findings">Findings</a></li>
-        <li><a href="#method">Protocol</a></li>
-        <li><a href="#tasks">Tasks</a></li>
+        <li><a href="#leaderboard">Results</a></li>
         <li><a href="#resources">Resources</a></li>
       </ul>
       <div class="nav-tools">
-        <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to light theme">
-          <svg class="i-moon" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"
-            aria-hidden="true">
-            <path d="M14 9.3A6 6 0 0 1 6.7 2a6.2 6.2 0 1 0 7.3 7.3Z" stroke-linejoin="round" />
-          </svg>
-          <svg class="i-sun" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"
-            aria-hidden="true">
-            <circle cx="8" cy="8" r="3.1" />
-            <path d="M8 1v1.7M8 13.3V15M1 8h1.7M13.3 8H15M3 3l1.2 1.2M11.8 11.8 13 13M13 3l-1.2 1.2M4.2 11.8 3 13"
-              stroke-linecap="round" />
-          </svg>
-        </button>
         <a class="icon-btn" href="https://github.com/OS-Copilot/OS-Omni" target="_blank"
           rel="noopener" aria-label="GitHub">
           <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
             <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z" />
           </svg>
         </a>
+        <button class="icon-btn nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navLinks" aria-label="Open navigation">
+          <svg aria-hidden="true" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path class="nav-menu-icon" d="M2 4h12M2 8h12M2 12h12" stroke-linecap="round" />
+            <path class="nav-close-icon" d="m3 3 10 10M3 13 13 3" stroke-linecap="round" />
+          </svg>
+        </button>
       </div>
     </div>
   </nav>
@@ -155,109 +170,42 @@
   <!-- Hero — split layout: content left, key art right                      -->
   <!-- ==================================================================== -->
   <header class="hero" id="top">
-    <div class="wrap wrap-wide hero-split">
-      <div class="hero-content">
-        <h1><span class="gilt">OS-Omni</span></h1>
-        <p class="tagline">Benchmarking Generalist Computer-Using Agents<br class="br-lg">
-          on Long-Horizon Workflows Across Platforms</p>
-        <p class="lede">Most computer-use benchmarks stop at a task a person would finish in a minute.
-          Real work does not: it runs for dozens of steps, moves between applications, and often between
-          machines. OS-Omni measures agents on that kind of work.</p>
-
-        <!-- TODO: four claims, one per bullet. Keep them concrete — what the
-             benchmark contains, what it measures, what it releases. -->
-        <ul class="bullets">
-          <li>
-            <span class="b-ico" aria-hidden="true">
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <rect x="3" y="4" width="18" height="14" rx="2" /><path d="M8 21h8M12 18v3" stroke-linecap="round" />
-              </svg>
-            </span>
-            <span><b>Long-horizon workflows</b> that run far past the length existing suites cover,
-              on tasks written to need real state rather than a single lookup</span>
-          </li>
-          <li>
-            <span class="b-ico" aria-hidden="true">
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <path d="M12 3 21 7.5 12 12 3 7.5 12 3Z" stroke-linejoin="round" />
-                <path d="M3 12.5 12 17l9-4.5M3 16.5 12 21l9-4.5" stroke-linejoin="round" />
-              </svg>
-            </span>
-            <span><b>Six platforms under one protocol</b> — Windows, Linux, macOS, iOS, Android, and Web —
-              plus 12 cross-device workflows in the 300-task v1 release</span>
-          </li>
-          <li>
-            <span class="b-ico" aria-hidden="true">
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <path d="M4 19V9M10 19V5M16 19v-6M22 19H2" stroke-linecap="round" />
-              </svg>
-            </span>
-            <span><b>A broad evaluation of generalist agents</b>, scored the same way on every
-              platform: seven models, evaluated by final-state task success</span>
-          </li>
-          <li>
-            <span class="b-ico" aria-hidden="true">
-              <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <path d="M12 3l7.5 4.2v9.6L12 21l-7.5-4.2V7.2L12 3Z" stroke-linejoin="round" />
-                <path d="M12 12v9M12 12 4.5 7.8M12 12l7.5-4.2" stroke-linejoin="round" />
-              </svg>
-            </span>
-            <span><b>Open environments, tasks and trajectories</b>, so a result can be reproduced
-              with reproducible initialization, platform adapters, and executable final-state checks</span>
-          </li>
-        </ul>
-
-        <!-- Release links. Each one is parked: it carries `pending`, has no
-             href, and shows a "soon" badge. To turn one on, drop the `pending`
-             class, add the href, and delete the <span class="soon"> badge.
-             `data-link` names the artifact: paper, arxiv, code, benchmark,
-             corpus, models. -->
-        <div class="links">
-          <a class="btn btn-gold pending" role="link" aria-disabled="true" title="Coming soon" data-link="paper">
-            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-              <path d="M9.5 0H3.75A1.75 1.75 0 0 0 2 1.75v12.5c0 .97.78 1.75 1.75 1.75h8.5c.97 0 1.75-.78 1.75-1.75V4.5L9.5 0Zm0 1.5L12.5 4.5H10a.5.5 0 0 1-.5-.5V1.5ZM5 8h6v1.2H5V8Zm0 2.6h6v1.2H5v-1.2ZM5 5.4h3v1.2H5V5.4Z" />
-            </svg>
-            Paper
-          </a>
-          <a class="btn pending" role="link" aria-disabled="true" title="Coming soon" data-link="arxiv">
-            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-              <path d="M2 2h12v1.4H2V2Zm0 5.3h12v1.4H2V7.3ZM2 12.6h12V14H2v-1.4Z" />
-            </svg>
-            arXiv
-          </a>
-          <a class="btn pending" role="link" aria-disabled="true" title="Public link forthcoming" data-link="code">
-            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
-              <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.4 7.4 0 0 1 2-.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z" />
-            </svg>
-            Code
-          </a>
-          <a class="btn pending" role="link" aria-disabled="true" title="Coming soon" data-link="benchmark">
-            <span class="ic" aria-hidden="true">🤗</span>
-            Benchmark
-          </a>
-          <a class="btn" href="#case-studies" data-link="corpus">
-            <span class="ic" aria-hidden="true">🤗</span>
-            Trajectories
-          </a>
+    <div class="wrap">
+      <div class="charcoal-hero-grid">
+        <div class="hero-content">
+          <div class="charcoal-brand-lockup">
+            <div><p class="charcoal-kicker"><i aria-hidden="true"></i>CROSS-PLATFORM BENCHMARK</p><p class="charcoal-brand-name">OS-Omni</p></div>
+          </div>
+          <h1 class="charcoal-paper-title">Benchmarking Generalist Computer-Using Agents on Long-Horizon Workflows Across Platforms</h1>
+          <p class="lede">Real work moves between applications, platforms, and devices. OS-Omni evaluates computer-using agents on 300 long-horizon tasks, with success checked against the state they leave behind.</p>
+          <div class="charcoal-hero-actions">
+            <a class="btn charcoal-primary" href="#playground-section">Explore the playground <span aria-hidden="true">↗</span></a>
+            <a class="btn" href="#leaderboard">View results</a>
+            <a class="charcoal-text-link" href="#tasks">Browse tasks <span aria-hidden="true">→</span></a>
+          </div>
+          <a class="charcoal-paper-link" href="#resources">Paper &amp; research resources <span aria-hidden="true">↗</span></a>
         </div>
+        <figure class="charcoal-brand-visual">
+          <img class="charcoal-brand-art" src="public/favicon-512.png" width="512" height="512" alt="OS-Omni project mark: a robot surrounded by Windows, Linux, macOS, iOS, Android, and Web devices." fetchpriority="high" decoding="async">
+        </figure>
       </div>
-
-      <!-- Both files are built from public/os-omni-cover-v2.png by
-           tools/build_cover.py. The WebP is listed first and is what almost
-           every browser fetches; the PNG is the fallback. -->
-      <figure class="hero-art plate">
-        <picture>
-          <source srcset="public/cover.webp" type="image/webp">
-          <img src="public/cover.png" width="900" height="900" fetchpriority="high"
-            alt="OS-Omni key art: a robot surrounded by the desktop and mobile platforms.">
-        </picture>
-      </figure>
+      <div class="charcoal-facts" aria-label="Benchmark at a glance">
+        <div><strong>300</strong><span>long-horizon tasks</span></div>
+        <div><strong>6</strong><span>evaluation platforms</span></div>
+        <div><strong>12</strong><span>cross-device workflows</span></div>
+        <div><strong>7</strong><span>evaluated models</span></div>
+      </div>
     </div>
   </header>
 
   <section class="band device-showcase" id="playground-section" aria-labelledby="device-showcase-title">
    <div class="wrap">
-    <div class="section-head"><span class="eyebrow">The applications, in your hands</span><h2 class="section-title" id="device-showcase-title">Five platforms.<br><span class="gilt">Open something.</span></h2><p class="section-sub">Choose a platform, then an App. Explore five browser-local device workspaces; the benchmark also evaluates Web as a sixth platform. Native benchmark execution runs in the separate OS-Omni environments.</p></div>
+    <div class="section-head"><span class="eyebrow">The applications, in your hands</span><h2 class="section-title" id="device-showcase-title">Explore the applications.</h2><p class="section-sub">Choose a platform and open an App in five browser-local workspaces. Native benchmark runs use separate environments; Web is evaluated as a sixth platform.</p></div>
+    <div class="orbit-explore-guide" aria-label="Ways to explore OS-Omni">
+      <a href="#playground"><span>01</span><strong>Open a workspace</strong><small>Choose a platform and an application.</small><b aria-hidden="true">↗</b></a>
+      <a href="#tasks"><span>02</span><strong>Find a task</strong><small>Browse the released instructions by App.</small><b aria-hidden="true">↗</b></a>
+      <a href="#case-studies"><span>03</span><strong>Follow a trajectory</strong><small>Inspect recorded actions and final states.</small><b aria-hidden="true">↗</b></a>
+    </div>
     <div id="playground" data-platform="linux"></div>
     <noscript>This interactive playground requires JavaScript.</noscript>
    </div>
@@ -434,7 +382,7 @@
     <!-- ================================================================== -->
     <section class="band" id="leaderboard">
  <div class="wrap wrap-wide">
-  <div class="section-head"><span class="eyebrow">Model leaderboard / v1</span><h2 class="section-title">Seven models.<br><span class="gilt">Every score, in the open.</span></h2><p class="section-sub">Seven evaluated models, six platforms, and cross-device workflows. Compare the full results below, with human performance as a separate reference.</p></div>
+  <div class="section-head"><span class="eyebrow">Model leaderboard / v1</span><h2 class="section-title">Results across platforms.<br><span class="gilt">Every score, in the open.</span></h2><p class="section-sub">Seven evaluated models, six platforms, and cross-device workflows. Compare the full results below, with human performance as a separate reference.</p></div>
   <div id="leaderboard-controls"></div>
   <div id="leaderboard-highlights" class="lb-highlights"></div>
   <div class="lb-table-panel"><div class="lb-table-heading"><span>THE COMPLETE RESULTS</span><span>Success rate (%) ↑ · Camera Ready Table 1</span></div><div id="table-leaderboard"><p>Loading published model results…</p></div><p class="cr-source"><b>Reading the table:</b> select any score column to sort. Gold marks the best model per column; underline marks the second-best distinct score. Human results are pinned and excluded from model ranks. Average is the equal-weight mean of all seven groups, retained at the paper’s published precision.</p><p class="cr-source"><b>Cross-device:</b> called “Cross-VM” in Table 1; these are the same 12 desktop + Android workflows. Values are the published success rates, not task counts. No confidence intervals or error bars are reported.</p></div>
@@ -644,17 +592,21 @@
   <script src="static/js/osomni-data.js?v=camera-ready-2"></script>
   <script src="static/js/paper-results.js?v=6"></script>
   <script src="static/js/dataset-composition.js?v=4"></script>
-  <script src="static/js/main.js?v=preflight-3"></script>
+  <script src="static/js/main.js?v=navbar-20261125"></script>
   <script src="static/js/browser-apps.js"></script>
   <script src="static/js/device-profiles.js?v=20261110-app-visibility-2"></script>
-  <script src="static/js/task-explorer.js?v=7"></script>
+  <script src="static/js/task-explorer.js?v=boot-14"></script>
   <script src="static/js/android-device-controls.js"></script>
   <script src="static/js/desktop-device-controls.js"></script>
   <script src="static/js/ios-device-controls.js"></script>
-  <script src="static/js/browser-playground.js?v=20261110-preflight-9"></script>
+  <script src="static/js/browser-playground.js?v=boot-14"></script>
   <script src="static/js/device-showcase.js?v=2"></script>
-  <script src="static/js/research-stories.js?v=20261110-pipeline-smooth-9"></script>
-  <script src="static/js/case-studies.js?v=10-web-library"></script>
+  <script src="static/js/research-stories.js?v=boot-14"></script>
+  <script src="static/js/case-studies.js?v=boot-14"></script>
+  <script src="static/js/leaderboard-explorer.js?v=boot-14"></script>
+  <script type="module" src="static/js/mascot-3d.js?v=studio-22"></script>
+  <script type="module" src="static/js/exploration-motion.js?v=boot-14"></script>
+  <script type="module" src="static/js/page-galaxy.js?v=boot-14"></script>
 </body>
 
 </html>

@@ -373,4 +373,5 @@
   }
   window.OSOmniPlayground = mount;
   mount(document.getElementById("playground"), false);
+  window.OSOmniBoot?.ready('playground');
 })();
