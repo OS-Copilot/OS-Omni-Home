@@ -122,46 +122,80 @@
     var toggle = document.getElementById("navToggle");
     var links = document.getElementById("navLinks");
     if (!el) return;
+    var more = document.getElementById("navMore");
+    var moreBtn = more && more.querySelector("button");
+    var compact = window.matchMedia("(max-width: 1040px)");
 
     function onScroll() { el.classList.toggle("stuck", window.scrollY > 40); }
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
 
+    function setResearchOpen(open) {
+      if (!more || !moreBtn) return;
+      more.setAttribute("data-open", String(open));
+      moreBtn.setAttribute("aria-expanded", String(open));
+    }
+
+    function setMenuOpen(open) {
+      if (!open) setResearchOpen(false);
+      if (!toggle || !links) return;
+      links.classList.toggle("open", open);
+      toggle.setAttribute("aria-expanded", String(open));
+      toggle.setAttribute("aria-label", open ? "Close navigation" : "Open navigation");
+    }
+
     if (toggle && links) {
-      toggle.addEventListener("click", function () {
-        var open = links.classList.toggle("open");
-        toggle.setAttribute("aria-expanded", String(open));
+      toggle.addEventListener("click", function (e) {
+        var open = !links.classList.contains("open");
+        setMenuOpen(open);
+        if (open && e.detail === 0) links.querySelector("button, a[href]").focus();
       });
       links.addEventListener("click", function (e) {
-        if (e.target.tagName === "A") {
-          links.classList.remove("open");
-          toggle.setAttribute("aria-expanded", "false");
+        if (e.target.closest("a")) {
+          if (more && more.contains(e.target)) {
+            (compact.matches ? toggle : moreBtn).focus();
+          }
+          setMenuOpen(false);
         }
       });
     }
-
-    /* "More research" dropdown: click to open, click-away or Escape to close */
-    var more = document.getElementById("navMore");
-    if (more) {
-      var moreBtn = more.querySelector("button");
-      var setOpen = function (v) {
-        more.setAttribute("data-open", String(v));
-        moreBtn.setAttribute("aria-expanded", String(v));
-      };
-      moreBtn.addEventListener("click", function (e) {
-        e.stopPropagation();
-        setOpen(more.getAttribute("data-open") !== "true");
-      });
-      document.addEventListener("click", function (e) {
-        if (!more.contains(e.target)) setOpen(false);
-      });
-      document.addEventListener("keydown", function (e) {
-        if (e.key === "Escape") setOpen(false);
+    if (moreBtn) {
+      moreBtn.addEventListener("click", function () {
+        setResearchOpen(more.getAttribute("data-open") !== "true");
       });
     }
 
+    function dismissOutside(e) {
+      if (more && !more.contains(e.target)) setResearchOpen(false);
+      if (!el.contains(e.target)) setMenuOpen(false);
+    }
+    document.addEventListener("click", dismissOutside);
+    document.addEventListener("focusin", dismissOutside);
+    document.addEventListener("keydown", function (e) {
+      if (e.key !== "Escape") return;
+      if (more && more.getAttribute("data-open") === "true") {
+        setResearchOpen(false);
+        moreBtn.focus();
+        e.preventDefault();
+      } else if (links && links.classList.contains("open")) {
+        setMenuOpen(false);
+        toggle.focus();
+        e.preventDefault();
+      }
+    });
+
+    function onLayoutChange() {
+      var active = document.activeElement;
+      setMenuOpen(false);
+      if (compact.matches && links && links.contains(active)) toggle.focus();
+      else if (!compact.matches && active === toggle) el.querySelector(".nav-brand").focus();
+      else if (!compact.matches && more && more.contains(active)) moreBtn.focus();
+    }
+    if (compact.addEventListener) compact.addEventListener("change", onLayoutChange);
+    else compact.addListener(onLayoutChange);
+
     /* highlight the section in view */
-    var ids = ["playground-section", "abstract", "benchmark", "leaderboard", "findings", "method", "tasks", "resources"];
+    var ids = ["abstract", "playground-section", "benchmark", "leaderboard", "resources"];
     var map = {};
     ids.forEach(function (id) {
       var a = document.querySelector('.nav-links a[href="#' + id + '"]');
@@ -173,8 +207,12 @@
       entries.forEach(function (en) {
         var m = map[en.target.id];
         if (m && en.isIntersecting) {
-          Object.keys(map).forEach(function (k) { map[k].a.classList.remove("active"); });
+          Object.keys(map).forEach(function (k) {
+            map[k].a.classList.remove("active");
+            map[k].a.removeAttribute("aria-current");
+          });
           m.a.classList.add("active");
+          m.a.setAttribute("aria-current", "location");
         }
       });
     }, { rootMargin: "-45% 0px -50% 0px" });
