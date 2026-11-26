@@ -22,10 +22,9 @@
     var key=normalized(name), id=aliases[key]||null, catalog=window.OSOmniBrowserApps||[];
     var app=catalog.find(function(item){return id?item.id===id:normalized(item.id)===key||normalized(item.name)===key;});
     var profile=(window.OSOmniDeviceProfiles||{})[track];
-    var nativeEntry=profile&&app&&profile.applications.find(function(item){return item.id===app.id;});
-    // Controlled applications share their benchmark brand across all platforms.
-    var controlled=app&&/^open/.test(app.id);
-    var path=controlled?app.icon:nativeEntry&&nativeEntry.icon||app&&app.icon;
+    var nativeEntries=profile&&profile.applications||[];
+    var nativeEntry=nativeEntries.find(function(item){return normalized(item.name)===key;})||nativeEntries.find(function(item){return item.id===(id||key)||app&&item.id===app.id;});
+    var path=nativeEntry&&nativeEntry.icon||app&&app.icon;
     return path?'<img class="te-app-icon" src="'+esc(path)+'" alt="" loading="lazy" width="20" height="20">':'<span class="te-app-initial" aria-hidden="true">'+esc(name.slice(0,1).toUpperCase())+'</span>';
   }
   var esc = function (value) { return String(value).replace(/[&<>"']/g, function (c) {return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); };
