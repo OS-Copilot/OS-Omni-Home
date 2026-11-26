@@ -1,6 +1,6 @@
 /* Static-only resource adapter. No API server, VM or remote execution. */
 "use strict";
-const CONFIG = {"base": "/OS-Omni-Home/", "manifest": "osomni-resources.208580d313a452e7.json", "revision": "208580d313a452e7"};
+const CONFIG = {"base": "/OS-Omni-Home/", "manifest": "osomni-resources.b673ad379a541681.json", "revision": "b673ad379a541681"};
 const BASE = new URL(CONFIG.base, self.location.origin);
 const MANIFEST = new URL(CONFIG.manifest, BASE).href;
 const CACHE_NAME = "osomni-pages-manifest-" + CONFIG.revision;
