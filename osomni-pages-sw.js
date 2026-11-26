@@ -1,6 +1,6 @@
 /* Static-only resource adapter. No API server, VM or remote execution. */
 "use strict";
-const CONFIG = {"base": "/OS-Omni-Home/", "manifest": "osomni-resources.63c1be35cda36fcb.json", "revision": "63c1be35cda36fcb"};
+const CONFIG = {"base": "/OS-Omni-Home/", "manifest": "osomni-resources.c2e205001e84be43.json", "revision": "c2e205001e84be43"};
 const BASE = new URL(CONFIG.base, self.location.origin);
 const MANIFEST = new URL(CONFIG.manifest, BASE).href;
 const CACHE_NAME = "osomni-pages-manifest-" + CONFIG.revision;
@@ -101,6 +101,12 @@ async function handleRequest(request) {
   if (url.origin !== BASE.origin || !["GET", "HEAD"].includes(request.method)) return fetch(request);
   let relative = relativePath(url);
   if (relative === null) return fetch(request);
+  // The document and static assets never wait for the packed App resource index.
+  if (relative === "" || relative === "index.html" || /^(?:static\/|public\/(?:favicon|apple-touch-icon|cover|logos\/))/.test(relative)) {
+    const direct = new URL(relative || "index.html", BASE);
+    direct.search = url.search;
+    return fetch(direct.href, {method:request.method, headers:request.headers, credentials:request.credentials || "same-origin", mode:"same-origin", cache:request.cache || "default", redirect:"follow", signal:request.signal});
+  }
   const data = await database();
   let route = findRoute(data, relative);
   if (!route) {
