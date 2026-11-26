@@ -11,16 +11,16 @@
     replays:{target:'#case-studies',host:'#recorded-cases',deps:['icons'],styles:['case-studies.css'],scripts:['case-studies.js']},
     leaderboard:{target:'#leaderboard',deps:['overview'],styles:['leaderboard.css','leaderboard-explorer.css'],scripts:['leaderboard-explorer.js']},
     pipeline:{target:'#method',host:'#annotation-pipeline',deps:['icons'],styles:['research-stories.css','annotation-pipeline.css'],scripts:['research-stories.js']},
-    atmosphere:{styles:['exploration-motion.css','galaxy.css','page-galaxy.css'],modules:['exploration-motion.js','page-galaxy.js']},
-    robot:{target:'.charcoal-brand-visual',styles:['mascot-3d.css'],modules:['mascot-3d.js']}
+    atmosphere:{styles:['exploration-motion.css','galaxy.css'],modules:['exploration-motion.js','page-galaxy.js']},
+    robot:{target:'.charcoal-brand-visual',modules:['mascot-3d.js']}
   };
   function style(name){
     if(styles.has(name))return styles.get(name);
-    var promise=new Promise(function(resolve,reject){var link=document.createElement('link');link.rel='stylesheet';link.href='static/css/'+name+'?v=progressive-1';link.onload=resolve;link.onerror=function(){styles.delete(name);link.remove();reject(Error('This section could not load.'));};document.head.appendChild(link);});styles.set(name,promise);return promise;
+    var promise=new Promise(function(resolve,reject){var link=document.createElement('link');link.rel='stylesheet';link.href='static/css/'+name+'?v=stable-hero-1';link.onload=resolve;link.onerror=function(){styles.delete(name);link.remove();reject(Error('This section could not load.'));};document.head.appendChild(link);});styles.set(name,promise);return promise;
   }
   function script(name,module){
     if(scripts.has(name))return scripts.get(name);
-    var promise=new Promise(function(resolve,reject){var el=document.createElement('script');el.src='static/js/'+name+'?v=progressive-1';if(module)el.type='module';el.onload=resolve;el.onerror=function(){scripts.delete(name);el.remove();reject(Error('This section could not load.'));};document.body.appendChild(el);});scripts.set(name,promise);return promise;
+    var promise=new Promise(function(resolve,reject){var el=document.createElement('script');el.src='static/js/'+name+'?v=stable-hero-1';if(module)el.type='module';el.onload=resolve;el.onerror=function(){scripts.delete(name);el.remove();reject(Error('This section could not load.'));};document.body.appendChild(el);});scripts.set(name,promise);return promise;
   }
   function load(id){
     if(running.has(id))return running.get(id);

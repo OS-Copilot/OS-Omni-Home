@@ -142,8 +142,8 @@ function start(host){
   reduced.addEventListener('change',()=>{action=null;nextIdleAt=elapsed+18;resume();});
   canvas.addEventListener('webglcontextlost',e=>{e.preventDefault();paused=true;companion?.disable();host.classList.remove('om3d-ready');canvas.hidden=true;controls.hidden=true;});
   document.addEventListener('osomni:app-enter',()=>{playAction('wave');resume();});
-  resize();host.classList.add('om3d-ready');resume();
-  platformSurfacesReady.then(()=>{renderOnce();window.OSOmniBoot?.ready('robot');}).catch(error=>{
+  resize();resume();
+  platformSurfacesReady.then(()=>{renderOnce();host.classList.add('om3d-ready');window.OSOmniBoot?.ready('robot');}).catch(error=>{
     console.warn('Platform screen surfaces could not finish.',error.message);
     window.OSOmniBoot?.fail('robot','Platform screen surfaces could not finish.');
   });

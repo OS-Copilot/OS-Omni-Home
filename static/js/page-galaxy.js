@@ -115,7 +115,7 @@ export function createPageGalaxy(){
   function onResize(){clearTimeout(timer);timer=setTimeout(paint,160);}
   function onVisibility(){root.dataset.paused=String(document.hidden);if(document.hidden){cancelAnimationFrame(frame);frame=0;}else schedule();}
   document.body.prepend(root);
-  paint();document.body.classList.add('has-page-galaxy');document.dispatchEvent(new CustomEvent('osomni:galaxy',{detail:{active:true}}));schedule();
+  paint();document.body.classList.add('has-page-galaxy','has-live-galaxy');document.dispatchEvent(new CustomEvent('osomni:galaxy',{detail:{active:true}}));schedule();
   document.addEventListener('osomni:app-enter',schedule);
   window.OSOmniBoot?.ready('galaxy');
   addEventListener('scroll',schedule,{passive:true});addEventListener('resize',onResize,{passive:true});document.addEventListener('pointermove',onPointer,{passive:true});document.addEventListener('pointerleave',onLeave);document.addEventListener('click',onClick);document.addEventListener('visibilitychange',onVisibility);reduced.addEventListener('change',onPreference);
