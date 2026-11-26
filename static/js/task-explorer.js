@@ -24,7 +24,8 @@
     var profile=(window.OSOmniDeviceProfiles||{})[track];
     var nativeEntries=profile&&profile.applications||[];
     var nativeEntry=nativeEntries.find(function(item){return normalized(item.name)===key;})||nativeEntries.find(function(item){return item.id===(id||key)||app&&item.id===app.id;});
-    var path=nativeEntry&&nativeEntry.icon||app&&app.icon;
+    var controlled=/^open/.test(key)&&app&&app.icon&&app.icon.indexOf("/controlled/")!==-1;
+    var path=controlled?app.icon:nativeEntry&&nativeEntry.icon||app&&app.icon;
     return path?'<img class="te-app-icon" src="'+esc(path)+'" alt="" loading="lazy" width="20" height="20">':'<span class="te-app-initial" aria-hidden="true">'+esc(name.slice(0,1).toUpperCase())+'</span>';
   }
   var esc = function (value) { return String(value).replace(/[&<>"']/g, function (c) {return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];}); };
