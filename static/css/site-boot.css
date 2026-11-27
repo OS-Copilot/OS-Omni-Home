@@ -13,6 +13,6 @@
 .charcoal-brand-visual>.charcoal-brand-art{visibility:hidden}
 .site-galaxy-poster{position:fixed;inset:-4%;z-index:-1;pointer-events:none;background:#0c1524 url('../images/hero-galaxy-preview.webp') center/cover no-repeat;transition:opacity .2s}
 .has-live-galaxy .site-galaxy-poster{opacity:0}
-.om3d-canvas,.om3d-controls{opacity:0;transition:opacity .22s}
+.charcoal-brand-visual>.om3d-canvas,.charcoal-brand-visual>.om3d-controls{opacity:0;transition:opacity .22s}
 .om3d-ready>.om3d-canvas,.om3d-ready>.om3d-controls{opacity:1}
 @media(prefers-reduced-motion:reduce){.site-galaxy-poster,.om3d-canvas,.om3d-controls{transition:none}}
