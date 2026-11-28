@@ -117,7 +117,8 @@
   var fileRows = [], currentFolder = null;
   async function renderFiles() {
     try {
-      fileRows = (await fileDB("getAll")).filter(function (f) { return f.platform === device.platform; });
+      if(window.OSOmniDemo)await window.OSOmniDemo.seedFiles();
+      fileRows = (await fileDB("getAll")).filter(function (f) { return f.platform === device.platform && f.type !== "demo-marker"; });
       var search = document.getElementById("file-search").value.toLowerCase(), folder = fileRows.find(function(f){return f.id===currentFolder;});
       document.getElementById("status").textContent = folder ? "Folder: " + folder.name : "Home ? browser workspace files";
       document.getElementById("file-list").innerHTML = fileRows.filter(function(f){return (f.parent || null) === currentFolder && f.name.toLowerCase().includes(search);}).map(function(f){return '<article class="card"><h3>'+escape(f.name)+'</h3><p>'+(f.type==='folder'?'Folder':(f.blob.size/1024).toFixed(1)+' KB ? '+escape(f.blob.type || 'File'))+'</p><div class="actions">'+(f.type==='folder'?button('open-file-folder',f.id,'Open'):button('download-file',f.id,'Download'))+button('rename-file',f.id,'Rename')+button('move-file',f.id,'Move')+button('delete-file',f.id,'Delete')+'</div></article>';}).join('') || '<div class="empty">No files here. Import a file or create a folder.</div>';

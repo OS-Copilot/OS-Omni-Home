@@ -25,6 +25,7 @@
  search.oninput=()=>{query=search.value.toLowerCase();render();};
  if(key==='preview'){
   const input=el('input');input.type='file';input.accept='application/pdf,image/*,text/plain,.md';input.setAttribute('aria-label','Open document');const viewer=el('section',undefined,'viewer');root.append(input,viewer);list.remove();search.remove();
+  if(window.OSOmniDemo){const sample=el('iframe');sample.src=window.OSOmniDemo.asset('public/demo/project-brief.pdf');sample.title='Demo project brief';viewer.append(sample);status.textContent='Demo project brief - fictional example document';}
   input.onchange=async()=>{const file=input.files[0];if(!file)return;if(objectURL)URL.revokeObjectURL(objectURL);viewer.replaceChildren();status.textContent=file.name+' · '+Math.ceil(file.size/1024)+' KB';if(file.type.startsWith('image/')){objectURL=URL.createObjectURL(file);const image=el('img');image.src=objectURL;image.alt=file.name;viewer.append(image);}else if(file.type==='application/pdf'){objectURL=URL.createObjectURL(file);const frame=el('iframe');frame.src=objectURL;frame.title=file.name;viewer.append(frame);}else if(file.type.startsWith('text/')||/\.(txt|md)$/i.test(file.name)){viewer.append(el('pre',await file.text()));}else status.textContent='Supported files: PDF, images and text.';};return;
  }
  const form=el('form');form.append(el('h2','Add '+(key==='shortcuts'?'shortcut':'record')));
